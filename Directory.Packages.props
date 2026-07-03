@@ -1,8 +1,8 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <TargetFramework>net8.0</TargetFramework>
-    <AspNetVersion>8.0.2</AspNetVersion>
+    <TargetFramework>net10.0</TargetFramework>
+    <AspNetVersion>10.0.9</AspNetVersion>
     <SystemExtensionVersion>8.0.0</SystemExtensionVersion>
     <EntityFramworkCoreVersion>8.0.2</EntityFramworkCoreVersion>
     <VSCodeGeneratorVersion>8.0.0</VSCodeGeneratorVersion>

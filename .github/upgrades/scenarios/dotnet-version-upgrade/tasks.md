@@ -1,0 +1,14 @@
+# .NET Version Upgrade Progress
+
+## Overview
+
+Upgrading eShopOnWeb from net8.0 to net10.0 LTS. Using a Top-Down (Application-First) strategy: Web and PublicApi applications upgraded with their library dependencies inline, followed by full solution validation.
+
+**Progress**: 1/4 tasks complete <progress value="25" max="100"></progress> 25%
+
+## Tasks
+
+- ✅ 01-prerequisites: Verify .NET 10 SDK and update global.json ([Content](tasks/01-prerequisites/task.md), [Progress](tasks/01-prerequisites/progress-details.md))
+- 🔲 02-upgrade-web: Upgrade Web application and its library dependencies
+- 🔲 03-upgrade-publicapi: Upgrade PublicApi and fix binary-incompatible APIs
+- 🔲 04-final-validation: Full solution build and test suite
