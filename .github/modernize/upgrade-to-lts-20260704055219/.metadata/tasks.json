@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0 (latest LTS)",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0 (latest LTS)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current Long-Term Support release, offering improved performance, new language features, and extended support. Upgrading from .NET 8.0 keeps the solution aligned with the latest supported platform and ensures access to the newest ASP.NET Core, Entity Framework Core, and Blazor capabilities.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution (ApplicationCore, Infrastructure, Web, PublicApi, BlazorAdmin, BlazorShared, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests) from net8.0 to net10.0. The TargetFramework is centrally managed in Directory.Packages.props, so that file must be updated. All NuGet packages with version variables tied to AspNetVersion, EntityFrameworkCoreVersion, SystemExtensionVersion, and VSCodeGeneratorVersion should be updated to their .NET 10-compatible releases. Any breaking API changes between .NET 8 and .NET 10 must be resolved to ensure the solution builds and all tests pass.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Upgraded all projects from .NET 8.0 to .NET 10.0. Updated TargetFramework, all NuGet packages (AspNetCore, EF Core, System.Extensions, etc.), resolved breaking API changes in source code and Razor views. All 74 tests pass (UnitTests: 44, IntegrationTests: 3, FunctionalTests: 12, PublicApiIntegrationTests: 15).",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-04T05:52:21.000Z",
+    "version": "1.0"
+  }
+}
