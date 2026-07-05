@@ -9,5 +9,5 @@ Upgrading eShopOnWeb from net8.0 to net10.0 LTS using the All-at-Once strategy. 
 ## Tasks
 
 - ✅ 01-prerequisites: Verify SDK and toolchain for net10.0 ([Content](tasks/01-prerequisites/task.md), [Progress](tasks/01-prerequisites/progress-details.md))
-- 🔲 02-upgrade-all: Upgrade all projects to net10.0
+- 🔄 02-upgrade-all: Upgrade all projects to net10.0 ([Content](tasks/02-upgrade-all/task.md))
 - 🔲 03-validation: Final build and test suite validation
