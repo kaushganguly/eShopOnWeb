@@ -13,7 +13,7 @@ public static class ConfigureWebServices
         services.AddScoped<IBasketViewModelService, BasketViewModelService>();
         services.AddScoped<CatalogViewModelService>();
         services.AddScoped<ICatalogItemViewModelService, CatalogItemViewModelService>();
-        services.Configure<CatalogSettings>(configuration);
+        services.Configure<CatalogSettings>(configuration.GetSection(nameof(CatalogSettings)));
         services.AddScoped<ICatalogViewModelService, CachedCatalogViewModelService>();
 
         return services;

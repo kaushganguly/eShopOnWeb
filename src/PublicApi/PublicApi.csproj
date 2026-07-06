@@ -25,8 +25,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <!-- Explicit version override: force NuGet.Packaging/Protocol past GHSA-g4vj-cjjj-v7hg (6.12.1 vulnerability) -->
+    <PackageReference Include="NuGet.Packaging">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Protocol">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
 
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
   </ItemGroup>

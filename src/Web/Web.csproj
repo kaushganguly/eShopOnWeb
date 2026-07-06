@@ -23,7 +23,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
-    <PackageReference Include="Microsoft.Web.LibraryManager.Build" />
+    <!-- Explicit version override: force NuGet.Packaging/Protocol past GHSA-g4vj-cjjj-v7hg (6.12.1 vulnerability) -->
+    <PackageReference Include="NuGet.Packaging">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Protocol">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" />
