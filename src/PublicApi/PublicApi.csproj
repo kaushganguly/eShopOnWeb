@@ -6,28 +6,33 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
     <Nullable>enable</Nullable>
+    <!-- Override Directory.Build.props default to target net10.0 directly -->
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" />
+    <!-- AutoMapper.Extensions.Microsoft.DependencyInjection: deprecated (NuGet.0005), deferred per upgrade strategy -->
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <PackageReference Include="MinimalApi.Endpoint" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" >
+    <!-- net10.0 versions via VersionOverride (AspNetVersion in Directory.Packages.props stays at 8.0.2 for Web) -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" VersionOverride="10.0.9" />
+    <!-- net10.0 EF Core versions via VersionOverride (EntityFramworkCoreVersion in Directory.Packages.props stays at 8.0.2 for Web) -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" VersionOverride="10.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
-
+    <!-- Microsoft.VisualStudio.Azure.Containers.Tools.Targets: incompatible with net10.0 (NuGet.0001), removed per defer strategy -->
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" VersionOverride="10.0.2" />
+    <!-- System.IdentityModel.Tokens.Jwt: deprecated (NuGet.0005), deferred per upgrade strategy -->
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
   </ItemGroup>
 
