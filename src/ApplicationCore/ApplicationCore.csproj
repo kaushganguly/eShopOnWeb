@@ -3,18 +3,14 @@
 	<PropertyGroup>	
 		<RootNamespace>Microsoft.eShopWeb.ApplicationCore</RootNamespace>
 		<Nullable>enable</Nullable>
-		<!-- Clear the default set in Directory.Build.props so TargetFrameworks enables multi-targeting.
-		     net8.0 for downstream net8.0 consumers (Web); net10.0 as the upgrade target. -->
-		<TargetFramework />
-		<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+		<TargetFramework>net10.0</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Ardalis.GuardClauses" />
 		<PackageReference Include="Ardalis.Result" />
 		<PackageReference Include="Ardalis.Specification" />
-		<!-- System.Security.Claims removed: functionality included with framework reference (NuGet.0003) -->
-		<PackageReference Include="System.Text.Json" />
+		<!-- System.Text.Json removed: bundled with net10.0 framework (NU1510) -->
 	</ItemGroup>
 
 	<ItemGroup>

@@ -16,13 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- net10.0 version (AspNetVersion in Directory.Packages.props stays at 8.0.2 for Web) -->
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" VersionOverride="10.0.9" />
+    <!-- Versions resolved centrally from Directory.Packages.props (AspNetVersion/EntityFramworkCoreVersion=10.0.9) -->
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
-    <!-- net10.0 EF Core version -->
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" VersionOverride="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 

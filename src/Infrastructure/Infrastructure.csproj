@@ -3,30 +3,19 @@
 	<PropertyGroup>		
 		<RootNamespace>Microsoft.eShopWeb.Infrastructure</RootNamespace>
 		<Nullable>enable</Nullable>
-		<!-- Clear the default set in Directory.Build.props so TargetFrameworks enables multi-targeting.
-		     net8.0 for downstream net8.0 consumers (Web); net10.0 as the upgrade target. -->
-		<TargetFramework />
-		<TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+		<TargetFramework>net10.0</TargetFramework>
 	</PropertyGroup>
 
-	<!-- net8.0 slice: use 8.x package versions -->
-	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" VersionOverride="8.0.2" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" VersionOverride="8.0.2" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" VersionOverride="8.0.2" />
+	<!-- net10.0 packages — versions resolved centrally via AspNetVersion/EntityFramworkCoreVersion=10.0.9 -->
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
 	</ItemGroup>
 
-	<!-- net10.0 slice: upgraded package versions (VersionOverride uses 10.0.9) -->
-	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" VersionOverride="10.0.9" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" VersionOverride="10.0.9" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" VersionOverride="10.0.9" />
-	</ItemGroup>
-
-	<!-- Packages compatible with both net8.0 and net10.0 -->
 	<ItemGroup>
 		<PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
-		<!-- System.IdentityModel.Tokens.Jwt 7.3.1: deprecated (NuGet.0005), deferred per upgrade strategy -->
+		<!-- System.IdentityModel.Tokens.Jwt: deprecated (NuGet.0005), deferred per upgrade strategy -->
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" />
 	</ItemGroup>
 	<ItemGroup>

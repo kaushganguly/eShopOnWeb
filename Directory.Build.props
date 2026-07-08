@@ -1,10 +1,8 @@
 <Project>
   <PropertyGroup>
-    <!-- Default target framework for all projects. Override in individual project files for the
-         Top-Down upgrade (BlazorAdmin → net10.0, BlazorShared → net8.0;net10.0, others → net8.0).
+    <!-- Default target framework for all projects. All projects now target net10.0 after the upgrade.
          Using Directory.Build.props (not Directory.Packages.props) so project-level TargetFramework
-         and TargetFrameworks properties are NOT treated as global MSBuild properties and can be
-         overridden freely per project. -->
-    <TargetFramework>net8.0</TargetFramework>
+         overrides are not treated as global MSBuild properties. -->
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 </Project>

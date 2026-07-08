@@ -3,13 +3,13 @@
   <PropertyGroup>  
     <RootNamespace>Microsoft.eShopWeb.IntegrationTests</RootNamespace>
     <IsPackable>false</IsPackable>
-    <!-- Override Directory.Build.props default to target net10.0 (follows UnitTests and Infrastructure) -->
+    <!-- TargetFramework matches Directory.Build.props default (net10.0) — explicit for clarity -->
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- net10.0 EF Core version via VersionOverride (EntityFramworkCoreVersion stays at 8.0.2 for shared projects) -->
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" VersionOverride="10.0.9" />
+    <!-- EF Core version resolved centrally from Directory.Packages.props (EntityFramworkCoreVersion=10.0.9) -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />
     <PackageReference Include="NSubstitute.Analyzers.CSharp">
