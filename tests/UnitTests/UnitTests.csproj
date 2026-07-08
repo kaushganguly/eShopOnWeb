@@ -6,6 +6,8 @@
     <IsPackable>false</IsPackable>
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Override Directory.Build.props default to target net10.0 (follows Web which is now net10.0) -->
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,9 +17,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <!-- xunit: deprecated (NuGet.0005), deferred per upgrade strategy -->
     <PackageReference Include="xunit" />
-    <PackageReference Include="xunit.runner.visualstudio" />      
-    <PackageReference Include="xunit.runner.console" />     
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <!-- xunit.runner.console: deprecated (NuGet.0005), deferred per upgrade strategy -->
+    <PackageReference Include="xunit.runner.console" />
   </ItemGroup>
 
   <ItemGroup>
