@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -54,11 +55,11 @@ public class HttpService
         var result = await _httpClient.PostAsync($"{_apiUrl}{uri}", content);
         if (!result.IsSuccessStatusCode)
         {
-            var exception = JsonSerializer.Deserialize<ErrorDetails>(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions
+            var exception = await result.Content.ReadFromJsonAsync<ErrorDetails>(new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
-            _toastService.ShowToast($"Error : {exception.Message}", ToastLevel.Error);
+            _toastService.ShowToast($"Error : {exception?.Message}", ToastLevel.Error);
 
             return null;
         }
@@ -88,9 +89,9 @@ public class HttpService
 
     private async Task<T> FromHttpResponseMessage<T>(HttpResponseMessage result)
     {
-        return JsonSerializer.Deserialize<T>(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions
+        return (await result.Content.ReadFromJsonAsync<T>(new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
-        });
+        }))!;
     }
 }

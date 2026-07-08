@@ -3,6 +3,11 @@
   <PropertyGroup>  
     <RootNamespace>BlazorShared</RootNamespace>
     <AssemblyName>BlazorShared</AssemblyName>
+    <!-- Clear the default set in Directory.Build.props so TargetFrameworks enables multi-targeting.
+         net8.0 for downstream net8.0 consumers (ApplicationCore, Web, BlazorAdmin-net8.0);
+         net10.0 as the upgrade target so the BlazorAdmin net10.0 slice gets a matching framework build. -->
+    <TargetFramework />
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>

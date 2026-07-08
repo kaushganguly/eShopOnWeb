@@ -1,9 +1,10 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <TargetFramework>net8.0</TargetFramework>
     <!-- AspNetVersion stays at 8.0.2: Microsoft.AspNetCore.* 10.0.9 requires net10.0; update per-app during TFM tasks -->
     <AspNetVersion>8.0.2</AspNetVersion>
+    <!-- BlazorWasmVersion: WASM client-only packages used exclusively by BlazorAdmin (net10.0). Web uses WebAssembly.Server which stays at AspNetVersion. -->
+    <BlazorWasmVersion>10.0.9</BlazorWasmVersion>
     <!-- SystemExtensionVersion updated to 10.0.9: System.Net.Http.Json and Microsoft.Extensions.Logging.Configuration are multi-targeted and support net8.0+ -->
     <SystemExtensionVersion>10.0.9</SystemExtensionVersion>
     <!-- EntityFramworkCoreVersion stays at 8.0.2: Microsoft.EntityFrameworkCore.* 10.0.9 requires net10.0; update per-app during TFM tasks -->
@@ -26,17 +27,17 @@
     <PackageVersion Include="BuildBundlerMinifier" Version="3.2.449" PrivateAssets="All" />
     <PackageVersion Include="FluentValidation" Version="11.9.0" />
     <PackageVersion Include="MediatR" Version="12.0.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.Authorization" Version="$(AspNetVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(AspNetVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="$(AspNetVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(AspNetVersion)" PrivateAssets="all" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.Authorization" Version="$(BlazorWasmVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(BlazorWasmVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="$(BlazorWasmVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(BlazorWasmVersion)" PrivateAssets="all" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="$(AspNetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="$(AspNetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(AspNetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="$(AspNetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="$(AspNetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="$(AspNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Identity.Core" Version="$(BlazorWasmVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Logging.Configuration" Version="$(SystemExtensionVersion)" />
     <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="$(VSCodeGeneratorVersion)" />
     <PackageVersion Include="Microsoft.Web.LibraryManager.Build" Version="2.1.175" />
