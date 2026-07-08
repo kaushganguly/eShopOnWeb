@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8 (net8.0) to .NET 10 (net10.0)",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8 (net8.0) to .NET 10 (net10.0)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10 is the current latest LTS release. Upgrading from .NET 8 to .NET 10 ensures continued long-term support, access to the latest platform features, performance improvements, security patches, and alignment with Microsoft's current LTS release.",
+      "requirements": "Upgrade the entire eShopOnWeb solution from net8.0 to net10.0. The target framework is defined centrally in Directory.Build.props and applies to all 10 projects (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, IntegrationTests, FunctionalTests, PublicApiIntegrationTests, UnitTests). The upgrade includes updating the TargetFramework in Directory.Build.props, updating the .NET SDK version in global.json, updating all .NET version-coupled NuGet package versions (Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, System.* and others in Directory.Build.props), and resolving any API breaking changes between .NET 8 and .NET 10 across all projects.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded eShopOnWeb solution from .NET 8 to .NET 10. Updated global.json SDK to 10.0.100, updated all NuGet packages to .NET 10 compatible versions (AspNetVersion=10.0.9, EntityFrameworkCoreVersion=10.0.9), resolved API breaking changes (SYSLIB0051 serialization constructor, TimeSpan.FromMinutes overload ambiguity, HttpService WASM behavioral changes), consolidated target framework to net10.0 across all projects. Build: 0 errors. Tests: 74/74 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-08T05:28:10.905Z",
+    "version": "1.0"
+  }
+}
