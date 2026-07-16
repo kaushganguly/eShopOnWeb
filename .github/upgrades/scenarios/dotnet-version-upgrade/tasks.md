@@ -8,4 +8,4 @@
 - ✅ 02-foundation-libs: Upgrade BlazorShared, ApplicationCore, BlazorAdmin, Infrastructure ([Content](tasks/02-foundation-libs/task.md), [Progress](tasks/02-foundation-libs/progress-details.md))
 - ✅ 03-applications: Upgrade PublicApi and Web applications ([Content](tasks/03-applications/task.md), [Progress](tasks/03-applications/progress-details.md))
 - ✅ 04-tests: Upgrade all test projects ([Content](tasks/04-tests/task.md), [Progress](tasks/04-tests/progress-details.md))
-🔲 05-final-validation: Full solution build and test validation
+- ✅ 05-final-validation: Full solution build and test validation ([Content](tasks/05-final-validation/task.md), [Progress](tasks/05-final-validation/progress-details.md))
