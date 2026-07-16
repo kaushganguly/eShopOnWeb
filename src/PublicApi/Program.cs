@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BlazorShared;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,12 +21,22 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MinimalApi.Endpoint;
 using MinimalApi.Endpoint.Configurations.Extensions;
 using MinimalApi.Endpoint.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpoints();
+// Register endpoint types from this assembly only. MinimalApi.Endpoint's own
+// AddEndpoints() scans every assembly loaded in the AppDomain, which can throw a
+// ReflectionTypeLoadException when unrelated Blazor WebAssembly assemblies (e.g.
+// Microsoft.JSInterop.WebAssembly) happen to be loaded into the same process, such
+// as during test discovery in PublicApiIntegrationTests.
+foreach (var endpointType in typeof(Program).Assembly.GetTypes()
+    .Where(t => !t.IsInterface && !t.IsAbstract && typeof(IEndpoint).IsAssignableFrom(t)))
+{
+    builder.Services.AddScoped(typeof(IEndpoint), endpointType);
+}
 
 // Use to force loading of appsettings.json of test project
 builder.Configuration.AddConfigurationFile("appsettings.test.json");
@@ -82,7 +93,10 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
+// AutoMapper 13+ removed the assembly-only overload; the empty delegate is required
+// because all profiles are discovered from the given assembly and no additional
+// configuration is needed here.
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
 builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddEndpointsApiExplorer();

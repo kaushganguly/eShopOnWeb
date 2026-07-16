@@ -200,3 +200,7 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Explicitly internal to avoid ambiguity with PublicApi's public partial Program
+// when both assemblies are referenced together (e.g. PublicApiIntegrationTests).
+internal partial class Program { }
