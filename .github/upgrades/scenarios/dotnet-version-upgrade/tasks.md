@@ -9,7 +9,7 @@ This upgrade moves the 10-project eShopOnWeb solution from net8.0 to net10.0 usi
 ## Tasks
 
 - ✅ 01-prerequisites-and-central-package-baseline: Prepare SDK and central package versions ([Content](tasks/01-prerequisites-and-central-package-baseline/task.md), [Progress](tasks/01-prerequisites-and-central-package-baseline/progress-details.md))
-- 🔲 02-upgrade-web-stack: Upgrade Web and its shared backend path
+- 🔄 02-upgrade-web-stack: Upgrade Web and its shared backend path ([Content](tasks/02-upgrade-web-stack/task.md))
 - 🔲 03-upgrade-publicapi-stack: Upgrade PublicApi and its integration coverage
 - 🔲 04-upgrade-blazoradmin-stack: Upgrade BlazorAdmin and finalize client package alignment
 - 🔲 05-consolidate-remaining-libraries-and-dependent-tests: Finish shared-library cleanup after all apps move
