@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from net8.0 to net10.0 for eShopOnWeb",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8 to .NET 10 (latest LTS)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. The project currently targets net8.0 (SDK 8.0.x). .NET 10 is the current latest LTS release, offering long-term support through 2027, improved performance, and the latest platform features.",
+      "requirements": "Upgrade the entire eShopOnWeb solution from net8.0 to net10.0. This includes updating the TargetFramework in Directory.Packages.props, updating the SDK version in global.json, and updating all .NET platform NuGet packages (ASP.NET Core, Entity Framework Core, Identity, etc.) to their net10.0-compatible versions. Address any breaking changes or deprecated APIs between .NET 8 and .NET 10. All 10 projects (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests) must build and tests must pass after the upgrade.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded all 10 projects from net8.0 to net10.0. Updated global.json to SDK 10.0.302, Directory.Packages.props to net10.0 TFM, upgraded all ASP.NET Core/EF Core packages to 10.0.10, fixed breaking changes (serialization constructor removal, AutoMapper 16.x API, BlazorInputFile removal, type ambiguity in tests). Build: 0 errors. Unit Tests: 44/44 passed. Integration Tests: 3/3 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-16T02:32:49.000Z",
+    "version": "1.0"
+  }
+}
