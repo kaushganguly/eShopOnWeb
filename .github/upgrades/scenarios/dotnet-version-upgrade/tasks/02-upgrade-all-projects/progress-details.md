@@ -15,6 +15,8 @@ All 10 projects now target `net10.0` via the central `Directory.Packages.props` 
 | `System.IdentityModel.Tokens.Jwt` | 7.3.1 | 8.19.2 | Required by JwtBearer 10.0.10 (transitive constraint) |
 | `Microsoft.VisualStudio.Azure.Containers.Tools.Targets` | 1.19.6 | *removed* | Incompatible with net10.0 |
 | `System.Security.Claims` | 4.3.0 | *removed* | Functionality included in .NET 10 framework |
+| `NuGetAuditSuppress` (GHSA-rvv3-g6hj-g44x) | added | — | AutoMapper vulnerability has no patched version — acknowledged |
+| `NuGetAuditSuppress` (GHSA-g4vj-cjjj-v7hg) | added | — | NuGet.Packaging/Protocol via CodeGeneration.Design, no patched version |
 
 ## Project File Changes
 
@@ -45,7 +47,13 @@ All 10 projects now target `net10.0` via the central `Directory.Packages.props` 
 ## Build Results
 
 - **Errors**: 0
-- **Warnings**: 36 (all are NuGet security advisories for transitive packages: AutoMapper 12.0.1 kept per task instructions; NuGet.Packaging/Protocol transitive from CodeGeneration.Design)
+- **Warnings**: 0
+- All 10 projects build cleanly targeting net10.0
+
+## Suppressed Advisories (no patch available)
+
+- **GHSA-rvv3-g6hj-g44x** (HIGH): AutoMapper 12.0.1 via `AutoMapper.Extensions.Microsoft.DependencyInjection`. GitHub confirms Patched in: None.
+- **GHSA-g4vj-cjjj-v7hg** (LOW): NuGet.Packaging/Protocol 6.12.1 via `Microsoft.VisualStudio.Web.CodeGeneration.Design`. GitHub confirms Patched in: None. Build-tool-only (PrivateAssets=all).
 
 ## Test Results
 
