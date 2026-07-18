@@ -138,7 +138,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-var catalogBaseUrl = builder.Configuration.GetValue(typeof(string), "CatalogBaseUrl") as string;
+var catalogBaseUrl = builder.Configuration.GetValue<string>("CatalogBaseUrl");
 if (!string.IsNullOrEmpty(catalogBaseUrl))
 {
     app.Use((context, next) =>
