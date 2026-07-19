@@ -9,6 +9,6 @@ Upgrading eShopOnWeb (10 projects) from net8.0 to net10.0 using the All-at-Once 
 ## Tasks
 
 - ✅ 01-prerequisites: Verify SDK and update global.json ([Content](tasks/01-prerequisites/task.md), [Progress](tasks/01-prerequisites/progress-details.md))
-- 🔲 02-upgrade-tfm-and-packages: Update TFM and NuGet packages in Directory.Packages.props
+- 🔄 02-upgrade-tfm-and-packages: Update TFM and NuGet packages in Directory.Packages.props ([Content](tasks/02-upgrade-tfm-and-packages/task.md))
 - 🔲 03-fix-api-breaks: Resolve breaking API changes in source code
 - 🔲 04-final-validation: Run full test suite
