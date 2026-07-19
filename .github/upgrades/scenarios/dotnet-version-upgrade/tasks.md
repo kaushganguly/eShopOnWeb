@@ -4,11 +4,11 @@
 
 Upgrading eShopOnWeb (10 projects) from net8.0 to net10.0 using the All-at-Once strategy. Centralized package management via Directory.Packages.props means TFM and package updates apply to all projects in a single file change, followed by inline API break fixes and full test validation.
 
-**Progress**: 3/4 tasks complete <progress value="75" max="100"></progress> 75%
+**Progress**: 4/4 tasks complete <progress value="100" max="100"></progress> 100%
 
 ## Tasks
 
 - ✅ 01-prerequisites: Verify SDK and update global.json ([Content](tasks/01-prerequisites/task.md), [Progress](tasks/01-prerequisites/progress-details.md))
 - ✅ 02-upgrade-tfm-and-packages: Update TFM and NuGet packages in Directory.Packages.props ([Content](tasks/02-upgrade-tfm-and-packages/task.md), [Progress](tasks/02-upgrade-tfm-and-packages/progress-details.md))
 - ✅ 03-fix-api-breaks: Resolve breaking API changes in source code ([Content](tasks/03-fix-api-breaks/task.md), [Progress](tasks/03-fix-api-breaks/progress-details.md))
-- 🔲 04-final-validation: Run full test suite
+- ✅ 04-final-validation: Run full test suite ([Content](tasks/04-final-validation/task.md), [Progress](tasks/04-final-validation/progress-details.md))
