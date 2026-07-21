@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from net8.0 to net10.0",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb solution from .NET 8.0 to .NET 10.0 LTS",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current latest LTS release, providing long-term support through November 2028, improved performance, and access to modern runtime features and APIs not available in .NET 8.0.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, FunctionalTests, IntegrationTests, PublicApiIntegrationTests, UnitTests) from net8.0 to net10.0. Update the TargetFramework in Directory.Packages.props, update global.json to target the .NET 10 SDK, update all NuGet package references to versions compatible with net10.0 (including ASP.NET Core 10, Entity Framework Core 10, Azure SDK packages), and resolve any breaking changes or deprecated APIs introduced between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded all 10 projects in the eShopOnWeb solution from net8.0 to net10.0. Updated TargetFramework in Directory.Packages.props, updated global.json to target .NET 10 SDK, updated all NuGet packages to net10.0-compatible versions (ASP.NET Core 10, EF Core 10, Azure.Identity 1.21.0, AutoMapper 16.2.0, etc.), fixed breaking changes (AutoMapper 16 API, BinaryFormatter serialization ctor, ambiguous Program type, xUnit2013 assertions). Build passes with 0 errors and all 74 unit tests pass.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-21T05:27:32.000Z",
+    "version": "1.0"
+  }
+}
