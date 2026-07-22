@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from net8.0 to net10.0 for eShopOnWeb",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8 (net8.0) to .NET 10 (net10.0)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. The current project targets .NET 8 (net8.0), while .NET 10 is the current latest Long-Term Support release. Upgrading ensures access to the latest platform improvements, security patches, performance enhancements, and extended support lifecycle.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution from net8.0 to net10.0. This includes: updating the TargetFramework in Directory.Packages.props from net8.0 to net10.0; updating global.json SDK version from 8.0.x to 10.0.x; updating all Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Microsoft.Extensions.*, and other platform NuGet packages to versions compatible with .NET 10; resolving any breaking API changes introduced between .NET 8 and .NET 10; and ensuring all 10 projects (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests) build and their tests pass successfully under .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "All 10 projects upgraded from net8.0 to net10.0. global.json updated to SDK 10.0.302. All NuGet packages updated to .NET 10 compatible versions. Breaking API changes resolved (SYSLIB0051, AutoMapper 16.x API, TimeSpan, nullable refs, xUnit assertions). Build: 0 errors/warnings. Tests: 74/74 passed (UnitTests 44, IntegrationTests 3, FunctionalTests 12, PublicApiIntegrationTests 15).",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-22T05:26:20.000Z",
+    "version": "1.0"
+  }
+}
