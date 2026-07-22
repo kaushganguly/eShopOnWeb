@@ -4,7 +4,7 @@
 
 Upgrade all 10 SDK-style eShopOnWeb projects from net8.0 to net10.0 using a top-down, application-first plan. The work starts with the lowest-dependency application slice, then upgrades the API and storefront surfaces with their supporting libraries and tests before whole-solution validation.
 
-**Progress**: 4/5 tasks complete <progress value="80" max="100"></progress> 80%
+**Progress**: 5/5 tasks complete <progress value="100" max="100"></progress> 100%
 
 ## Tasks
 
@@ -12,4 +12,4 @@ Upgrade all 10 SDK-style eShopOnWeb projects from net8.0 to net10.0 using a top-
 - ✅ 02-blazor-admin-stack: Upgrade the Blazor admin application and shared UI contracts ([Content](tasks/02-blazor-admin-stack/task.md), [Progress](tasks/02-blazor-admin-stack/progress-details.md))
 - ✅ 03-public-api-stack: Upgrade the API service with its domain and infrastructure dependencies ([Content](tasks/03-public-api-stack/task.md), [Progress](tasks/03-public-api-stack/progress-details.md))
 - ✅ 04-web-storefront-stack: Upgrade the storefront application and its downstream test suites ([Content](tasks/04-web-storefront-stack/task.md), [Progress](tasks/04-web-storefront-stack/progress-details.md))
-- 🔲 05-solution-validation: Validate the full net10 solution and close remaining upgrade gaps
+- ✅ 05-solution-validation: Validate the full net10 solution and close remaining upgrade gaps ([Content](tasks/05-solution-validation/task.md), [Progress](tasks/05-solution-validation/progress-details.md))
