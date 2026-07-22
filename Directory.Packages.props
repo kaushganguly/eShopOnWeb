@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <TargetFramework>net8.0</TargetFramework>
-    <AspNetVersion>8.0.2</AspNetVersion>
-    <SystemExtensionVersion>8.0.0</SystemExtensionVersion>
-    <EntityFramworkCoreVersion>8.0.2</EntityFramworkCoreVersion>
-    <VSCodeGeneratorVersion>8.0.0</VSCodeGeneratorVersion>
+    <TargetFramework>net10.0</TargetFramework>
+    <AspNetVersion>10.0.10</AspNetVersion>
+    <SystemExtensionVersion>10.0.10</SystemExtensionVersion>
+    <EntityFramworkCoreVersion>10.0.10</EntityFramworkCoreVersion>
+    <VSCodeGeneratorVersion>10.0.2</VSCodeGeneratorVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Ardalis.ApiEndpoints" Version="4.1.0" />
@@ -49,7 +49,7 @@
     <PackageVersion Include="NSubstitute" Version="5.1.0" />
     <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
     <PackageVersion Include="System.Net.Http.Json" Version="10.0.10" />
-    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="9.0.18" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.10" />
     <PackageVersion Include="System.Security.Claims" Version="4.3.0" />
     <PackageVersion Include="System.Text.Json" Version="9.0.0" />
     <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.20.0" />
@@ -60,13 +60,13 @@
     <PackageVersion Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
     <!-- Test -->
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(AspNetVersion)" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
-    <PackageVersion Include="xunit" Version="2.7.0" />
-    <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.6">
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageVersion>
-    <PackageVersion Include="xunit.runner.console" Version="2.7.0">
+    <PackageVersion Include="xunit.runner.console" Version="2.9.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageVersion>

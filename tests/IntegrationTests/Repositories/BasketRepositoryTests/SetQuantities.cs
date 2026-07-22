@@ -29,12 +29,12 @@ public class SetQuantities
     public async Task RemoveEmptyQuantities()
     {
         var basket = BasketBuilder.WithOneBasketItem();
-        var basketService = new BasketService(_basketRepository, null);
+        var basketService = new BasketService(_basketRepository, null!);
         await _basketRepository.AddAsync(basket);
         _catalogContext.SaveChanges();
 
         await basketService.SetQuantities(BasketBuilder.BasketId, new Dictionary<string, int>() { { BasketBuilder.BasketId.ToString(), 0 } });
 
-        Assert.Equal(0, basket.Items.Count);
+        Assert.Empty(basket.Items);
     }
 }
