@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="AutoMapper" />
     <PackageReference Include="MinimalApi.Endpoint" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
@@ -27,6 +27,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <!-- Override NuGet.Protocol/Packaging transitive from Microsoft.VisualStudio.Web.CodeGeneration.Design to use patched version -->
+    <PackageReference Include="NuGet.Protocol">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Packaging">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
 
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
   </ItemGroup>

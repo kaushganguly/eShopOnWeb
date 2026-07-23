@@ -12,5 +12,5 @@ Upgrade eShopOnWeb from net8.0 to net10.0 using an application-first plan. The w
 - ✅ 02-blazor-admin-client: Upgrade the Blazor admin client path ([Content](tasks/02-blazor-admin-client/task.md), [Progress](tasks/02-blazor-admin-client/progress-details.md))
 - ✅ 03-web-storefront: Upgrade the customer-facing web application ([Content](tasks/03-web-storefront/task.md), [Progress](tasks/03-web-storefront/progress-details.md))
 - ✅ 04-public-api-surface: Upgrade the public API host and API test path ([Content](tasks/04-public-api-surface/task.md), [Progress](tasks/04-public-api-surface/progress-details.md))
-- 🔲 05-deferred-package-cleanup: Resolve deferred package and shared cleanup work
+- 🔄 05-deferred-package-cleanup: Resolve deferred package and shared cleanup work ([Content](tasks/05-deferred-package-cleanup/task.md))
 - 🔲 06-solution-validation: Validate the full net10.0 solution
