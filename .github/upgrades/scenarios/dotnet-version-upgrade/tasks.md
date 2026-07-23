@@ -4,7 +4,7 @@
 
 Upgrade eShopOnWeb from net8.0 to net10.0 using an application-first plan. The work upgrades BlazorAdmin, Web, and PublicApi in order, keeps test updates with the application that triggers them, and finishes with deferred package cleanup plus full-solution validation.
 
-**Progress**: 5/6 tasks complete <progress value="83" max="100"></progress> 83%
+**Progress**: 6/6 tasks complete <progress value="100" max="100"></progress> 100%
 
 ## Tasks
 
@@ -13,4 +13,4 @@ Upgrade eShopOnWeb from net8.0 to net10.0 using an application-first plan. The w
 - ✅ 03-web-storefront: Upgrade the customer-facing web application ([Content](tasks/03-web-storefront/task.md), [Progress](tasks/03-web-storefront/progress-details.md))
 - ✅ 04-public-api-surface: Upgrade the public API host and API test path ([Content](tasks/04-public-api-surface/task.md), [Progress](tasks/04-public-api-surface/progress-details.md))
 - ✅ 05-deferred-package-cleanup: Resolve deferred package and shared cleanup work ([Content](tasks/05-deferred-package-cleanup/task.md), [Progress](tasks/05-deferred-package-cleanup/progress-details.md))
-- 🔲 06-solution-validation: Validate the full net10.0 solution
+- ✅ 06-solution-validation: Validate the full net10.0 solution ([Content](tasks/06-solution-validation/task.md), [Progress](tasks/06-solution-validation/progress-details.md))
