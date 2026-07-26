@@ -15,7 +15,8 @@
   <ItemGroup>
     <PackageReference Include="Ardalis.ListStartupServices" />
     <PackageReference Include="Ardalis.Specification" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <!-- AutoMapper 13.0.1: DI support built-in -->
+    <!-- AutoMapper removed: Web project does not use AutoMapper directly -->
     <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
     <PackageReference Include="Azure.Identity" />
     <PackageReference Include="MediatR" />
@@ -34,6 +35,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>     
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+    <!-- Override transitive NuGet.Packaging/Protocol 6.12.1 (GHSA-g4vj-cjjj-v7hg) to 6.13.2 (fixed) -->
+    <PackageReference Include="NuGet.Packaging">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Protocol">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\fonts\" />

@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.ApiEndpoints" />
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <!-- AutoMapper 13.0.1: DI support built-in (AddAutoMapper available without extensions package) -->
+    <PackageReference Include="AutoMapper" />
     <PackageReference Include="MinimalApi.Endpoint" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" />
@@ -27,6 +28,13 @@
     </PackageReference>
     <!-- Microsoft.VisualStudio.Azure.Containers.Tools.Targets removed: incompatible with net10.0 -->
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <!-- Override transitive NuGet.Packaging/Protocol 6.12.1 (GHSA-g4vj-cjjj-v7hg) to 6.13.2 (fixed) -->
+    <PackageReference Include="NuGet.Packaging">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Protocol">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
 
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
   </ItemGroup>

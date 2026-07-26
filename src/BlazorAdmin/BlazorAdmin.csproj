@@ -8,7 +8,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" />
 		<PackageReference Include="Microsoft.Extensions.Identity.Core" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" />
-		<PackageReference Include="System.Net.Http.Json" />
+		<!-- System.Net.Http.Json is bundled in net10.0 framework; no explicit reference needed -->
 	</ItemGroup>
 
 	<ItemGroup>
