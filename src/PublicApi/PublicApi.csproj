@@ -25,7 +25,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <!-- Microsoft.VisualStudio.Azure.Containers.Tools.Targets removed: incompatible with net10.0 -->
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
 
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
