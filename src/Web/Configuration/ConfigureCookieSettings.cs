@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,7 +23,7 @@ public static class ConfigureCookieSettings
         {
             options.EventsType = typeof(RevokeAuthenticationEvents);
             options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(ValidityMinutesPeriod);
+            options.ExpireTimeSpan = TimeSpan.FromMinutes((long)ValidityMinutesPeriod);
             options.LoginPath = "/Account/Login";
             options.LogoutPath = "/Account/Logout";
             options.Cookie = new CookieBuilder

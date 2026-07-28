@@ -1,0 +1,3411 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-07-28T05:24:06.2843357Z",
+  "analysisEndTime": "2026-07-28T05:24:10.8349814Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 10,
+      "issues": 9,
+      "incidents": 119,
+      "effort": 119
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 21,
+        "Optional": 14,
+        "Potential": 84,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 48,
+        "Project": 10,
+        "Api": 61
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "src/ApplicationCore/ApplicationCore.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 6,
+      "properties": {
+        "appName": "ApplicationCore",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 40,
+        "numberOfCodeFiles": 40,
+        "linesTotal": 792,
+        "linesOfCode": 792,
+        "totalApiScanned": 604,
+        "minLinesOfCodeToChange": 2,
+        "maxLinesOfCodeToChange": 2
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4e978d7b-9e57-4049-8016-082f72ddeac0",
+          "ruleId": "NuGet.0003",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Security.Claims, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Security.Claims, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/ApplicationCore.csproj",
+            "snippet": "System.Security.Claims, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Security.Claims, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Security.Claims 4.3.0",
+            "properties": {
+              "PackageId": "System.Security.Claims",
+              "PackageVersion": "4.3.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5ddd4218-697b-485a-a7c5-820cdf876cd0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.10",
+              "protected": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/ApplicationCore.csproj",
+            "snippet": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.10",
+            "protectedSnippet": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nRemove System.Text.Json, and replace with new package System.Text.Json 10.0.10",
+            "label": "System.Text.Json 8.0.3",
+            "properties": {
+              "PackageId": "System.Text.Json",
+              "PackageVersion": "8.0.3",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "c6d9d4bf-6e54-4aab-961f-497a41f41e07",
+          "ruleId": "NuGet.0004",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nSystem.Text.Json, 10.0.10",
+              "protected": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nSystem.Text.Json, 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/ApplicationCore.csproj",
+            "snippet": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nSystem.Text.Json, 10.0.10",
+            "protectedSnippet": "System.Text.Json, 8.0.3\n\nRecommendation:\n\nSystem.Text.Json, 10.0.10",
+            "label": "System.Text.Json 8.0.3",
+            "properties": {
+              "PackageId": "System.Text.Json",
+              "PackageVersion": "8.0.3",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "fd391418-a23a-40b7-9bdc-55910b624874",
+          "ruleId": "Project.0002",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/ApplicationCore.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "889d8114-d18c-49af-90aa-b1ef7e8231fb",
+          "ruleId": "Api.0002",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code. ",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": ": base(info, context)",
+              "protected": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/Exceptions/EmptyBasketOnCheckoutException.cs",
+            "snippet": ": base(info, context)",
+            "protectedSnippet": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "label": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": false
+              }
+            ],
+            "line": 11,
+            "column": 153
+          }
+        },
+        {
+          "incidentId": "86689f9f-7ca2-4684-9cfa-213306cbe1ef",
+          "ruleId": "Api.0002",
+          "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code. ",
+          "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": ": base(info, context)",
+              "protected": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)"
+            },
+            "kind": "File",
+            "path": "src/ApplicationCore/Exceptions/EmptyBasketOnCheckoutException.cs",
+            "snippet": ": base(info, context)",
+            "protectedSnippet": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "label": "M:System.Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0051",
+                "isCustom": false
+              }
+            ],
+            "line": 11,
+            "column": 153
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 11,
+      "properties": {
+        "appName": "BlazorAdmin",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 48,
+        "numberOfCodeFiles": 20,
+        "linesTotal": 3774,
+        "linesOfCode": 969,
+        "totalApiScanned": 539,
+        "minLinesOfCodeToChange": 3,
+        "maxLinesOfCodeToChange": 3
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "3f43f0cd-37e8-4d55-a312-f4c360917772",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.Authorization, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.Authorization, and replace with new package Microsoft.AspNetCore.Components.Authorization 10.0.10",
+              "protected": "Microsoft.AspNetCore.Components.Authorization, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.Authorization, and replace with new package Microsoft.AspNetCore.Components.Authorization 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.Authorization, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.Authorization, and replace with new package Microsoft.AspNetCore.Components.Authorization 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.Authorization, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.Authorization, and replace with new package Microsoft.AspNetCore.Components.Authorization 10.0.10",
+            "label": "Microsoft.AspNetCore.Components.Authorization 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.Authorization",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3c485227-c90e-476e-90b2-78eafd9fb5e0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly, and replace with new package Microsoft.AspNetCore.Components.WebAssembly 10.0.10",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly, and replace with new package Microsoft.AspNetCore.Components.WebAssembly 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly, and replace with new package Microsoft.AspNetCore.Components.WebAssembly 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly, and replace with new package Microsoft.AspNetCore.Components.WebAssembly 10.0.10",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7a7926c6-ea36-4e7f-b33a-d2cf0b62a0f6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.Authentication, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Authentication, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Authentication 10.0.10",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly.Authentication, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Authentication, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Authentication 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.Authentication, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Authentication, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Authentication 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly.Authentication, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Authentication, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Authentication 10.0.10",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly.Authentication 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "57e9ac5d-21db-440b-8f30-3dcc91aa8d7d",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.DevServer, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.10",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.DevServer, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.DevServer, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly.DevServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.DevServer, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.DevServer 10.0.10",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly.DevServer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly.DevServer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "76a8d663-500b-491d-b29d-b8bba0975c39",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Identity.Core, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Identity.Core, and replace with new package Microsoft.Extensions.Identity.Core 10.0.10",
+              "protected": "Microsoft.Extensions.Identity.Core, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Identity.Core, and replace with new package Microsoft.Extensions.Identity.Core 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.Extensions.Identity.Core, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Identity.Core, and replace with new package Microsoft.Extensions.Identity.Core 10.0.10",
+            "protectedSnippet": "Microsoft.Extensions.Identity.Core, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Identity.Core, and replace with new package Microsoft.Extensions.Identity.Core 10.0.10",
+            "label": "Microsoft.Extensions.Identity.Core 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Identity.Core",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9e1043c5-6cf1-43c8-b84d-edf0277dec52",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Configuration, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Configuration, and replace with new package Microsoft.Extensions.Logging.Configuration 10.0.10",
+              "protected": "Microsoft.Extensions.Logging.Configuration, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Configuration, and replace with new package Microsoft.Extensions.Logging.Configuration 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Configuration, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Configuration, and replace with new package Microsoft.Extensions.Logging.Configuration 10.0.10",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Configuration, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Configuration, and replace with new package Microsoft.Extensions.Logging.Configuration 10.0.10",
+            "label": "Microsoft.Extensions.Logging.Configuration 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Configuration",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "a6730877-8532-4c0e-9a9c-e1daa3274fe8",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Net.Http.Json, 8.0.0\n\nRecommendation:\n\nRemove System.Net.Http.Json, and replace with new package System.Net.Http.Json 10.0.10",
+              "protected": "System.Net.Http.Json, 8.0.0\n\nRecommendation:\n\nRemove System.Net.Http.Json, and replace with new package System.Net.Http.Json 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "System.Net.Http.Json, 8.0.0\n\nRecommendation:\n\nRemove System.Net.Http.Json, and replace with new package System.Net.Http.Json 10.0.10",
+            "protectedSnippet": "System.Net.Http.Json, 8.0.0\n\nRecommendation:\n\nRemove System.Net.Http.Json, and replace with new package System.Net.Http.Json 10.0.10",
+            "label": "System.Net.Http.Json 8.0.0",
+            "properties": {
+              "PackageId": "System.Net.Http.Json",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "a6498978-40bf-4a7b-8c79-100b62ca1442",
+          "ruleId": "Project.0002",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/BlazorAdmin.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "4c410282-bfae-4004-b43b-d1b328e52979",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return JsonSerializer.Deserialize\u003CT\u003E(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions\n        {\n            PropertyNameCaseInsensitive = true\n        });",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Services/HttpService.cs",
+            "snippet": "return JsonSerializer.Deserialize\u003CT\u003E(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions\n        {\n            PropertyNameCaseInsensitive = true\n        });",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 90,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "6d424eb9-8f4d-4a2d-9008-506f1fd719dd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var exception = JsonSerializer.Deserialize\u003CErrorDetails\u003E(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions\n            {\n                PropertyNameCaseInsensitive = true\n            });",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Services/HttpService.cs",
+            "snippet": "var exception = JsonSerializer.Deserialize\u003CErrorDetails\u003E(await result.Content.ReadAsStringAsync(), new JsonSerializerOptions\n            {\n                PropertyNameCaseInsensitive = true\n            });",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "827fec70-ada1-42fe-b20c-a4de11faf0ca",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src/BlazorShared/BlazorShared.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "BlazorShared",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 20,
+        "numberOfCodeFiles": 20,
+        "linesTotal": 290,
+        "linesOfCode": 290,
+        "totalApiScanned": 274,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "7fceaa2b-74ab-420d-89f6-12c8a54c5a51",
+          "ruleId": "Project.0002",
+          "projectPath": "src/BlazorShared/BlazorShared.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/BlazorShared/BlazorShared.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests/FunctionalTests/FunctionalTests.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 33,
+      "properties": {
+        "appName": "FunctionalTests",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 12,
+        "numberOfCodeFiles": 12,
+        "linesTotal": 633,
+        "linesOfCode": 633,
+        "totalApiScanned": 591,
+        "minLinesOfCodeToChange": 29,
+        "maxLinesOfCodeToChange": 29
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9e3f5255-f96f-4f7b-b796-9f881dec6db9",
+          "ruleId": "NuGet.0002",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+              "protected": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/FunctionalTests.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+            "label": "Microsoft.AspNetCore.Mvc.Testing 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Testing",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "65d58dd9-5169-4966-ac7f-79b9f26b44cd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/FunctionalTests.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3944596f-6b55-4f24-9d16-4aedc7df22ea",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/FunctionalTests.csproj",
+            "snippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.7.0",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.7.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "72f138cb-b055-4892-9f2e-004459e36ac4",
+          "ruleId": "Project.0002",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/FunctionalTests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "7428c350-20d3-4e4e-85d5-89497b877420",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/HomePageOnGet.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f6743436-d60d-4a95-a865-e535ad1bd888",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Contains(\u0022/basket/update\u0022, updateResponse!.RequestMessage!.RequestUri!.ToString()!);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "Assert.Contains(\u0022/basket/update\u0022, updateResponse!.RequestMessage!.RequestUri!.ToString()!);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 94,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "8c260476-adf5-4307-82d9-c4641b5e8a1c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 92,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "dc416791-3025-474b-909f-964c9bde2f4d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 79,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d4729cc5-07d7-4346-a4f4-2d8843667ecc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 65,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "b7ae4846-7a11-40f2-b42d-47cb2f957a12",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Contains(\u0022/basket/update\u0022, updateResponse!.RequestMessage!.RequestUri!.ToString()!);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "Assert.Contains(\u0022/basket/update\u0022, updateResponse!.RequestMessage!.RequestUri!.ToString()!);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d991ba7a-e5be-4768-8e05-5d99f3b6da6d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 52,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d8f256fe-ef6b-4888-aabd-56b7b95ef7bd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 39,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "4f658482-3cb4-429e-af66-66bce1a44c4a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs",
+            "snippet": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "25bd35a2-5cab-4e9a-ba9f-7165ab6418d0",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Contains(\u0022/Basket/Success\u0022, checkOutResponse.RequestMessage!.RequestUri!.ToString());",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "Assert.Contains(\u0022/Basket/Success\u0022, checkOutResponse.RequestMessage!.RequestUri!.ToString());",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 64,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "5748b30d-2d79-4f68-bc72-6d0a94cd8f94",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringCheckOutResponse = await checkOutResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "var stringCheckOutResponse = await checkOutResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 62,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "f4c485f5-d3bc-4535-9fbc-9c555d96c405",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var loginStringResponse = await loginPostResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "var loginStringResponse = await loginPostResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 51,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "b8c35365-b452-4e8c-b643-8c04c8a68510",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var longinKeyValues = new List\u003CKeyValuePair\u003Cstring, string\u003E\u003E\n        {\n            new KeyValuePair\u003Cstring, string\u003E(\u0022email\u0022, \u0022demouser@microsoft.com\u0022),\n            new KeyValuePair\u003Cstring, string\u003E(\u0022password\u0022, \u0022Pass@word1\u0022),\n            new KeyValuePair\u003Cstring, string\u003E(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(await loginResponse.Content.ReadAsStringAsync()))\n        };",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "var longinKeyValues = new List\u003CKeyValuePair\u003Cstring, string\u003E\u003E\n        {\n            new KeyValuePair\u003Cstring, string\u003E(\u0022email\u0022, \u0022demouser@microsoft.com\u0022),\n            new KeyValuePair\u003Cstring, string\u003E(\u0022password\u0022, \u0022Pass@word1\u0022),\n            new KeyValuePair\u003Cstring, string\u003E(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(await loginResponse.Content.ReadAsStringAsync()))\n        };",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c06f4ea0-30cd-4de6-9665-04bee717de9b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringPostResponse = await postResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "var stringPostResponse = await postResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 38,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "a696285d-c80b-4b1a-b222-1ef8a5a5f545",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "ae436cd6-feb2-40d0-ba4d-2597929f86c7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Contains(\u0022/Identity/Account/Login\u0022, postResponse2!.RequestMessage!.RequestUri!.ToString()!);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/BasketPageCheckout.cs",
+            "snippet": "Assert.Contains(\u0022/Identity/Account/Login\u0022, postResponse2!.RequestMessage!.RequestUri!.ToString()!);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "aa033be8-d4fe-4a6a-b12f-c41b67af475c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/BasketPageCheckout.cs",
+            "snippet": "var stringResponse = await postResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 40,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "dada2610-c324-480d-8ff6-a9c615934b96",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Pages/Basket/BasketPageCheckout.cs",
+            "snippet": "var stringResponse1 = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "9b2a6ae3-b6aa-4a0b-896f-c2f656ac3617",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var redirectLocation = response!.Headers.Location!.OriginalString;",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/OrderControllerIndex.cs",
+            "snippet": "var redirectLocation = response!.Headers.Location!.OriginalString;",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d74b7edd-043c-4050-b18f-8e9afe887862",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/CatalogControllerIndex.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "8408ccfa-1e31-46df-b9bf-9cfb522e6f21",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringProfileResponse2 = await profileResponse2.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringProfileResponse2 = await profileResponse2.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 108,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "e122f52c-3d4b-4cae-911d-f26685ab2de0",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringProfileResponse = await profileResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringProfileResponse = await profileResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 94,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "3c527811-402e-4dbf-9077-ec008c6c0510",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse1 = await getResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringResponse1 = await getResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 81,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "b7de167a-377c-46d4-b94c-90bebe8e03dc",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "45725085-5edf-44a2-b75c-9bc3aa34c59d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "dececba7-839c-4b53-8c81-3053f03b2b6c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+              "protected": "M:System.Uri.#ctor(System.String,System.UriKind)"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String,System.UriKind)",
+            "label": "M:System.Uri.#ctor(System.String,System.UriKind)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c8877b55-d798-47cd-821e-596a232da857",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse1 = await getResponse.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringResponse1 = await getResponse.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 60,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "6a5c0dec-b06f-4633-bac5-011e914cf713",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 49,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "ae539f16-68cc-486a-8f2c-d3685e54320d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src/Infrastructure/Infrastructure.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 5,
+      "properties": {
+        "appName": "Infrastructure",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 30,
+        "numberOfCodeFiles": 30,
+        "linesTotal": 2923,
+        "linesOfCode": 2923,
+        "totalApiScanned": 197,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "e3958702-1c7a-4acc-8beb-669ab6e59263",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Infrastructure.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "19143b7f-6807-4688-8433-79c7792d1938",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Infrastructure.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2b741dbe-7d66-499d-9b88-9dde977eea57",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Infrastructure.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6abbc3ba-4893-46c3-a67b-5357334da9e2",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+              "protected": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Infrastructure.csproj",
+            "snippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "protectedSnippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "label": "System.IdentityModel.Tokens.Jwt 7.3.1",
+            "properties": {
+              "PackageId": "System.IdentityModel.Tokens.Jwt",
+              "PackageVersion": "7.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "6f3878d4-4878-4803-8df0-094c7c767cbf",
+          "ruleId": "Project.0002",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Infrastructure.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests/IntegrationTests/IntegrationTests.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "IntegrationTests",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 147,
+        "linesOfCode": 147,
+        "totalApiScanned": 39,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "13112959-05f8-4ccd-8360-726c3c42dc76",
+          "ruleId": "NuGet.0002",
+          "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10"
+            },
+            "kind": "File",
+            "path": "tests/IntegrationTests/IntegrationTests.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "87fc71d6-4288-41f8-bd43-09229f891cbc",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests/IntegrationTests/IntegrationTests.csproj",
+            "snippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.7.0",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.7.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "33dbf7d1-90c4-4e34-829e-aa7ebfacb2c7",
+          "ruleId": "Project.0002",
+          "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests/IntegrationTests/IntegrationTests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src/PublicApi/PublicApi.csproj",
+      "startingProject": true,
+      "issues": 6,
+      "storyPoints": 17,
+      "properties": {
+        "appName": "PublicApi",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 38,
+        "numberOfCodeFiles": 35,
+        "linesTotal": 1120,
+        "linesOfCode": 1070,
+        "totalApiScanned": 903,
+        "minLinesOfCodeToChange": 5,
+        "maxLinesOfCodeToChange": 5
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "98df5b59-e98a-4436-b946-90c0bc33152e",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+              "protected": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+            "label": "Microsoft.AspNetCore.Authentication.JwtBearer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "551f94f7-64a3-427b-b4ec-ce6ee676cebd",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+              "protected": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+            "label": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3a842a95-1e00-4bf4-8305-6a4eac962d1b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "711372db-a5ce-4768-bf61-5177482022dc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+              "protected": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+            "label": "Microsoft.AspNetCore.Identity.UI 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "eccf0990-33d3-4ebc-9f97-5a9865d31555",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "df34c4a0-cc7f-41e8-8fe1-b716e03a50b6",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1119d60e-605c-4c92-b480-7fe1ec2c2a76",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "fc4c8a6f-e8e0-45cf-8b18-c8aded17a42b",
+          "ruleId": "NuGet.0001",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.19.6\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.19.6\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.19.6\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.19.6\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.19.6",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets",
+              "PackageVersion": "1.19.6",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "06d42a41-7a0f-44ec-9558-dcc682027941",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f35175f3-b14f-495b-bb72-08bf9737bcf5",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+              "protected": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "protectedSnippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "label": "AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1",
+            "properties": {
+              "PackageId": "AutoMapper.Extensions.Microsoft.DependencyInjection",
+              "PackageVersion": "12.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "76ec9ff6-264d-46d6-bb39-b9012f8cf465",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+              "protected": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "protectedSnippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "label": "System.IdentityModel.Tokens.Jwt 7.3.1",
+            "properties": {
+              "PackageId": "System.IdentityModel.Tokens.Jwt",
+              "PackageVersion": "7.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3a39cc51-90b1-446c-bbca-d382cc2f0ae3",
+          "ruleId": "Project.0002",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/PublicApi.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "e2a66208-a171-485e-a535-a58b0be4dcbd",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var baseUrlConfig = configSection.Get\u003CBaseUrlConfiguration\u003E();",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "var baseUrlConfig = configSection.Get\u003CBaseUrlConfiguration\u003E();",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 49,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "daf9ca0e-769d-4413-bf81-3cbf21a2fe96",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "54ca21d6-0bd5-40fe-9813-32002caffbfd",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var catalogSettings = builder.Configuration.Get\u003CCatalogSettings\u003E() ?? new CatalogSettings();",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "var catalogSettings = builder.Configuration.Get\u003CCatalogSettings\u003E() ?? new CatalogSettings();",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 42,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "8dde5fed-375a-43d4-9b6e-eaba5a7e88a7",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CCatalogSettings\u003E(builder.Configuration);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.Configure\u003CCatalogSettings\u003E(builder.Configuration);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "a35d63e4-404a-4db6-bd9b-afb023fce3b6",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Logging.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Logging.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 11,
+      "properties": {
+        "appName": "PublicApiIntegrationTests",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 8,
+        "numberOfCodeFiles": 7,
+        "linesTotal": 321,
+        "linesOfCode": 318,
+        "totalApiScanned": 218,
+        "minLinesOfCodeToChange": 7,
+        "maxLinesOfCodeToChange": 7
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "57f7bbf8-12fd-45d7-ba30-6745a4f316ab",
+          "ruleId": "NuGet.0002",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+              "protected": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+            "snippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Mvc.Testing, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Mvc.Testing, and replace with new package Microsoft.AspNetCore.Mvc.Testing 10.0.10",
+            "label": "Microsoft.AspNetCore.Mvc.Testing 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Mvc.Testing",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "07b97b5a-4c94-43fb-aa52-a217f4cb83da",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestAdapter, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.3.2",
+              "protected": "MSTest.TestAdapter, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.3.2"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+            "snippet": "MSTest.TestAdapter, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.3.2",
+            "protectedSnippet": "MSTest.TestAdapter, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.3.2",
+            "label": "MSTest.TestAdapter 3.2.2",
+            "properties": {
+              "PackageId": "MSTest.TestAdapter",
+              "PackageVersion": "3.2.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b8c998c4-846f-4161-b89d-4f318ad877c8",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestFramework, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.3.2",
+              "protected": "MSTest.TestFramework, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.3.2"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+            "snippet": "MSTest.TestFramework, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.3.2",
+            "protectedSnippet": "MSTest.TestFramework, 3.2.2\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.3.2",
+            "label": "MSTest.TestFramework 3.2.2",
+            "properties": {
+              "PackageId": "MSTest.TestFramework",
+              "PackageVersion": "3.2.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "3beefd9a-877c-4ac0-b954-1ec10d2de4b4",
+          "ruleId": "Project.0002",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "c0ea7214-4904-48c4-894b-b09d7d33720b",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/DeleteCatalogItemEndpointTest.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 20,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "aaafe326-0087-4eda-82c9-314e8c2ec183",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse2 = await response2.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/CatalogItemListPagedEndpoint.cs",
+            "snippet": "var stringResponse2 = await response2.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "6e0c6f8f-6224-47d7-b597-5552a857b393",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/CatalogItemListPagedEndpoint.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "bd8ec594-f4e2-47ae-9271-ec0a68de99a0",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/CatalogItemListPagedEndpoint.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "5a820cb5-ad98-4cb0-920d-b8e66a55c181",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/CatalogItemGetByIdEndpointTest.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 16,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "847cdb69-9419-44b9-9b31-815705358f2d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/CatalogItemEndpoints/CreateCatalogItemEndpointTest.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "302c8ebe-f195-4d71-a00a-7524af2ec5a9",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stringResponse = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/AuthEndpoints/AuthenticateEndpointTest.cs",
+            "snippet": "var stringResponse = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 28,
+            "column": 8
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "tests/UnitTests/UnitTests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "UnitTests",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 23,
+        "numberOfCodeFiles": 23,
+        "linesTotal": 933,
+        "linesOfCode": 933,
+        "totalApiScanned": 445,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "64f2e002-47c4-4063-b5ff-c9aeccf5e127",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/UnitTests/UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests/UnitTests/UnitTests.csproj",
+            "snippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.7.0",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.7.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f2846f56-ab94-4bc5-a5e5-eb6c37a2936d",
+          "ruleId": "NuGet.0005",
+          "projectPath": "tests/UnitTests/UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit.runner.console, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+              "protected": "xunit.runner.console, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3"
+            },
+            "kind": "File",
+            "path": "tests/UnitTests/UnitTests.csproj",
+            "snippet": "xunit.runner.console, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+            "protectedSnippet": "xunit.runner.console, 2.7.0\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit.runner.console, and replace with new package xunit.runner.console, 2.9.3",
+            "label": "xunit.runner.console 2.7.0",
+            "properties": {
+              "PackageId": "xunit.runner.console",
+              "PackageVersion": "2.7.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f00e6e6c-569e-45a8-b5d0-73e0bb410f07",
+          "ruleId": "Project.0002",
+          "projectPath": "tests/UnitTests/UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "tests/UnitTests/UnitTests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "src/Web/Web.csproj",
+      "startingProject": true,
+      "issues": 7,
+      "storyPoints": 29,
+      "properties": {
+        "appName": "Web",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 185,
+        "numberOfCodeFiles": 112,
+        "linesTotal": 30071,
+        "linesOfCode": 4084,
+        "totalApiScanned": 3143,
+        "minLinesOfCodeToChange": 15,
+        "maxLinesOfCodeToChange": 15
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9a05946c-0cc6-41a4-969a-2ca205a9640a",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Components.WebAssembly.Server, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Server, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Server 10.0.10",
+              "protected": "Microsoft.AspNetCore.Components.WebAssembly.Server, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Server, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Server 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.AspNetCore.Components.WebAssembly.Server, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Server, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Server 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Components.WebAssembly.Server, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Components.WebAssembly.Server, and replace with new package Microsoft.AspNetCore.Components.WebAssembly.Server 10.0.10",
+            "label": "Microsoft.AspNetCore.Components.WebAssembly.Server 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Components.WebAssembly.Server",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0b033b0c-50d7-48a9-8b26-097ad891cfd1",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d3f120e3-c095-4e73-ae77-8c5a49d4db7e",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+              "protected": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "protectedSnippet": "Microsoft.VisualStudio.Web.CodeGeneration.Design, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.VisualStudio.Web.CodeGeneration.Design, and replace with new package Microsoft.VisualStudio.Web.CodeGeneration.Design 10.0.2",
+            "label": "Microsoft.VisualStudio.Web.CodeGeneration.Design 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "44d1405b-67ee-44cd-8caf-def40a7f829c",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+              "protected": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 10.0.10",
+            "label": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1d2afc32-d154-48e2-9bb3-878fea6e8abe",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+              "protected": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.EntityFrameworkCore, and replace with new package Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.10",
+            "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2b9123be-8352-4163-b18f-acd1cb1560de",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+              "protected": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Identity.UI, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Identity.UI, and replace with new package Microsoft.AspNetCore.Identity.UI 10.0.10",
+            "label": "Microsoft.AspNetCore.Identity.UI 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9076403d-a6ca-4838-9535-b5423a573fb2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.SqlServer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.SqlServer, and replace with new package Microsoft.EntityFrameworkCore.SqlServer 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.SqlServer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.SqlServer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "68b70a27-2a17-4dc9-ad1a-a28022f8d388",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+              "protected": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.10",
+            "label": "Microsoft.AspNetCore.Authentication.JwtBearer 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0a35d885-a4ba-4bdd-8106-b09f3adc477b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.2\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.10",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.2",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "8.0.2",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ecfa963b-a06a-4fbc-827f-aa8a1cb65ffa",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+              "protected": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "protectedSnippet": "AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1\n\nRecommendation:\n\nThe functionality of this package is now included directly in AutoMapper.\nRemove AutoMapper.Extensions.Microsoft.DependencyInjection, and replace with new package AutoMapper.Extensions.Microsoft.DependencyInjection, 12.0.1",
+            "label": "AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1",
+            "properties": {
+              "PackageId": "AutoMapper.Extensions.Microsoft.DependencyInjection",
+              "PackageVersion": "12.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5541daea-d159-478b-add2-f7b9838f4b8f",
+          "ruleId": "NuGet.0004",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+              "protected": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nAzure.Identity, 1.21.0"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+            "protectedSnippet": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nAzure.Identity, 1.21.0",
+            "label": "Azure.Identity 1.10.4",
+            "properties": {
+              "PackageId": "Azure.Identity",
+              "PackageVersion": "1.10.4",
+              "PackageNewVersion": "1.21.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4044ec40-2c98-43ee-b685-1ffd49c9ad67",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+              "protected": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+            "protectedSnippet": "Azure.Identity, 1.10.4\n\nRecommendation:\n\nThis version has a vulnerability rated as MODERATE severity, which represents an additional attack surface in enterprise authentication systems and could potentially be chained with other vulnerabilities to create more significant security risks.\nRemove Azure.Identity, and replace with new package Azure.Identity, 1.21.0",
+            "label": "Azure.Identity 1.10.4",
+            "properties": {
+              "PackageId": "Azure.Identity",
+              "PackageVersion": "1.10.4",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b6668d95-93ec-4d62-95a1-633a8b47b5f3",
+          "ruleId": "NuGet.0005",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+              "protected": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "protectedSnippet": "System.IdentityModel.Tokens.Jwt, 7.3.1\n\nRecommendation:\n\nMove to latest https://aka.ms/IdentityModel/LTS\nRemove System.IdentityModel.Tokens.Jwt, and replace with new package System.IdentityModel.Tokens.Jwt, 8.21.0",
+            "label": "System.IdentityModel.Tokens.Jwt 7.3.1",
+            "properties": {
+              "PackageId": "System.IdentityModel.Tokens.Jwt",
+              "PackageVersion": "7.3.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "9642e1ec-30ff-4871-94c2-039d6f5e644a",
+          "ruleId": "Project.0002",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "src/Web/Web.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "78de62af-658b-401c-9692-fd64b5a53cc7",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var pageContents = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "src/Web/HealthChecks/HomePageHealthCheck.cs",
+            "snippet": "var pageContents = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 26,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "38495ef0-06bd-4931-a6f8-88ac88375e07",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var pageContents = await response.Content.ReadAsStringAsync();",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "src/Web/HealthChecks/ApiHealthCheck.cs",
+            "snippet": "var pageContents = await response.Content.ReadAsStringAsync();",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "7447e924-57b5-4f90-b268-de1df2e64580",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "services.Configure\u003CCatalogSettings\u003E(configuration);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/Web/Configuration/ConfigureWebServices.cs",
+            "snippet": "services.Configure\u003CCatalogSettings\u003E(configuration);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 15,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "bc1bd349-7c00-4c7c-be27-b0674bbc9813",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var catalogSettings = configuration.Get\u003CCatalogSettings\u003E() ?? new CatalogSettings();",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/Web/Configuration/ConfigureCoreServices.cs",
+            "snippet": "var catalogSettings = configuration.Get\u003CCatalogSettings\u003E() ?? new CatalogSettings();",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 21,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "4754ed40-413d-4156-9bd5-3db84a7a8ebe",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.ExpireTimeSpan = TimeSpan.FromMinutes(ValidityMinutesPeriod);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "src/Web/Configuration/ConfigureCookieSettings.cs",
+            "snippet": "options.ExpireTimeSpan = TimeSpan.FromMinutes(ValidityMinutesPeriod);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 25,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "7f7fe60f-94cc-4fda-9976-7bf58ebddc88",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 179,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "e2859172-4375-46a6-9ccf-c313264fefc8",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var catalogBaseUrl = builder.Configuration.GetValue(typeof(string), \u0022CatalogBaseUrl\u0022) as string;",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.String)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "var catalogBaseUrl = builder.Configuration.GetValue(typeof(string), \u0022CatalogBaseUrl\u0022) as string;",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.String)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue(Microsoft.Extensions.Configuration.IConfiguration,System.Type,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 140,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "36d71dda-ff25-4eb9-bb0c-542b95bcdc7d",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 101,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "401186bc-065e-47ca-a3f2-f35ffa606cc9",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 101,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "df8bb143-4f3c-4eef-a56d-bd1f950cd68a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddScoped\u003CHttpClient\u003E(s =\u003E new HttpClient\n{\n    BaseAddress = new Uri(baseUrlConfig!.WebBase)\n});",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 101,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "f4f3205c-b249-49c0-aa4e-1a0716b6a5e1",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var baseUrlConfig = configSection.Get\u003CBaseUrlConfiguration\u003E();",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "var baseUrlConfig = configSection.Get\u003CBaseUrlConfiguration\u003E();",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.Get\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 98,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "3e0203d7-e0d2-4f74-b6bc-f1d876ed2a11",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 97,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "7dc70762-8e82-4706-9ac9-5abc1fc99ae1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "92f7261e-82d9-42d4-bd5a-78aa036d4845",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 31,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "bf3b587c-187b-4d3e-9e10-4d911ad70e7f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Logging.AddConsole();",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Logging.AddConsole();",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "NuGet package contains security vulnerabilities.\n\nPackage needs to be upgraded to a newer version that addresses known security vulnerabilities.",
+      "label": "NuGet package contains security vulnerability",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0001": {
+      "id": "NuGet.0001",
+      "isFeature": false,
+      "description": "NuGet package is incompatible with selected target framework.\n\nPackage needs to be upgraded to a version supporting selected project target framework. If there no new package versions supporting new target framework, different package needs to be used and all code needs to be upgraded to new API.",
+      "label": "NuGet package is incompatible",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262529",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
