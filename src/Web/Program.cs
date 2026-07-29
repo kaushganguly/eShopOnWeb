@@ -200,3 +200,7 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Explicitly mark Web's Program class as internal to prevent naming conflict
+// with PublicApi's public partial class Program when both are referenced in tests.
+internal partial class Program { }
