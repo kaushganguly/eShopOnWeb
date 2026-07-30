@@ -96,7 +96,7 @@ builder.Services.Configure<ServiceConfig>(config =>
 // blazor configuration
 var configSection = builder.Configuration.GetRequiredSection(BaseUrlConfiguration.CONFIG_NAME);
 builder.Services.Configure<BaseUrlConfiguration>(configSection);
-var baseUrlConfig = configSection.Get<BaseUrlConfiguration>();
+var baseUrlConfig = configSection.Get<BaseUrlConfiguration>() ?? new BaseUrlConfiguration();
 
 // Blazor Admin Required Services for Prerendering
 builder.Services.AddScoped<HttpClient>(s => new HttpClient
@@ -138,7 +138,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-var catalogBaseUrl = builder.Configuration.GetValue(typeof(string), "CatalogBaseUrl") as string;
+var catalogBaseUrl = builder.Configuration.GetValue<string>("CatalogBaseUrl");
 if (!string.IsNullOrEmpty(catalogBaseUrl))
 {
     app.Use((context, next) =>
