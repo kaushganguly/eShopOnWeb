@@ -3,4 +3,4 @@
 - ✅ 03-publicapi: Upgrade src/PublicApi application ([Content](tasks/03-publicapi/task.md), [Progress](tasks/03-publicapi/progress-details.md))
 - ✅ 04-blazor: Upgrade BlazorAdmin and BlazorShared ([Content](tasks/04-blazor/task.md), [Progress](tasks/04-blazor/progress-details.md))
 - ✅ 05-library-consolidation: Upgrade ApplicationCore and Infrastructure ([Content](tasks/05-library-consolidation/task.md), [Progress](tasks/05-library-consolidation/progress-details.md))
-🔲 06-final-validation: Full solution build and test validation
+- ✅ 06-final-validation: Full solution build and test validation ([Content](tasks/06-final-validation/task.md), [Progress](tasks/06-final-validation/progress-details.md))
