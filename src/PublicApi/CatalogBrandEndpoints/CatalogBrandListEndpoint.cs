@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -15,12 +14,6 @@ namespace Microsoft.eShopWeb.PublicApi.CatalogBrandEndpoints;
 /// </summary>
 public class CatalogBrandListEndpoint : IEndpoint<IResult, IRepository<CatalogBrand>>
 {
-    private readonly IMapper _mapper;
-
-    public CatalogBrandListEndpoint(IMapper mapper)
-    {
-        _mapper = mapper;
-    }
 
     public void AddRoute(IEndpointRouteBuilder app)
     {
@@ -39,7 +32,7 @@ public class CatalogBrandListEndpoint : IEndpoint<IResult, IRepository<CatalogBr
 
         var items = await catalogBrandRepository.ListAsync();
 
-        response.CatalogBrands.AddRange(items.Select(_mapper.Map<CatalogBrandDto>));
+        response.CatalogBrands.AddRange(items.Select(item => item.ToDto()));
 
         return Results.Ok(response);
     }

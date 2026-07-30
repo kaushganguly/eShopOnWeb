@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -15,12 +14,6 @@ namespace Microsoft.eShopWeb.PublicApi.CatalogTypeEndpoints;
 /// </summary>
 public class CatalogTypeListEndpoint : IEndpoint<IResult, IRepository<CatalogType>>
 {
-    private readonly IMapper _mapper;
-
-    public CatalogTypeListEndpoint(IMapper mapper)
-    {
-        _mapper = mapper;
-    }
 
     public void AddRoute(IEndpointRouteBuilder app)
     {
@@ -39,7 +32,7 @@ public class CatalogTypeListEndpoint : IEndpoint<IResult, IRepository<CatalogTyp
 
         var items = await catalogTypeRepository.ListAsync();
 
-        response.CatalogTypes.AddRange(items.Select(_mapper.Map<CatalogTypeDto>));
+        response.CatalogTypes.AddRange(items.Select(item => item.ToDto()));
 
         return Results.Ok(response);
     }

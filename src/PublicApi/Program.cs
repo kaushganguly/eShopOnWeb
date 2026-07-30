@@ -21,11 +21,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MinimalApi.Endpoint.Configurations.Extensions;
-using MinimalApi.Endpoint.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpoints();
+builder.Services.AddPublicApiEndpoints();
 
 // Use to force loading of appsettings.json of test project
 builder.Configuration.AddConfigurationFile("appsettings.test.json");
@@ -39,15 +38,20 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 builder.Services.AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>));
-builder.Services.Configure<CatalogSettings>(builder.Configuration);
-var catalogSettings = builder.Configuration.Get<CatalogSettings>() ?? new CatalogSettings();
+var catalogSettings = new CatalogSettings
+{
+    CatalogBaseUrl = builder.Configuration["CatalogBaseUrl"]
+};
 builder.Services.AddSingleton<IUriComposer>(new UriComposer(catalogSettings));
 builder.Services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
 builder.Services.AddScoped<ITokenClaimsService, IdentityTokenClaimService>();
 
 var configSection = builder.Configuration.GetRequiredSection(BaseUrlConfiguration.CONFIG_NAME);
-builder.Services.Configure<BaseUrlConfiguration>(configSection);
-var baseUrlConfig = configSection.Get<BaseUrlConfiguration>();
+var baseUrlConfig = new BaseUrlConfiguration
+{
+    ApiBase = configSection[nameof(BaseUrlConfiguration.ApiBase)] ?? string.Empty,
+    WebBase = configSection[nameof(BaseUrlConfiguration.WebBase)] ?? string.Empty
+};
 
 builder.Services.AddMemoryCache();
 
@@ -82,7 +86,6 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
-builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -173,7 +176,7 @@ app.UseSwaggerUI(c =>
 });
 
 app.MapControllers();
-app.MapEndpoints();
+app.MapPublicApiEndpoints();
 
 app.Logger.LogInformation("LAUNCHING PublicApi");
 app.Run();

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -18,12 +17,10 @@ namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
 public class CatalogItemListPagedEndpoint : IEndpoint<IResult, ListPagedCatalogItemRequest, IRepository<CatalogItem>>
 {
     private readonly IUriComposer _uriComposer;
-    private readonly IMapper _mapper;
 
-    public CatalogItemListPagedEndpoint(IUriComposer uriComposer, IMapper mapper)
+    public CatalogItemListPagedEndpoint(IUriComposer uriComposer)
     {
         _uriComposer = uriComposer;
-        _mapper = mapper;
     }
 
     public void AddRoute(IEndpointRouteBuilder app)
@@ -53,7 +50,7 @@ public class CatalogItemListPagedEndpoint : IEndpoint<IResult, ListPagedCatalogI
 
         var items = await itemRepository.ListAsync(pagedSpec);
 
-        response.CatalogItems.AddRange(items.Select(_mapper.Map<CatalogItemDto>));
+        response.CatalogItems.AddRange(items.Select(item => item.ToDto()));
         foreach (CatalogItemDto item in response.CatalogItems)
         {
             item.PictureUri = _uriComposer.ComposePicUri(item.PictureUri);
