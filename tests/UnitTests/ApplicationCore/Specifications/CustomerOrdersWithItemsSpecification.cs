@@ -18,9 +18,8 @@ public class CustomerOrdersWithItemsSpecification
         var result = spec.Evaluate(GetTestCollection()).FirstOrDefault();
 
         Assert.NotNull(result);
-        Assert.NotNull(result.OrderItems);
-        Assert.Equal(1, result.OrderItems.Count);
-        Assert.NotNull(result.OrderItems.FirstOrDefault()?.ItemOrdered);
+        var orderItems = Assert.Single(result.OrderItems);
+        Assert.NotNull(orderItems.ItemOrdered);
     }
 
     [Fact]
@@ -30,13 +29,15 @@ public class CustomerOrdersWithItemsSpecification
 
         var result = spec.Evaluate(GetTestCollection()).ToList();
 
-        Assert.NotNull(result);
-        Assert.Equal(2, result.Count);
-        Assert.Equal(1, result[0].OrderItems.Count);
-        Assert.NotNull(result[0].OrderItems.FirstOrDefault()?.ItemOrdered);
-        Assert.Equal(2, result[1].OrderItems.Count);
-        Assert.NotNull(result[1].OrderItems.ToList()[0].ItemOrdered);
-        Assert.NotNull(result[1].OrderItems.ToList()[1].ItemOrdered);
+        Assert.Collection(result,
+            first =>
+            {
+                var orderItem = Assert.Single(first.OrderItems);
+                Assert.NotNull(orderItem.ItemOrdered);
+            },
+            second => Assert.Collection(second.OrderItems,
+                orderItem => Assert.NotNull(orderItem.ItemOrdered),
+                orderItem => Assert.NotNull(orderItem.ItemOrdered)));
     }
 
     public List<Order> GetTestCollection()
