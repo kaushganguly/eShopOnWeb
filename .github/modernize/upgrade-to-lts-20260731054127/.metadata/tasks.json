@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8 (net8.0) to .NET 10 (net10.0)",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8 (net8.0) to .NET 10 (net10.0)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10 is the current latest LTS release, providing a longer support window beyond .NET 8, along with performance improvements, new runtime features, and alignment with the latest Azure SDK and ecosystem package versions.",
+      "requirements": "Upgrade the entire eShopOnWeb solution from net8.0 to net10.0. This includes updating the global.json SDK version, the shared TargetFramework property in Directory.Packages.props, all Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Microsoft.Extensions.*, Azure.*, and third-party NuGet package versions to net10.0-compatible releases. Resolve any breaking API changes between .NET 8 and .NET 10 across all 10 projects (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests). The solution must build successfully and all unit tests must pass after the upgrade.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Upgraded all 10 projects from net8.0 to net10.0. Updated global.json SDK to 10.0.302, TargetFramework and all NuGet packages in Directory.Packages.props. Fixed breaking API changes (SYSLIB0051, SYSLIB0056, Program class ambiguity). Build: 0 errors, 0 warnings. Unit tests: 44/44 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-07-31T05:41:28.489Z",
+    "version": "1.0"
+  }
+}
