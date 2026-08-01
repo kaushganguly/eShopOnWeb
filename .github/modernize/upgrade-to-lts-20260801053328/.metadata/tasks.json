@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current latest Long-Term Support release, offering improved performance, new runtime and language features, and a longer support lifecycle compared to .NET 8.0.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution from net8.0 to net10.0. This includes updating the TargetFramework in Directory.Build.props, the SDK version in global.json, and all NuGet package references in Directory.Packages.props to versions compatible with .NET 10.0. Address any breaking API changes between .NET 8.0 and .NET 10.0. Projects to upgrade: src/Web, src/PublicApi, src/BlazorAdmin, src/BlazorShared, src/Infrastructure, src/ApplicationCore, tests/UnitTests, tests/IntegrationTests, tests/FunctionalTests, tests/PublicApiIntegrationTests.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded eShopOnWeb from .NET 8.0 to .NET 10.0. Updated global.json SDK version, Directory.Packages.props TFM and all package versions, fixed breaking API changes (BinaryFormatter serialization, configuration binding APIs, TimeSpan.FromMinutes obsolescence, CS0433 type ambiguity in tests). Build: 0 errors across all 10 projects. Unit tests: 44/44 passing.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-01T05:33:29.000Z",
+    "version": "1.0"
+  }
+}
