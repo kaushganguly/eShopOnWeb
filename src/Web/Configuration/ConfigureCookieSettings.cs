@@ -23,7 +23,7 @@ public static class ConfigureCookieSettings
         {
             options.EventsType = typeof(RevokeAuthenticationEvents);
             options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(ValidityMinutesPeriod);
+            options.ExpireTimeSpan = new TimeSpan(0, ValidityMinutesPeriod, 0);
             options.LoginPath = "/Account/Login";
             options.LogoutPath = "/Account/Logout";
             options.Cookie = new CookieBuilder
