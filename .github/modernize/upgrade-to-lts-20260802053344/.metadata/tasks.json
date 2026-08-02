@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from net8.0 to net10.0",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current latest LTS, providing long-term support through November 2028, improved runtime performance, and access to the latest platform features. Upgrading from net8.0 ensures the solution stays on a modern, fully supported .NET version with the latest security and performance improvements.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution (Web, ApplicationCore, BlazorShared, BlazorAdmin, PublicApi, Infrastructure, FunctionalTests, PublicApiIntegrationTests, UnitTests, IntegrationTests) from net8.0 to net10.0. Update the centrally defined TargetFramework in Directory.Packages.props and the SDK version in global.json. Update all NuGet package references (Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Microsoft.Extensions.*, and other dependencies) to versions compatible with .NET 10. Resolve any breaking changes or deprecated APIs introduced between .NET 8 and .NET 10. The solution must build successfully and all unit and integration tests must pass after the upgrade.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded all 10 projects in eShopOnWeb from net8.0 to net10.0. Updated global.json SDK to 10.0.302, updated TargetFramework in Directory.Packages.props, upgraded all NuGet packages (AspNetCore, EntityFrameworkCore, Extensions) to 10.0.10-compatible versions, replaced deprecated AutoMapper extension with AutoMapper 14.0.0, removed packages now included in the framework, and fixed breaking API changes. Build: 0 errors, 0 warnings. All 74 tests pass (UnitTests: 44, IntegrationTests: 3, FunctionalTests: 12, PublicApiIntegrationTests: 15).",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-02T05:33:45.531Z",
+    "version": "1.0"
+  }
+}
