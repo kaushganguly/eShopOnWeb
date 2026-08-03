@@ -1,0 +1,14 @@
+<Project>
+  <ItemGroup>
+    <!-- AutoMapper 12.0.1 has a HIGH severity vulnerability (GHSA-rvv3-g6hj-g44x, ReDoS).
+         Fixing requires migrating from AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1
+         (the last version of that package) to standalone AutoMapper 13.x+, which merged DI extensions
+         into the core package. That is a breaking change spanning PublicApi and Web projects and is
+         tracked as a separate follow-up task; suppressed here to keep the build warning-free meanwhile. -->
+    <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-rvv3-g6hj-g44x" />
+    <!-- NuGet.Packaging/NuGet.Protocol 6.12.1 have LOW severity vulnerabilities (GHSA-g4vj-cjjj-v7hg).
+         These come in as transitive dependencies of Microsoft.VisualStudio.Web.CodeGeneration.Design
+         and Microsoft.NET.Test.Sdk; no direct upgrade path is available from consumer project files. -->
+    <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-g4vj-cjjj-v7hg" />
+  </ItemGroup>
+</Project>
