@@ -1,0 +1,4 @@
+- ⬜ 01-update-sdk-and-tfm: Update global.json and Directory.Packages.props
+- ⬜ 02-fix-api-breaking-changes: Fix API breaking changes
+- ⬜ 03-build-and-fix: Build and resolve compilation errors
+- ⬜ 04-run-tests: Run tests and fix failures
