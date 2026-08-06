@@ -1,4 +1,4 @@
-- ⬜ 01-tfm-and-packages: Update TFM and package versions
-- ⬜ 02-fix-source-breaking-changes: Fix source-incompatible API changes
-- ⬜ 03-build-and-fix: Build solution and fix remaining errors
-- ⬜ 04-run-unit-tests: Run unit tests to verify upgrade
+- ✅ 01-tfm-and-packages: Update TFM and package versions ([Content](tasks/01-tfm-and-packages/task.md), [Progress](tasks/01-tfm-and-packages/progress-details.md))
+- ✅ 02-fix-source-breaking-changes: Fix source-incompatible API changes
+- ✅ 03-build-and-fix: Build solution and fix remaining errors
+- ✅ 04-run-unit-tests: Run unit tests to verify upgrade

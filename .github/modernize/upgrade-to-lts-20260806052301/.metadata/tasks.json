@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8 (net8.0) to .NET 10 (net10.0)",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8 to .NET 10 (latest LTS)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. The current SDK targets .NET 8 (8.0.x as specified in global.json). .NET 10 is the current latest LTS release, offering longer support, improved performance, and access to the latest platform features and security updates.",
+      "requirements": "Upgrade all projects in the eShopOnWeb solution from net8.0 to net10.0. This includes: updating global.json SDK version from 8.0.x to 10.0.x; updating TargetFramework to net10.0 in all source and test project files (Web, ApplicationCore, Infrastructure, BlazorAdmin, BlazorShared, PublicApi, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests); updating all NuGet package references to versions compatible with .NET 10; and resolving any breaking API changes introduced between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded eShopOnWeb from .NET 8 to .NET 10. Updated global.json SDK version, all project TargetFramework references, and NuGet packages. Fixed breaking API changes (removed obsolete serialization constructor, fixed TimeSpan.FromMinutes overload, resolved ambiguous Program type in tests). Build passes with 0 errors and all 44 unit tests pass.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-06T05:23:03.000Z",
+    "version": "1.0"
+  }
+}
