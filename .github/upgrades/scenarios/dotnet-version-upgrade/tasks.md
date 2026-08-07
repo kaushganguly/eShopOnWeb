@@ -1,0 +1,4 @@
+- ✅ 01-update-sdk-packages: Update SDK and package versions ([Content](tasks/01-update-sdk-packages/task.md), [Progress](tasks/01-update-sdk-packages/progress-details.md))
+- ✅ 02-fix-source-breaking-changes: Fix source-incompatible API changes ([Content](tasks/02-fix-source-breaking-changes/task.md), [Progress](tasks/02-fix-source-breaking-changes/progress-details.md))
+- ✅ 03-build-and-fix: Build solution and fix compile issues ([Content](tasks/03-build-and-fix/task.md), [Progress](tasks/03-build-and-fix/progress-details.md))
+- ✅ 04-run-tests: Run all tests and fix failures ([Content](tasks/04-run-tests/task.md), [Progress](tasks/04-run-tests/progress-details.md))

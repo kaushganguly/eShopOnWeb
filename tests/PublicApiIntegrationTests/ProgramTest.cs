@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.eShopWeb.PublicApi.Middleware;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;
 
@@ -7,7 +8,9 @@ namespace PublicApiIntegrationTests;
 [TestClass]
 public class ProgramTest
 {
-    private static WebApplicationFactory<Program> _application = new();
+    // Use ExceptionMiddleware (a PublicApi-specific type) to anchor WebApplicationFactory
+    // to the PublicApi assembly, avoiding the CS0433 ambiguity with Web's Program type.
+    private static WebApplicationFactory<ExceptionMiddleware> _application = new();
 
     public static HttpClient NewClient
     {
@@ -20,7 +23,7 @@ public class ProgramTest
     [AssemblyInitialize]
     public static void AssemblyInitialize(TestContext _)
     {
-        _application = new WebApplicationFactory<Program>();
+        _application = new WebApplicationFactory<ExceptionMiddleware>();
 
     }
 }

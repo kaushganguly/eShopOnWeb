@@ -9,8 +9,7 @@
 		<PackageReference Include="Ardalis.GuardClauses" />
 		<PackageReference Include="Ardalis.Result" />
 		<PackageReference Include="Ardalis.Specification" />		
-		<PackageReference Include="System.Security.Claims" />
-		<PackageReference Include="System.Text.Json" />
+		<!-- System.Security.Claims and System.Text.Json are inbox in net10.0 -->
 	</ItemGroup>
 
 	<ItemGroup>
