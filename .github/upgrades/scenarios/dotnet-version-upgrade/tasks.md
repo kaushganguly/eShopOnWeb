@@ -1,0 +1,2 @@
+- ⬜ 01-upgrade-all: Upgrade all projects from net8.0 to net10.0
+- ⬜ 02-final-validation: Run tests and validate

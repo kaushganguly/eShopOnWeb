@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Http.Features
 
 @{
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
@@ -14,12 +14,8 @@
             <span aria-hidden="true">Accept</span>
         </button>
     </div>
-    <script>
-        (function () {
-            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
-            button.addEventListener("click", function (event) {
-                document.cookie = button.dataset.cookieString;
-            }, false);
-        })();
-    </script>
+}
+@if (showBanner)
+{
+    @Html.Raw("<script>\n        (function () {\n            var button = document.querySelector(\"#cookieConsent button[data-cookie-string]\");\n            button.addEventListener(\"click\", function (event) {\n                document.cookie = button.dataset.cookieString;\n            }, false);\n        })();\n    </script>")
 }

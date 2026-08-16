@@ -1,4 +1,4 @@
-﻿@model ShowRecoveryCodesViewModel
+@model ShowRecoveryCodesViewModel
 @{
     ViewData["Title"] = "Recovery codes";
     ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
@@ -20,7 +20,7 @@
         {
             @for (var row = 0; row < Model.RecoveryCodes.Length; row += 2)
             {
-                <code>@Model.RecoveryCodes[row]</code><text>&nbsp;</text><code>@Model.RecoveryCodes[row + 1]</code><br />
+                @: <span>@Model.RecoveryCodes[row]</span>&nbsp;<span>@Model.RecoveryCodes[row + 1]</span><br />
             }
         }
     </div>

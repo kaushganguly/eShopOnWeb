@@ -1,7 +1,18 @@
-﻿@model IndexViewModel
+@model IndexViewModel
 @{
     ViewData["Title"] = "Profile";
     ViewData.AddActivePage(ManageNavPages.Index);
+}
+@{
+    string emailSectionHtml;
+    if (Model.IsEmailConfirmed)
+    {
+        emailSectionHtml = $"<div class=\"input-group\"><input type=\"email\" id=\"Email\" name=\"Email\" value=\"{Html.Encode(Model.Email)}\" class=\"form-control\" /><span class=\"input-group-addon\" aria-hidden=\"true\"><span class=\"glyphicon glyphicon-ok text-success\"></span></span></div>";
+    }
+    else
+    {
+        emailSectionHtml = $"<input type=\"email\" id=\"Email\" name=\"Email\" value=\"{Html.Encode(Model.Email)}\" class=\"form-control\" /><button type=\"submit\" formaction=\"{Url.Action("SendVerificationEmail")}\" class=\"btn btn-link\">Send verification email</button>";
+    }
 }
 
 <h4>@ViewData["Title"]</h4>
@@ -16,18 +27,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Email"></label>
-                @if (Model.IsEmailConfirmed)
-                {
-                <div class="input-group">
-                    <input asp-for="Email" class="form-control" />
-                    <span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-ok text-success"></span></span>
-                </div>
-                }
-                else
-                {
-                <input asp-for="Email" class="form-control" />
-                <button asp-action="SendVerificationEmail" class="btn btn-link">Send verification email</button>
-                }
+                @Html.Raw(emailSectionHtml)
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
