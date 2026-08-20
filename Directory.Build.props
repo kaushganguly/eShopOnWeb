@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- Only audit direct package dependencies for vulnerabilities.
+         Transitive vulnerability warnings from tooling packages (e.g., Microsoft.VisualStudio.Web.CodeGeneration.Design)
+         are suppressed here since they cannot be directly controlled in this project. -->
+    <NuGetAuditMode>direct</NuGetAuditMode>
+  </PropertyGroup>
+</Project>
