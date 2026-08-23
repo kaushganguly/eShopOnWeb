@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 (net8.0) to .NET 10.0 (net10.0)",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0 (latest LTS)",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 8.0 support ends in November 2026; upgrading to .NET 10.0 LTS ensures continued long-term support, security updates, and access to the latest runtime performance improvements and language features.",
+      "requirements": "Upgrade the entire eShopOnWeb solution (6 application projects and 4 test projects) from net8.0 to net10.0. This includes updating the TargetFramework in Directory.Build.props, updating the .NET SDK version in global.json, updating all version-aligned NuGet packages (Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Microsoft.Extensions.*, and related packages), and resolving any API breaking changes introduced between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Upgraded eShopOnWeb from .NET 8.0 to .NET 10.0 LTS. Updated global.json SDK version, bumped all version-aligned NuGet packages in Directory.Packages.props, removed obsolete serialization constructor, fixed xUnit test warnings, resolved PublicApiIntegrationTests Program ambiguity with extern alias. All 74 tests pass across UnitTests, IntegrationTests, FunctionalTests, and PublicApiIntegrationTests.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-23T03:09:15.831Z",
+    "version": "1.0"
+  }
+}
