@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0 for eShopOnWeb",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 8.0 LTS support ends November 2026 and .NET 10.0 is the current latest LTS, providing longer-term support, improved performance, and access to the latest APIs and security fixes.",
+      "requirements": "Upgrade the entire eShopOnWeb solution from net8.0 to net10.0. The TargetFramework is defined centrally in Directory.Packages.props and applies to all 10 projects (Web, ApplicationCore, Infrastructure, BlazorShared, BlazorAdmin, PublicApi, UnitTests, IntegrationTests, FunctionalTests, PublicApiIntegrationTests). Update the TFM from net8.0 to net10.0, update all NuGet package versions (Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Azure.*, and other dependencies) to versions compatible with .NET 10, and resolve any breaking API changes between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Upgraded all 10 projects from net8.0 to net10.0. Updated TFM in Directory.Packages.props and global.json SDK version. Updated all NuGet packages (AspNetCore, EF Core, System.* to 10.0.11, Azure.Identity to 1.21.0, System.IdentityModel.Tokens.Jwt to 8.22.0). Removed packages now built into the framework. Fixed breaking API changes (removed obsolete serialization constructor, resolved CS0433 ambiguity in tests). Build: 0 errors. Unit Tests: 44/44 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-24T03:09:49.000Z",
+    "version": "1.0"
+  }
+}
