@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from net8.0 to net10.0",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb solution from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current latest LTS release, providing long-term support, performance improvements, new language features, and continued security updates beyond .NET 8.",
+      "requirements": "Upgrade all 10 projects in the eShopOnWeb solution from net8.0 to net10.0. Update the TargetFramework property in Directory.Packages.props, update global.json SDK version to 10.0.x, update all NuGet package versions to net10.0-compatible versions (ASP.NET Core 10, Entity Framework Core 10, Azure SDK packages, Blazor WebAssembly packages), update the CI workflow dotnet-version to 10.0.x, and resolve any breaking API changes between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded all 10 projects from net8.0 to net10.0. Updated global.json SDK to 10.0.x, updated all NuGet packages (ASP.NET Core/EF Core/Blazor to 10.0.11, MediatR to 14.2.0, Swashbuckle to 10.2.3, and 15+ more). Resolved breaking changes: Swashbuckle 6→10 OpenApi model migration, removed BlazorInputFile 0.2.0, fixed PublicApiIntegrationTests, removed SYSLIB0051 obsolete constructor, cleaned redundant SDK-bundled packages. Build: 0 errors. Tests: 74/74 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-29T08:53:08.000Z",
+    "version": "1.0"
+  }
+}
