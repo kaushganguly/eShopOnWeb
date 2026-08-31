@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0 LTS",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0 LTS",
+      "reason": "The user has explicitly requested an upgrade to the latest LTS version. The project currently targets .NET 8.0 (defined centrally in Directory.Build.props). .NET 10.0 is the current latest LTS release, providing extended long-term support, the latest runtime and language features, performance improvements, and alignment with Microsoft's LTS lifecycle roadmap.",
+      "requirements": "Upgrade the entire eShopOnWeb solution from .NET 8.0 to .NET 10.0. The target framework is set centrally in Directory.Build.props (net8.0 → net10.0). Update the SDK version in global.json from 8.0.x to 10.0.x. Update all framework-versioned NuGet packages in Directory.Packages.props (ASP.NET Core 8.0.x, EF Core 8.0.x, System.* 8.0.x) to their .NET 10 equivalents. Resolve any breaking API changes between .NET 8 and .NET 10. All 10 projects must build successfully and all unit and integration tests must pass on .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Upgraded eShopOnWeb from .NET 8.0 to .NET 10.0 LTS. Updated global.json SDK to 10.0.x, Directory.Build.props TFM to net10.0, and all framework-versioned NuGet packages. Removed packages now built into the framework (System.Text.Json, System.Net.Http.Json, System.Security.Claims). Fixed breaking API changes: removed obsolete serialization constructor, fixed TimeSpan cast, updated options binding API, and resolved WebApplicationFactory ambiguity. All 74 tests pass (UnitTests: 44, IntegrationTests: 3, FunctionalTests: 12, PublicApiIntegrationTests: 15).",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-08-31T08:31:02.676Z",
+    "version": "1.0"
+  }
+}
