@@ -1,0 +1,4 @@
+- ⬜ 01-tfm-sdk-update: Update TFM and SDK version
+- ⬜ 02-package-updates: Update NuGet packages
+- ⬜ 03-api-fixes: Fix API breaking changes
+- ⬜ 04-build-validate: Build and test validation
