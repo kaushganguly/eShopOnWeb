@@ -10,4 +10,4 @@
 - ✅ 10-integrationtests: Upgrade IntegrationTests project
 - ✅ 11-functionaltests: Upgrade FunctionalTests project
 - ✅ 12-publicapiintegrationtests: Upgrade PublicApiIntegrationTests project
-- ✅ 13-build-validate: Build solution and run unit tests
+- ✅ 13-build-validate: Build solution and run unit tests ([Content](tasks/13-build-validate/task.md), [Progress](tasks/13-build-validate/progress-details.md))
