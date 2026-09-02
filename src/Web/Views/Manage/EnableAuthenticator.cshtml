@@ -39,7 +39,7 @@
                             <span asp-validation-for="Code" class="text-danger"></span>
                         </div>
                         <button type="submit" class="btn btn-default">Verify</button>
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        @Html.ValidationSummary(true, null, new { @class = "text-danger" })
                     </form>
                 </div>
             </div>

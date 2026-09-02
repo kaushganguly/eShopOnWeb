@@ -3,38 +3,38 @@
     ViewData["Title"] = "Catalog";
     @model IndexModel
 }
-<section class="esh-catalog-hero">
+<div class="esh-catalog-hero">
     <div class="container">
         <img class="esh-catalog-title" src="~/images/main_banner_text.png" />
     </div>
-</section>
-<section class="esh-catalog-filters">
+</div>
+<div class="esh-catalog-filters">
     <div class="container">
         <form method="get">
             <label class="esh-catalog-label" data-title="brand">
-                <select asp-for="@Model.CatalogModel.BrandFilterApplied" asp-items="@Model.CatalogModel.Brands" class="esh-catalog-filter"></select>
+                <select asp-for="CatalogModel.BrandFilterApplied" asp-items="@Model.CatalogModel.Brands" class="esh-catalog-filter"></select>
             </label>
             <label class="esh-catalog-label" data-title="type">
-                <select asp-for="@Model.CatalogModel.TypesFilterApplied" asp-items="@Model.CatalogModel.Types" class="esh-catalog-filter"></select>
+                <select asp-for="CatalogModel.TypesFilterApplied" asp-items="@Model.CatalogModel.Types" class="esh-catalog-filter"></select>
             </label>
             <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
         </form>
     </div>
-</section>
+</div>
 <div class="container">
     @if (Model.CatalogModel.CatalogItems.Any())
     {
-        <partial name="_pagination" for="CatalogModel.PaginationInfo" />
+        @await Html.PartialAsync("_pagination", Model.CatalogModel.PaginationInfo)
 
         <div class="esh-catalog-items row">
             @foreach (var catalogItem in Model.CatalogModel.CatalogItems)
             {
                 <div class="esh-catalog-item col-md-4">
-                    <partial name="_product" for="@catalogItem" />
+                    @await Html.PartialAsync("_product", catalogItem)
                 </div>
             }
         </div>
-        <partial name="_pagination" for="CatalogModel.PaginationInfo" />
+        @await Html.PartialAsync("_pagination", Model.CatalogModel.PaginationInfo)
     }
     else
     {

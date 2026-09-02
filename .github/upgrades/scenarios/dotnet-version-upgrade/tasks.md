@@ -1,0 +1,13 @@
+- ✅ 01-global-json: Update global.json SDK version to 10.0.x ([Content](tasks/01-global-json/task.md), [Progress](tasks/01-global-json/progress-details.md))
+- ✅ 02-central-packages: Update Directory.Packages.props versions for net10.0 ([Content](tasks/02-central-packages/task.md), [Progress](tasks/02-central-packages/progress-details.md))
+- ✅ 03-blazorshared: Upgrade BlazorShared project
+- ✅ 04-applicationcore: Upgrade ApplicationCore project ([Content](tasks/04-applicationcore/task.md), [Progress](tasks/04-applicationcore/progress-details.md))
+- ✅ 05-infrastructure: Upgrade Infrastructure project
+- ✅ 06-blazoradmin: Upgrade BlazorAdmin project
+- ✅ 07-web: Upgrade Web project
+- ✅ 08-publicapi: Upgrade PublicApi project ([Content](tasks/08-publicapi/task.md), [Progress](tasks/08-publicapi/progress-details.md))
+- ✅ 09-unittests: Upgrade UnitTests project
+- ✅ 10-integrationtests: Upgrade IntegrationTests project
+- ✅ 11-functionaltests: Upgrade FunctionalTests project
+- ✅ 12-publicapiintegrationtests: Upgrade PublicApiIntegrationTests project
+- ✅ 13-build-validate: Build solution and run unit tests

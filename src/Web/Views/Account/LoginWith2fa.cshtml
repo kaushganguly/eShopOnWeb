@@ -10,7 +10,7 @@
     <div class="col-md-4">
         <form method="post" asp-route-returnUrl="@ViewData["ReturnUrl"]">
             <input asp-for="RememberMe" type="hidden" />
-            <div asp-validation-summary="All" class="text-danger"></div>
+            @Html.ValidationSummary(false, null, new { @class = "text-danger" })
             <div class="form-group">
                 <label asp-for="TwoFactorCode"></label>
                 <input asp-for="TwoFactorCode" class="form-control" autocomplete="off" />

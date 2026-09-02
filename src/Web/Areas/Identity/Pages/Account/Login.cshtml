@@ -10,10 +10,10 @@
     <h2>@ViewData["Title"]</h2>
     <div class="row">
         <div class="col-md-12">
-            <section>
+            <div>
                 <form method="post">
                     <hr />
-                    <div asp-validation-summary="All" class="text-danger"></div>
+                    @Html.ValidationSummary(false, null, new { @class = "text-danger" })
                     <div class="form-group">
                         <label asp-for="Input.Email"></label>
                         <input asp-for="Input.Email" class="form-control" />
@@ -53,7 +53,7 @@
                         Password: <b>Pass@word1</b>
                     </p>
                 </form>
-            </section>
+            </div>
         </div>
     </div>
 </div>

@@ -14,12 +14,5 @@
             <span aria-hidden="true">Accept</span>
         </button>
     </div>
-    <script>
-        (function () {
-            var button = document.querySelector("#cookieConsent button[data-cookie-string]");
-            button.addEventListener("click", function (event) {
-                document.cookie = button.dataset.cookieString;
-            }, false);
-        })();
-    </script>
+    @Html.Raw("<script>(function(){var b=document.querySelector('#cookieConsent button[data-cookie-string]');b.addEventListener('click',function(e){document.cookie=b.dataset.cookieString;},false);})();</script>")
 }
