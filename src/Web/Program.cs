@@ -200,3 +200,7 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Explicitly mark Program as internal to avoid type ambiguity with PublicApi.Program in test projects.
+// In .NET 10, the compiler-generated Program class became public by default.
+internal partial class Program { }
