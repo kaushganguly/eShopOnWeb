@@ -1,0 +1,4 @@
+- ⬜ 001.01-central-config: Update central project configuration (TFM, SDK, packages)
+- ⬜ 001.02-remove-incompatible-packages: Remove incompatible packages from project files
+- ⬜ 001.03-fix-breaking-api: Fix source-incompatible API usages
+- ⬜ 001.04-build-and-test: Build solution and run unit tests

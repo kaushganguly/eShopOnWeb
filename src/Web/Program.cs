@@ -200,3 +200,7 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Keep Program internal so it doesn't conflict with PublicApi.Program in test projects
+internal partial class Program { }
+
