@@ -1,0 +1,31 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested an upgrade to the latest LTS version. .NET 10.0 is the current latest LTS, providing extended support, improved performance, enhanced security, and access to the latest .NET platform features compared to .NET 8.0.",
+      "requirements": "Upgrade the eShopOnWeb solution (ApplicationCore, BlazorShared, Infrastructure, BlazorAdmin, PublicApi, Web, UnitTests, FunctionalTests, IntegrationTests, PublicApiIntegrationTests) from net8.0 to net10.0. Update the TargetFramework in Directory.Packages.props, update global.json SDK version from 8.0.x to 10.0.x, update all NuGet package references (Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Azure.*, and other dependencies) to versions compatible with net10.0, and resolve any breaking API changes introduced between .NET 8 and .NET 10.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      },
+      "status": "success",
+      "summary": "Successfully upgraded eShopOnWeb solution from .NET 8.0 to .NET 10.0. Updated global.json SDK to 10.0.x, TargetFramework to net10.0, all Microsoft.AspNetCore.*, Microsoft.EntityFrameworkCore.*, Microsoft.Extensions.*, Azure.Identity, System.Text.Json, AutoMapper packages to net10.0-compatible versions. Removed obsolete packages, fixed breaking API changes (SYSLIB0051, CS0433, AutoMapper 16.x API). Build: passed (0 errors). Unit tests: 44/44 passed.",
+      "successCriteriaStatus": {
+        "passBuild": true,
+        "passUnitTests": true
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-09-09T07:16:44.842Z",
+    "version": "1.0"
+  }
+}
