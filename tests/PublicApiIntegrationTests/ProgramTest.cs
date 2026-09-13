@@ -7,7 +7,7 @@ namespace PublicApiIntegrationTests;
 [TestClass]
 public class ProgramTest
 {
-    private static WebApplicationFactory<Program> _application = new();
+    private static WebApplicationFactory<Program> _application = null!;
 
     public static HttpClient NewClient
     {
