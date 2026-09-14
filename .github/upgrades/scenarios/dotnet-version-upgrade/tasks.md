@@ -1,0 +1,21 @@
+# Tasks
+
+- ⏳ P1-001: Update global.json to support .NET 10.0 SDK
+- ⏳ P1-002: Validate .NET 10.0 SDK is installed
+- ⏳ P2-001: Update BlazorShared target framework to net10.0
+- ⏳ P2-002: Update ApplicationCore target framework to net10.0
+- ⏳ P2-003: Update Infrastructure target framework to net10.0
+- ⏳ P3-001: Update BlazorAdmin target framework to net10.0
+- ⏳ P3-002: Update PublicApi target framework to net10.0
+- ⏳ P3-003: Update Web target framework to net10.0
+- ⏳ P4-001: Update UnitTests target framework to net10.0
+- ⏳ P4-002: Update FunctionalTests target framework to net10.0
+- ⏳ P4-003: Update IntegrationTests target framework to net10.0
+- ⏳ P4-004: Update PublicApiIntegrationTests target framework to net10.0
+- ⏳ P5-001: Update deprecated and incompatible packages across all projects
+- ⏳ P5-002: Fix API compatibility issues (binary, source, behavioral)
+- ⏳ P5-003: Address security vulnerabilities
+- ⏳ P6-001: Clean build of entire solution
+- ⏳ P6-002: Run unit tests
+- ⏳ P6-003: Run integration tests
+- ⏳ P6-004: Final verification and commit
