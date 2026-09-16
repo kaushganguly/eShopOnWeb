@@ -1,47 +1,36 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+extern alias WebAlias;
+
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;
 
+// Now we can use Program from PublicApi without ambiguity
 namespace PublicApiIntegrationTests;
-
-// Custom WebApplicationFactory to avoid Program type ambiguity
-public class PublicApiWebApplicationFactory : WebApplicationFactory<IHost>
-{
-    protected override IHost CreateHost(IHostBuilder builder)
-    {
-        // This will use the PublicApi's Program.cs when the assembly is loaded
-        return base.CreateHost(builder);
-    }
-}
 
 [TestClass]
 public class ProgramTest
 {
-    private static readonly HttpClient _httpClient = CreateClient();
+    // Reference the PublicApi Program class - no ambiguity now
+    private static WebApplicationFactory<global::Program>? _application;
 
-    public static HttpClient NewClient => _httpClient;
-
-    private static HttpClient CreateClient()
+    public static HttpClient NewClient
     {
-        try
+        get
         {
-            var factory = new PublicApiWebApplicationFactory();
-            return factory.CreateClient();
-        }
-        catch
-        {
-            // Fallback: return a basic client if factory creation fails
-            return new HttpClient();
+            _application ??= new WebApplicationFactory<global::Program>();
+            return _application.CreateClient();
         }
     }
 
     [AssemblyInitialize]
     public static void AssemblyInitialize(TestContext _)
     {
-        // Initialization happens in CreateClient
+        _application = new WebApplicationFactory<global::Program>();
+    }
+
+    [AssemblyCleanup]
+    public static void AssemblyCleanup()
+    {
+        _application?.Dispose();
     }
 }
