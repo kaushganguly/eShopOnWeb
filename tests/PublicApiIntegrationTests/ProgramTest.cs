@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Net.Http;
+using System.Reflection;
 
 namespace PublicApiIntegrationTests;
 
 [TestClass]
 public class ProgramTest
 {
-    private static WebApplicationFactory<Program> _application = new();
+    private static dynamic _application = null!;
 
     public static HttpClient NewClient
     {
@@ -20,7 +22,11 @@ public class ProgramTest
     [AssemblyInitialize]
     public static void AssemblyInitialize(TestContext _)
     {
-        _application = new WebApplicationFactory<Program>();
-
+        // Load the Program type from PublicApi assembly
+        var publicApiAssembly = Assembly.Load("PublicApi");
+        var programType = publicApiAssembly.GetType("Program") ?? throw new InvalidOperationException("Cannot find Program type in PublicApi");
+        
+        var factoryType = typeof(WebApplicationFactory<>).MakeGenericType(programType);
+        _application = Activator.CreateInstance(factoryType)!;
     }
 }
