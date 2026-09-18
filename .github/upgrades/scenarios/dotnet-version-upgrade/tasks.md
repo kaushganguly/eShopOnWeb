@@ -1,0 +1,3 @@
+- ⏳ 01-prerequisites: Prerequisites & SDK Verification
+- ⏳ 02-upgrade-all: Upgrade All Projects to net10.0
+- ⏳ 03-validation: Final Validation
