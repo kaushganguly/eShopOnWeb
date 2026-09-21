@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>    
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
@@ -31,7 +32,33 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <ProjectReference Include="..\..\src\Web\Web.csproj" Aliases="WebLib" />
   </ItemGroup>
+
+  <!--
+    Web.csproj is only referenced here for its ViewModel types (used to deserialize
+    JSON responses in tests). It transitively drags in BlazorAdmin (a Blazor
+    WebAssembly project) and its dependencies: BlazorInputFile (abandoned package,
+    old struct layout), Blazored.LocalStorage, and the
+    Microsoft.AspNetCore.Components.WebAssembly*/Microsoft.JSInterop.WebAssembly
+    assemblies. None of those are meant to be loaded into a normal (non-WASM) host
+    process, and under .NET 10's stricter runtime type-loader validation, reflecting
+    over some of them throws ReflectionTypeLoadException ("object field ...
+    incorrectly aligned"). MinimalApi.Endpoint's AddEndpoints() enumerates ALL
+    loaded assemblies via reflection (AppDomain.CurrentDomain.GetAssemblies()), so
+    if any of these WASM assemblies are present next to the test host they get
+    loaded and crash endpoint discovery at WebApplicationFactory startup. None of
+    them are needed by these API tests, so exclude them from the test output.
+  -->
+  <Target Name="RemoveBlazorAssembliesFromOutput" AfterTargets="ResolveReferences">
+    <ItemGroup>
+      <_BlazorAssembliesToExclude Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'BlazorInputFile'" />
+      <_BlazorAssembliesToExclude Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'BlazorAdmin'" />
+      <_BlazorAssembliesToExclude Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'Blazored.LocalStorage'" />
+      <_BlazorAssembliesToExclude Include="@(ReferenceCopyLocalPaths)" Condition="$([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Microsoft.AspNetCore.Components.WebAssembly'))" />
+      <_BlazorAssembliesToExclude Include="@(ReferenceCopyLocalPaths)" Condition="$([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Microsoft.JSInterop.WebAssembly'))" />
+      <ReferenceCopyLocalPaths Remove="@(_BlazorAssembliesToExclude)" />
+    </ItemGroup>
+  </Target>
 
 </Project>
