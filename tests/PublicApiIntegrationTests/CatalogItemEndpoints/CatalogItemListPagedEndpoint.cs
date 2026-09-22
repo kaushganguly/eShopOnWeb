@@ -1,6 +1,7 @@
-﻿using Microsoft.eShopWeb;
+﻿extern alias WebAssembly;
+using Microsoft.eShopWeb;
 using Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
-using Microsoft.eShopWeb.Web.ViewModels;
+using WebAssembly::Microsoft.eShopWeb.Web.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
