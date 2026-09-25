@@ -200,3 +200,9 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Starting with newer .NET SDKs, the compiler-generated top-level Program class defaults to
+// public visibility. Web's Program is not intended as a WebApplicationFactory<T> entry point
+// (see PublicApi's Program, which is explicitly public for that purpose) — keep it internal to
+// avoid an ambiguous 'Program' reference in projects that reference both Web and PublicApi.
+internal partial class Program { }
