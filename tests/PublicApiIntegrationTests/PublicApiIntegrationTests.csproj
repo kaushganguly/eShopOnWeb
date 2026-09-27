@@ -31,7 +31,26 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <ProjectReference Include="..\..\src\Web\Web.csproj">
+      <Aliases>WebAssembly</Aliases>
+    </ProjectReference>
   </ItemGroup>
+
+  <!--
+    .NET 10 hardened its runtime type-layout validation. Blazor WebAssembly (Mono/wasm-only)
+    assemblies pulled in transitively via the Web -> BlazorAdmin project reference (e.g.
+    Microsoft.JSInterop.WebAssembly, Microsoft.AspNetCore.Components.WebAssembly*) are only valid
+    under the browser-wasm runtime and are never actually used by this server-side test host
+    (WebApplicationFactory<Program> only starts the PublicApi entry point). When they land in this
+    project's own output, in-process reflection over AppDomain.CurrentDomain.GetAssemblies()
+    (performed by the MinimalApi.Endpoint package during PublicApi's endpoint discovery) throws
+    ReflectionTypeLoadException for these assemblies. They are not needed here, so exclude them
+    from this project's output to avoid loading them into the shared test host AppDomain.
+  -->
+  <Target Name="RemoveBlazorWebAssemblyOnlyAssembliesFromOutput" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="$([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Microsoft.JSInterop.WebAssembly')) or $([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Microsoft.AspNetCore.Components.WebAssembly')) or $([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('BlazorAdmin')) or $([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Blazored.LocalStorage'))" />
+    </ItemGroup>
+  </Target>
 
 </Project>
