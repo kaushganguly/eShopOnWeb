@@ -49,7 +49,7 @@ public class CatalogItemListPagedEndpoint
         Assert.AreEqual(totalExpected, model2!.CatalogItems.Count());
     }
 
-    [DataTestMethod]
+    [TestMethod]
     [DataRow("catalog-items")]
     [DataRow("catalog-brands")]
     [DataRow("catalog-types")]

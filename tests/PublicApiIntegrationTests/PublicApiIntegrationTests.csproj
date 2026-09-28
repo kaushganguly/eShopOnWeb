@@ -30,8 +30,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
+    <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj">
+      <Aliases>global,PublicApiAlias</Aliases>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
+
+  <!--
+    Web.csproj is referenced only to expose Microsoft.eShopWeb.Web.ViewModels types used by the
+    catalog-item endpoint tests for JSON deserialization. Web.csproj also references the BlazorAdmin
+    Blazor WebAssembly client app, which pulls Blazor-WASM-specific runtime assemblies (compiled for
+    the mono/wasm runtime) into this test project's transitive closure. MinimalApi.Endpoint's
+    AddEndpoints() (invoked by PublicApi's Program.cs) scans every assembly in the test host's base
+    directory via reflection; loading those WASM-targeted assemblies on the desktop CoreCLR throws
+    a TypeLoadException ("incorrectly aligned or overlapped by a non-object field") under .NET 10's
+    stricter struct-layout validation. PublicApi's Program.cs does not depend on BlazorAdmin or any
+    Blazor-WASM-specific assembly at runtime (it only needs BlazorShared, which IS kept), so those
+    WASM-only assemblies are excluded from the build output to keep the AddEndpoints() assembly scan
+    limited to genuinely relevant assemblies.
+  -->
+  <Target Name="RemoveBlazorWebAssemblyAssembliesFromOutput" AfterTargets="ResolveReferences;ResolveProjectReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="$([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').Contains('WebAssembly')) or '%(ReferenceCopyLocalPaths.Filename)' == 'BlazorAdmin' or $([System.String]::Copy('%(ReferenceCopyLocalPaths.Filename)').StartsWith('Blazored.'))" />
+    </ItemGroup>
+  </Target>
 
 </Project>
