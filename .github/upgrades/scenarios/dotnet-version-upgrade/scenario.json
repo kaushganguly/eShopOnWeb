@@ -1,0 +1,18 @@
+{
+  "scenarioId": "dotnet-version-upgrade",
+  "operationId": "d2962321-5823-4c9a-9b6a-04d0c20658b2",
+  "description": "Upgrade .NET projects to newer .NET versions, including guidance on current release status, support lifecycle (LTS/STS), and recommended upgrade targets.",
+  "startTime": "2026-09-29T08:18:32.195783Z",
+  "lastUpdateTime": "2026-09-29T08:55:32.9074915Z",
+  "properties": {
+    "UpgradeTargetFramework": "net10.0",
+    "taskStates": {
+      "01-prerequisites": "Completed",
+      "02-upgrade-class-libraries": "Completed",
+      "03-upgrade-web-and-api-projects": "Completed",
+      "04-upgrade-test-projects": "Completed",
+      "05-final-validation": "Completed"
+    }
+  },
+  "folderPath": ""
+}
