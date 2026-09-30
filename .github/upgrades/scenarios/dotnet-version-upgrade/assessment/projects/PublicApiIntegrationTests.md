@@ -8,17 +8,21 @@
 - **Proposed Target Framework:** net10.0
 - **SDK-style**: True
 - **Project Kind:** ClassLibrary
-- **Dependencies**: 2
+- **Dependencies**: 6
 - **Dependants**: 0
 - **Number of Files**: 8
-- **Number of Files with Incidents**: 6
+- **Number of Files with Incidents**: 7
 - **Lines of Code**: 318
-- **Estimated LOC to modify**: 7+ (at least 2.2% of the project)
+- **Estimated LOC to modify**: 11+ (at least 3.5% of the project)
 
 ## Related Projects
 
-**Depends on (2)** — projects this one references:
+**Depends on (6)** — projects this one references:
 
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/src/ApplicationCore/ApplicationCore.csproj](../projects/ApplicationCore.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/src/BlazorAdmin/BlazorAdmin.csproj](../projects/BlazorAdmin.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/src/BlazorShared/BlazorShared.csproj](../projects/BlazorShared.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Infrastructure/Infrastructure.csproj](../projects/Infrastructure.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/PublicApi/PublicApi.csproj](../projects/PublicApi.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Web/Web.csproj](../projects/Web.md)
 
@@ -34,14 +38,26 @@ flowchart TB
         MAIN["<b>📦&nbsp;PublicApiIntegrationTests.csproj</b><br/><small>net8.0</small>"]
         click MAIN "../projects/PublicApiIntegrationTests.md"
     end
-    subgraph downstream["Dependencies (2)"]
+    subgraph downstream["Dependencies (6)"]
         P7["<b>📦&nbsp;PublicApi.csproj</b><br/><small>net8.0</small>"]
         P1["<b>📦&nbsp;Web.csproj</b><br/><small>net8.0</small>"]
+        P3["<b>📦&nbsp;ApplicationCore.csproj</b><br/><small>net8.0</small>"]
+        P8["<b>📦&nbsp;BlazorAdmin.csproj</b><br/><small>net8.0</small>"]
+        P9["<b>📦&nbsp;BlazorShared.csproj</b><br/><small>net8.0</small>"]
+        P2["<b>📦&nbsp;Infrastructure.csproj</b><br/><small>net8.0</small>"]
         click P7 "../projects/PublicApi.md"
         click P1 "../projects/Web.md"
+        click P3 "../projects/ApplicationCore.md"
+        click P8 "../projects/BlazorAdmin.md"
+        click P9 "../projects/BlazorShared.md"
+        click P2 "../projects/Infrastructure.md"
     end
     MAIN --> P7
     MAIN --> P1
+    MAIN --> P3
+    MAIN --> P8
+    MAIN --> P9
+    MAIN --> P2
 
 ```
 
@@ -49,11 +65,11 @@ flowchart TB
 
 | Category | Count | Impact |
 | :--- | :---: | :--- |
-| 🔴 Binary Incompatible | 0 | High - Require code changes |
+| 🔴 Binary Incompatible | 4 | High - Require code changes |
 | 🟡 Source Incompatible | 0 | Medium - Needs re-compilation and potential conflicting API error fixing |
 | 🔵 Behavioral change | 7 | Low - Behavioral changes that may require testing at runtime |
-| ✅ Compatible | 217 |  |
-| ***Total APIs Analyzed*** | ***224*** |  |
+| ✅ Compatible | 427 |  |
+| ***Total APIs Analyzed*** | ***438*** |  |
 
 ## NuGet Package Issues
 
@@ -64,4 +80,10 @@ flowchart TB
 | MSTest.TestFramework | 3.2.2 | — | 🔵 Optional | NuGet package is deprecated |
 
 Every project affected by these packages, and the versions the repository settles on: [aggregate NuGet packages](../nuget/aggregate-packages.md).
+
+## Project Technologies and Features
+
+| Technology | Issues | Percentage | Migration Path |
+| :--- | :---: | :---: | :--- |
+| IdentityModel & Claims-based Security | 4 | 36.4% | Windows Identity Foundation (WIF), SAML, and claims-based authentication APIs that have been replaced by modern identity libraries. WIF was the original identity framework for .NET Framework. Migrate to Microsoft.IdentityModel.* packages (modern identity stack). |
 

@@ -22,6 +22,7 @@
 ## Decisions
 
 - Working branch `upgrade/dotnet10` created from `main` (clean tree) before scenario initialization.
+- Note (environment observation): in this session, `start_task` does not auto-bootstrap `tasks.md` from `plan.md` despite scenario docs describing that behavior — `tasks.md` is maintained manually here as the flat emoji-checklist per the plan-generation template.
 
 ## Upgrade Options
 

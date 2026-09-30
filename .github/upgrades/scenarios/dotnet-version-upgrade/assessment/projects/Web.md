@@ -9,11 +9,11 @@
 - **SDK-style**: True
 - **Project Kind:** AspNetCore
 - **Dependencies**: 4
-- **Dependants**: 3
+- **Dependants**: 4
 - **Number of Files**: 185
 - **Number of Files with Incidents**: 6
 - **Lines of Code**: 4084
-- **Estimated LOC to modify**: 14+ (at least 0.3% of the project)
+- **Estimated LOC to modify**: 24+ (at least 0.6% of the project)
 
 ## Related Projects
 
@@ -24,9 +24,10 @@
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/BlazorShared/BlazorShared.csproj](../projects/BlazorShared.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Infrastructure/Infrastructure.csproj](../projects/Infrastructure.md)
 
-**Depended on by (3)** — projects that reference this one:
+**Depended on by (4)** — projects that reference this one:
 
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/FunctionalTests/FunctionalTests.csproj](../projects/FunctionalTests.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/IntegrationTests/IntegrationTests.csproj](../projects/IntegrationTests.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj](../projects/PublicApiIntegrationTests.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/UnitTests/UnitTests.csproj](../projects/UnitTests.md)
 
@@ -38,11 +39,13 @@ Legend:
 
 ```mermaid
 flowchart TB
-    subgraph upstream["Dependants (3)"]
+    subgraph upstream["Dependants (4)"]
         P4["<b>📦&nbsp;UnitTests.csproj</b><br/><small>net8.0</small>"]
+        P5["<b>📦&nbsp;IntegrationTests.csproj</b><br/><small>net8.0</small>"]
         P6["<b>📦&nbsp;FunctionalTests.csproj</b><br/><small>net8.0</small>"]
         P10["<b>📦&nbsp;PublicApiIntegrationTests.csproj</b><br/><small>net8.0</small>"]
         click P4 "../projects/UnitTests.md"
+        click P5 "../projects/IntegrationTests.md"
         click P6 "../projects/FunctionalTests.md"
         click P10 "../projects/PublicApiIntegrationTests.md"
     end
@@ -61,6 +64,7 @@ flowchart TB
         click P2 "../projects/Infrastructure.md"
     end
     P4 --> MAIN
+    P5 --> MAIN
     P6 --> MAIN
     P10 --> MAIN
     MAIN --> P3
@@ -74,11 +78,11 @@ flowchart TB
 
 | Category | Count | Impact |
 | :--- | :---: | :--- |
-| 🔴 Binary Incompatible | 5 | High - Require code changes |
-| 🟡 Source Incompatible | 0 | Medium - Needs re-compilation and potential conflicting API error fixing |
+| 🔴 Binary Incompatible | 6 | High - Require code changes |
+| 🟡 Source Incompatible | 9 | Medium - Needs re-compilation and potential conflicting API error fixing |
 | 🔵 Behavioral change | 9 | Low - Behavioral changes that may require testing at runtime |
-| ✅ Compatible | 3232 |  |
-| ***Total APIs Analyzed*** | ***3246*** |  |
+| ✅ Compatible | 3579 |  |
+| ***Total APIs Analyzed*** | ***3603*** |  |
 
 ## NuGet Package Issues
 

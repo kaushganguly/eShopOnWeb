@@ -9,7 +9,7 @@
 - **SDK-style**: True
 - **Project Kind:** ClassLibrary
 - **Dependencies**: 1
-- **Dependants**: 5
+- **Dependants**: 7
 - **Number of Files**: 40
 - **Number of Files with Incidents**: 2
 - **Lines of Code**: 792
@@ -21,12 +21,14 @@
 
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/BlazorShared/BlazorShared.csproj](../projects/BlazorShared.md)
 
-**Depended on by (5)** — projects that reference this one:
+**Depended on by (7)** — projects that reference this one:
 
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Infrastructure/Infrastructure.csproj](../projects/Infrastructure.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/PublicApi/PublicApi.csproj](../projects/PublicApi.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Web/Web.csproj](../projects/Web.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/FunctionalTests/FunctionalTests.csproj](../projects/FunctionalTests.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/IntegrationTests/IntegrationTests.csproj](../projects/IntegrationTests.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj](../projects/PublicApiIntegrationTests.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/tests/UnitTests/UnitTests.csproj](../projects/UnitTests.md)
 
 ## Dependency Graph
@@ -37,17 +39,21 @@ Legend:
 
 ```mermaid
 flowchart TB
-    subgraph upstream["Dependants (5)"]
+    subgraph upstream["Dependants (7)"]
         P1["<b>📦&nbsp;Web.csproj</b><br/><small>net8.0</small>"]
         P2["<b>📦&nbsp;Infrastructure.csproj</b><br/><small>net8.0</small>"]
         P4["<b>📦&nbsp;UnitTests.csproj</b><br/><small>net8.0</small>"]
+        P5["<b>📦&nbsp;IntegrationTests.csproj</b><br/><small>net8.0</small>"]
         P6["<b>📦&nbsp;FunctionalTests.csproj</b><br/><small>net8.0</small>"]
         P7["<b>📦&nbsp;PublicApi.csproj</b><br/><small>net8.0</small>"]
+        P10["<b>📦&nbsp;PublicApiIntegrationTests.csproj</b><br/><small>net8.0</small>"]
         click P1 "../projects/Web.md"
         click P2 "../projects/Infrastructure.md"
         click P4 "../projects/UnitTests.md"
+        click P5 "../projects/IntegrationTests.md"
         click P6 "../projects/FunctionalTests.md"
         click P7 "../projects/PublicApi.md"
+        click P10 "../projects/PublicApiIntegrationTests.md"
     end
     subgraph current["ApplicationCore.csproj"]
         MAIN["<b>📦&nbsp;ApplicationCore.csproj</b><br/><small>net8.0</small>"]
@@ -60,8 +66,10 @@ flowchart TB
     P1 --> MAIN
     P2 --> MAIN
     P4 --> MAIN
+    P5 --> MAIN
     P6 --> MAIN
     P7 --> MAIN
+    P10 --> MAIN
     MAIN --> P9
 
 ```
@@ -73,8 +81,8 @@ flowchart TB
 | 🔴 Binary Incompatible | 0 | High - Require code changes |
 | 🟡 Source Incompatible | 2 | Medium - Needs re-compilation and potential conflicting API error fixing |
 | 🔵 Behavioral change | 0 | Low - Behavioral changes that may require testing at runtime |
-| ✅ Compatible | 620 |  |
-| ***Total APIs Analyzed*** | ***622*** |  |
+| ✅ Compatible | 1045 |  |
+| ***Total APIs Analyzed*** | ***1047*** |  |
 
 ## NuGet Package Issues
 

@@ -8,18 +8,19 @@
 - **Proposed Target Framework:** net10.0
 - **SDK-style**: True
 - **Project Kind:** AspNetCore
-- **Dependencies**: 2
+- **Dependencies**: 3
 - **Dependants**: 2
 - **Number of Files**: 38
 - **Number of Files with Incidents**: 2
 - **Lines of Code**: 1070
-- **Estimated LOC to modify**: 5+ (at least 0.5% of the project)
+- **Estimated LOC to modify**: 15+ (at least 1.4% of the project)
 
 ## Related Projects
 
-**Depends on (2)** — projects this one references:
+**Depends on (3)** — projects this one references:
 
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/ApplicationCore/ApplicationCore.csproj](../projects/ApplicationCore.md)
+- [/home/runner/work/eShopOnWeb/eShopOnWeb/src/BlazorShared/BlazorShared.csproj](../projects/BlazorShared.md)
 - [/home/runner/work/eShopOnWeb/eShopOnWeb/src/Infrastructure/Infrastructure.csproj](../projects/Infrastructure.md)
 
 **Depended on by (2)** — projects that reference this one:
@@ -45,16 +46,19 @@ flowchart TB
         MAIN["<b>📦&nbsp;PublicApi.csproj</b><br/><small>net8.0</small>"]
         click MAIN "../projects/PublicApi.md"
     end
-    subgraph downstream["Dependencies (2)"]
+    subgraph downstream["Dependencies (3)"]
         P3["<b>📦&nbsp;ApplicationCore.csproj</b><br/><small>net8.0</small>"]
         P2["<b>📦&nbsp;Infrastructure.csproj</b><br/><small>net8.0</small>"]
+        P9["<b>📦&nbsp;BlazorShared.csproj</b><br/><small>net8.0</small>"]
         click P3 "../projects/ApplicationCore.md"
         click P2 "../projects/Infrastructure.md"
+        click P9 "../projects/BlazorShared.md"
     end
     P6 --> MAIN
     P10 --> MAIN
     MAIN --> P3
     MAIN --> P2
+    MAIN --> P9
 
 ```
 
@@ -62,11 +66,11 @@ flowchart TB
 
 | Category | Count | Impact |
 | :--- | :---: | :--- |
-| 🔴 Binary Incompatible | 4 | High - Require code changes |
-| 🟡 Source Incompatible | 0 | Medium - Needs re-compilation and potential conflicting API error fixing |
+| 🔴 Binary Incompatible | 5 | High - Require code changes |
+| 🟡 Source Incompatible | 9 | Medium - Needs re-compilation and potential conflicting API error fixing |
 | 🔵 Behavioral change | 1 | Low - Behavioral changes that may require testing at runtime |
-| ✅ Compatible | 922 |  |
-| ***Total APIs Analyzed*** | ***927*** |  |
+| ✅ Compatible | 1249 |  |
+| ***Total APIs Analyzed*** | ***1264*** |  |
 
 ## NuGet Package Issues
 

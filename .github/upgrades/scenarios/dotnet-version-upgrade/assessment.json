@@ -7,27 +7,27 @@
     "targetId": "net10.0",
     "targetDisplayName": ".NETCoreApp,Version=v10.0"
   },
-  "analysisStartTime": "2026-09-30T08:19:05.4127971Z",
-  "analysisEndTime": "2026-09-30T08:19:12.4385Z",
+  "analysisStartTime": "2026-09-30T08:29:59.637744Z",
+  "analysisEndTime": "2026-09-30T08:30:03.6282942Z",
   "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
   "stats": {
     "summary": {
       "projects": 10,
-      "issues": 9,
-      "incidents": 118,
-      "effort": 118
+      "issues": 10,
+      "incidents": 154,
+      "effort": 154
     },
     "charts": {
       "severity": {
-        "Mandatory": 21,
+        "Mandatory": 36,
         "Optional": 14,
-        "Potential": 83,
+        "Potential": 104,
         "Information": 0
       },
       "category": {
         "NuGet": 48,
         "Project": 10,
-        "Api": 60
+        "Api": 96
       }
     }
   },
@@ -55,13 +55,13 @@
         "numberOfCodeFiles": 40,
         "linesTotal": 792,
         "linesOfCode": 792,
-        "totalApiScanned": 622,
+        "totalApiScanned": 1047,
         "minLinesOfCodeToChange": 2,
         "maxLinesOfCodeToChange": 2
       },
       "ruleInstances": [
         {
-          "incidentId": "f6b65690-a3c5-4e49-b844-1cf6197eb2d4",
+          "incidentId": "5db5a6e0-830f-434e-b4a9-78442037987d",
           "ruleId": "NuGet.0003",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
           "state": "Active",
@@ -84,7 +84,7 @@
           }
         },
         {
-          "incidentId": "db348c0d-e41b-423e-ad7d-b329f8b8d768",
+          "incidentId": "5683d47a-e12d-4374-844e-c726dc11d7ec",
           "ruleId": "NuGet.0002",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
           "state": "Active",
@@ -107,7 +107,7 @@
           }
         },
         {
-          "incidentId": "9e58e7be-6100-4088-85f6-b1ca8e60e775",
+          "incidentId": "c9025cf2-ac9b-4d8b-b19f-8acc8a0e092f",
           "ruleId": "NuGet.0004",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
           "state": "Active",
@@ -130,7 +130,7 @@
           }
         },
         {
-          "incidentId": "a6d3eea9-f2c3-4c15-9acf-37327751d249",
+          "incidentId": "3aec55c3-3c79-462d-879e-62f0cc1848aa",
           "ruleId": "Project.0002",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
           "state": "Active",
@@ -150,7 +150,7 @@
           }
         },
         {
-          "incidentId": "cc030cdd-4f8f-420b-8d97-dbed558b00a9",
+          "incidentId": "662368f7-6cca-4e6d-93b8-c80e4a038a0f",
           "ruleId": "Api.0002",
           "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code. ",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
@@ -180,7 +180,7 @@
           }
         },
         {
-          "incidentId": "01ab9b9a-9040-47ab-abcf-4c1eb2cbf2a3",
+          "incidentId": "46e4a16b-edc7-4980-8611-ba2f4e7ad50a",
           "ruleId": "Api.0002",
           "description": "This API supports obsolete formatter-based serialization. It should not be called or extended by application code. ",
           "projectPath": "src/ApplicationCore/ApplicationCore.csproj",
@@ -215,8 +215,8 @@
     {
       "path": "src/BlazorAdmin/BlazorAdmin.csproj",
       "startingProject": true,
-      "issues": 3,
-      "storyPoints": 11,
+      "issues": 4,
+      "storyPoints": 14,
       "properties": {
         "appName": "BlazorAdmin",
         "projectKind": "AspNetCore",
@@ -235,13 +235,13 @@
         "numberOfCodeFiles": 20,
         "linesTotal": 3774,
         "linesOfCode": 969,
-        "totalApiScanned": 554,
-        "minLinesOfCodeToChange": 3,
-        "maxLinesOfCodeToChange": 3
+        "totalApiScanned": 888,
+        "minLinesOfCodeToChange": 6,
+        "maxLinesOfCodeToChange": 6
       },
       "ruleInstances": [
         {
-          "incidentId": "bd6be4df-04dc-439c-a82b-bac929cde290",
+          "incidentId": "eb2fadb2-f4e3-4ff2-9861-e6ba23d76fbc",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -264,7 +264,7 @@
           }
         },
         {
-          "incidentId": "2a8e595c-7e43-4cba-bda2-9a4909947fba",
+          "incidentId": "ee3e58ec-dfa0-4b5a-814f-cc6bfe0ecff8",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -287,7 +287,7 @@
           }
         },
         {
-          "incidentId": "fba63503-6fdf-438f-a14b-4adee2bfefcd",
+          "incidentId": "41030e89-0f7a-4daf-8497-6bcd953ad9d7",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -310,7 +310,7 @@
           }
         },
         {
-          "incidentId": "593f5344-a01a-42af-8f83-96c471fdb158",
+          "incidentId": "853712da-a8d8-49bf-93d4-6ffd10b65d8c",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -333,7 +333,7 @@
           }
         },
         {
-          "incidentId": "24ed5587-fda1-40e7-ab55-e1f2f41dc1b5",
+          "incidentId": "07ef4de3-6d6b-48e5-b0b0-11c0144e6c48",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -356,7 +356,7 @@
           }
         },
         {
-          "incidentId": "2da6c334-b26e-467a-b0de-309f2f26b809",
+          "incidentId": "5ad34b49-408a-4185-92d4-a190364243fe",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -379,7 +379,7 @@
           }
         },
         {
-          "incidentId": "aadcd63d-c46f-4af5-a1d1-6e513e5ef4ab",
+          "incidentId": "6981bd11-dc2a-487f-ba24-7fa7bd478ece",
           "ruleId": "NuGet.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -402,7 +402,7 @@
           }
         },
         {
-          "incidentId": "632a8a5e-b5b7-4558-9057-ed8816d9305f",
+          "incidentId": "5bc55256-9f0c-40a7-8c8c-375a8b045c16",
           "ruleId": "Project.0002",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
           "state": "Active",
@@ -422,7 +422,7 @@
           }
         },
         {
-          "incidentId": "76601421-366b-4e43-b38d-69cb807433c6",
+          "incidentId": "2a458590-ae99-4d21-8206-94b59403170b",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
@@ -452,7 +452,7 @@
           }
         },
         {
-          "incidentId": "60c52d84-2ce3-4945-b28e-3a4955eb9dbb",
+          "incidentId": "e05862a6-527d-4225-a92b-1ed3a361e486",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
@@ -482,7 +482,7 @@
           }
         },
         {
-          "incidentId": "d971622c-7cf9-4445-8d51-d49b979f84dc",
+          "incidentId": "2aa0d012-482f-469b-9e28-ade63809cfc0",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
@@ -508,6 +508,96 @@
               }
             ],
             "line": 22,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "4ecca369-671d-4fff-b858-1f5cbfe0f3ff",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "1835"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "ab4f8372-8528-477a-a1b4-15de4cf2e4ec",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Program.cs",
+            "snippet": "builder.Services.AddScoped(sp =\u003E new HttpClient() { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "1835"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 22,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "da32cf49-cfcd-4a83-bbe8-19cba6e03083",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "src/BlazorAdmin/BlazorAdmin.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)"
+            },
+            "kind": "File",
+            "path": "src/BlazorAdmin/Program.cs",
+            "snippet": "builder.Services.Configure\u003CBaseUrlConfiguration\u003E(configSection);",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.OptionsConfigurationServiceCollectionExtensions.Configure\u0060\u00601(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)",
+            "properties": {
+              "CharCount": "1835"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 20,
             "column": 0
           }
         }
@@ -537,13 +627,13 @@
         "numberOfCodeFiles": 20,
         "linesTotal": 290,
         "linesOfCode": 290,
-        "totalApiScanned": 279,
+        "totalApiScanned": 284,
         "minLinesOfCodeToChange": 0,
         "maxLinesOfCodeToChange": 0
       },
       "ruleInstances": [
         {
-          "incidentId": "a566a194-d80a-44a3-b0ea-09f45b753b3b",
+          "incidentId": "8d9ee2a4-5309-4462-a59b-547e29df2eba",
           "ruleId": "Project.0002",
           "projectPath": "src/BlazorShared/BlazorShared.csproj",
           "state": "Active",
@@ -568,8 +658,8 @@
     {
       "path": "tests/FunctionalTests/FunctionalTests.csproj",
       "startingProject": true,
-      "issues": 4,
-      "storyPoints": 33,
+      "issues": 5,
+      "storyPoints": 38,
       "properties": {
         "appName": "FunctionalTests",
         "projectKind": "ClassLibrary",
@@ -588,13 +678,13 @@
         "numberOfCodeFiles": 12,
         "linesTotal": 633,
         "linesOfCode": 633,
-        "totalApiScanned": 592,
-        "minLinesOfCodeToChange": 29,
-        "maxLinesOfCodeToChange": 29
+        "totalApiScanned": 916,
+        "minLinesOfCodeToChange": 34,
+        "maxLinesOfCodeToChange": 34
       },
       "ruleInstances": [
         {
-          "incidentId": "0197a80a-68cb-4c2a-8c7d-cac2b2b13354",
+          "incidentId": "e0232a73-19f5-4411-98b2-15df1ea22faa",
           "ruleId": "NuGet.0002",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
           "state": "Active",
@@ -617,7 +707,7 @@
           }
         },
         {
-          "incidentId": "01766cdd-6cff-4509-8138-0c2847fb1c64",
+          "incidentId": "047d70c6-35c3-420f-89e1-90181056ad0c",
           "ruleId": "NuGet.0002",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
           "state": "Active",
@@ -640,7 +730,7 @@
           }
         },
         {
-          "incidentId": "ef929899-6156-48d4-ba0b-812404902c2b",
+          "incidentId": "31ab656b-7df5-4540-a2d2-513189151709",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
           "state": "Active",
@@ -663,7 +753,7 @@
           }
         },
         {
-          "incidentId": "ea317f87-b01e-49ab-8198-4a570b429dd1",
+          "incidentId": "89182e66-804f-409d-8eef-85cf8c0bd6a7",
           "ruleId": "Project.0002",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
           "state": "Active",
@@ -683,7 +773,7 @@
           }
         },
         {
-          "incidentId": "06756a1b-8b8f-453c-939e-fb156e81738c",
+          "incidentId": "2848fe7f-0f1a-40cf-b84b-28789f57abfc",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -713,7 +803,7 @@
           }
         },
         {
-          "incidentId": "fcb40f34-02e1-45be-be55-afe1e8eadf2b",
+          "incidentId": "df09172b-be71-4552-8624-f01cfe164548",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -743,7 +833,7 @@
           }
         },
         {
-          "incidentId": "66b3dc22-dc53-4d6b-9d6b-9bf6eaee0a34",
+          "incidentId": "c72db8dc-0ae0-4768-a542-8ff42b8e1e4f",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -773,7 +863,7 @@
           }
         },
         {
-          "incidentId": "d92d0d54-1c1c-4e57-99b8-4a6f271a6b95",
+          "incidentId": "9789fa7e-0e13-43de-a45a-7989207c25a2",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -803,7 +893,7 @@
           }
         },
         {
-          "incidentId": "077daadf-20c9-4c1f-93a3-5fc67fb649b0",
+          "incidentId": "45d73285-f50c-4758-8400-8344331b3e29",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -833,7 +923,7 @@
           }
         },
         {
-          "incidentId": "fff4d4b3-e1b6-4dc9-99bb-fb94a4225f5e",
+          "incidentId": "3e6d617e-f67f-4931-a516-47ce0f3aade6",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -863,7 +953,7 @@
           }
         },
         {
-          "incidentId": "668d5e2d-d6d5-4cc0-84a0-45d614dad0a1",
+          "incidentId": "2b1a6a4a-a2a3-43bf-8361-f643f64a406b",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -893,7 +983,7 @@
           }
         },
         {
-          "incidentId": "7b9bfd74-a206-46cb-a787-d01dd76f906f",
+          "incidentId": "ad69ce2c-9652-4732-a6e7-6dd50daa4ae5",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -923,7 +1013,7 @@
           }
         },
         {
-          "incidentId": "fc603719-6dc3-4bfd-bc5a-376a88cea36d",
+          "incidentId": "f243e674-c398-4004-a8a2-496f7d78542a",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -953,7 +1043,7 @@
           }
         },
         {
-          "incidentId": "d04d28c5-ae8f-48af-905c-daacdf16e4de",
+          "incidentId": "2005444c-6a69-46c1-b28b-a36127ec1ec9",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -983,7 +1073,7 @@
           }
         },
         {
-          "incidentId": "8b19ae9b-8f73-46a1-88ba-ee3e9c530d79",
+          "incidentId": "5a5e7094-ee61-47dc-960b-546bd9814da2",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1013,7 +1103,7 @@
           }
         },
         {
-          "incidentId": "44909e33-e755-4db6-aa21-9a2a5a02960a",
+          "incidentId": "2a57de53-66d4-4869-8e53-87e04ea316d9",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1043,7 +1133,7 @@
           }
         },
         {
-          "incidentId": "87c362b7-35c7-4802-a1c2-e4a9ee57a605",
+          "incidentId": "21aa3ce7-7e7b-4310-91a3-696c93b1c88c",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1073,7 +1163,7 @@
           }
         },
         {
-          "incidentId": "2c57db9d-f4d1-4e5c-9dcf-944617802d3b",
+          "incidentId": "7bb8e87c-0346-42d0-8b00-9f099db1d68a",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1103,7 +1193,7 @@
           }
         },
         {
-          "incidentId": "a4c1a20a-94e9-46fd-83c8-5f387fc4112a",
+          "incidentId": "48089a12-2cb0-4135-b981-383efd692b03",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1133,7 +1223,7 @@
           }
         },
         {
-          "incidentId": "3a7b19bb-13ff-402b-8866-b22ccdd6d3f2",
+          "incidentId": "098aad1b-91e4-4bda-83d0-93cabd35e0e2",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1163,7 +1253,7 @@
           }
         },
         {
-          "incidentId": "10d52f10-e927-438f-83a0-0bf4efa12b77",
+          "incidentId": "d5e9f06b-a23d-4741-a800-4086e4995be2",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1193,7 +1283,7 @@
           }
         },
         {
-          "incidentId": "fc6c4ca2-80be-46dd-8bfb-d84f095241d7",
+          "incidentId": "d1a4cf5b-e717-4eda-8da0-dcd356efd784",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1223,7 +1313,7 @@
           }
         },
         {
-          "incidentId": "ebb0cf9f-93df-41da-b4bc-a92a7a0b029a",
+          "incidentId": "0a802c28-d62d-496b-a620-88c668daab73",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1253,7 +1343,7 @@
           }
         },
         {
-          "incidentId": "81c218a9-dfd9-4042-a220-3f515576d160",
+          "incidentId": "60b5b0ce-c3fa-4198-9893-44d48a9feb84",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1283,7 +1373,7 @@
           }
         },
         {
-          "incidentId": "264c1be4-1209-4578-ac7f-7e5bf4fecfd9",
+          "incidentId": "ebe95cac-1394-4293-a7e0-3644c3123295",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1313,7 +1403,7 @@
           }
         },
         {
-          "incidentId": "8ab2e1d5-d1a0-4ee5-bf4f-723081f937ba",
+          "incidentId": "06a719ea-c727-4925-9d57-45b84f494b83",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1343,7 +1433,7 @@
           }
         },
         {
-          "incidentId": "36f9747f-4af5-47fd-be61-7ceacdd50164",
+          "incidentId": "00e83884-5497-49d8-b519-9d680ab95bd0",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1373,7 +1463,7 @@
           }
         },
         {
-          "incidentId": "9b7a4451-82b4-4073-9180-977b02626357",
+          "incidentId": "14740631-1f78-4906-93e9-b132b76028d7",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1403,7 +1493,7 @@
           }
         },
         {
-          "incidentId": "2008fd2b-d219-4016-885b-8acdd43f2ed0",
+          "incidentId": "310e462a-b8ec-4958-bf31-3f5bcd6b0437",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1433,7 +1523,7 @@
           }
         },
         {
-          "incidentId": "78c12094-116d-4385-8bb4-18f08e2e46a5",
+          "incidentId": "2f99314f-6e95-4ab1-af78-353012ad3b44",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1463,7 +1553,37 @@
           }
         },
         {
-          "incidentId": "0d88b4a6-2455-483c-bb9a-16ad54af816f",
+          "incidentId": "e1d73e82-acd0-464d-939d-65259a1594f8",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/Web/Controllers/AccountControllerSignIn.cs",
+            "snippet": "Assert.Equal(new System.Uri(\u0022/\u0022, UriKind.Relative), postResponse.Headers.Location);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "5019"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 72,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "6163d94e-6fb6-4b94-94d8-df47b61a9474",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1493,7 +1613,7 @@
           }
         },
         {
-          "incidentId": "d36da4b8-19ec-4313-b1c9-5ec35b8db871",
+          "incidentId": "a6f6217c-decb-4a97-bd8d-6fe70ded0210",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1523,7 +1643,7 @@
           }
         },
         {
-          "incidentId": "abec0da1-b028-4f35-8261-74f935e3459f",
+          "incidentId": "90865cc3-4363-4a4f-82c5-789e023971fa",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
@@ -1551,15 +1671,117 @@
             "line": 25,
             "column": 8
           }
+        },
+        {
+          "incidentId": "5c1f9b18-1392-4036-918e-3ef2987d36b3",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return tokenHandler.WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/PublicApi/ApiTokenHelper.cs",
+            "snippet": "return tokenHandler.WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "1546"
+            },
+            "line": 46,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "ef3c9809-0584-413f-a2ea-f01cf39c5a55",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/PublicApi/ApiTokenHelper.cs",
+            "snippet": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "properties": {
+              "CharCount": "1546"
+            },
+            "line": 45,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "c8c008d8-132f-4f1d-9216-094178754efe",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/PublicApi/ApiTokenHelper.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "1546"
+            },
+            "line": 44,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "24958058-5efa-4003-a5ff-f5f1897dcf11",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/FunctionalTests/FunctionalTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "tests/FunctionalTests/PublicApi/ApiTokenHelper.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "1546"
+            },
+            "line": 44,
+            "column": 8
+          }
         }
       ],
-      "features": []
+      "features": [
+        {
+          "featureId": "IdentityModel",
+          "incidents": [
+            "24958058-5efa-4003-a5ff-f5f1897dcf11",
+            "c8c008d8-132f-4f1d-9216-094178754efe",
+            "ef3c9809-0584-413f-a2ea-f01cf39c5a55",
+            "5c1f9b18-1392-4036-918e-3ef2987d36b3"
+          ]
+        }
+      ]
     },
     {
       "path": "src/Infrastructure/Infrastructure.csproj",
       "startingProject": true,
-      "issues": 3,
-      "storyPoints": 5,
+      "issues": 4,
+      "storyPoints": 9,
       "properties": {
         "appName": "Infrastructure",
         "projectKind": "ClassLibrary",
@@ -1578,13 +1800,13 @@
         "numberOfCodeFiles": 30,
         "linesTotal": 2923,
         "linesOfCode": 2923,
-        "totalApiScanned": 200,
-        "minLinesOfCodeToChange": 0,
-        "maxLinesOfCodeToChange": 0
+        "totalApiScanned": 4252,
+        "minLinesOfCodeToChange": 4,
+        "maxLinesOfCodeToChange": 4
       },
       "ruleInstances": [
         {
-          "incidentId": "5e957359-4804-4872-b204-9563bf99f60b",
+          "incidentId": "f79fbe39-c462-4476-a25e-a3823288b214",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Infrastructure/Infrastructure.csproj",
           "state": "Active",
@@ -1607,7 +1829,7 @@
           }
         },
         {
-          "incidentId": "395b9ab3-16dc-40b0-8c08-2dc4d37dcfe5",
+          "incidentId": "61a4ec85-7443-4323-87a5-e095cc464b22",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Infrastructure/Infrastructure.csproj",
           "state": "Active",
@@ -1630,7 +1852,7 @@
           }
         },
         {
-          "incidentId": "2e75ea89-4736-4590-bce6-7f1ca9eed33f",
+          "incidentId": "f9d1474a-97ae-4218-bbb4-47de20a77bc2",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Infrastructure/Infrastructure.csproj",
           "state": "Active",
@@ -1653,7 +1875,7 @@
           }
         },
         {
-          "incidentId": "efee4333-254b-4023-9189-484413d4ca82",
+          "incidentId": "754cacef-1a39-4613-a889-16e07282e326",
           "ruleId": "NuGet.0005",
           "projectPath": "src/Infrastructure/Infrastructure.csproj",
           "state": "Active",
@@ -1676,7 +1898,7 @@
           }
         },
         {
-          "incidentId": "03458941-1361-4d86-90b5-158885b5b5a9",
+          "incidentId": "4dce9f32-f866-483a-873d-9e9acd95f6dd",
           "ruleId": "Project.0002",
           "projectPath": "src/Infrastructure/Infrastructure.csproj",
           "state": "Active",
@@ -1694,9 +1916,111 @@
               "RecommendedTargetFramework": "net10.0"
             }
           }
+        },
+        {
+          "incidentId": "0c55cde4-a8e9-4c97-ad13-e82172a2cfd1",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return tokenHandler.WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Identity/IdentityTokenClaimService.cs",
+            "snippet": "return tokenHandler.WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "1688"
+            },
+            "line": 43,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "7373e483-9dd2-4384-84c7-710b7e45c1a0",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Identity/IdentityTokenClaimService.cs",
+            "snippet": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "properties": {
+              "CharCount": "1688"
+            },
+            "line": 42,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "198cbe83-33d4-481c-a19f-40a8b6479170",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Identity/IdentityTokenClaimService.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "1688"
+            },
+            "line": 24,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "7c58e8ef-b76f-4920-9730-93b5980bf351",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/Infrastructure/Infrastructure.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "src/Infrastructure/Identity/IdentityTokenClaimService.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "1688"
+            },
+            "line": 24,
+            "column": 8
+          }
         }
       ],
-      "features": []
+      "features": [
+        {
+          "featureId": "IdentityModel",
+          "incidents": [
+            "7c58e8ef-b76f-4920-9730-93b5980bf351",
+            "198cbe83-33d4-481c-a19f-40a8b6479170",
+            "7373e483-9dd2-4384-84c7-710b7e45c1a0",
+            "0c55cde4-a8e9-4c97-ad13-e82172a2cfd1"
+          ]
+        }
+      ]
     },
     {
       "path": "tests/IntegrationTests/IntegrationTests.csproj",
@@ -1721,13 +2045,13 @@
         "numberOfCodeFiles": 3,
         "linesTotal": 147,
         "linesOfCode": 147,
-        "totalApiScanned": 39,
+        "totalApiScanned": 234,
         "minLinesOfCodeToChange": 0,
         "maxLinesOfCodeToChange": 0
       },
       "ruleInstances": [
         {
-          "incidentId": "2ee0db96-f369-4f7f-988c-800f29fb0b14",
+          "incidentId": "4947972a-0182-452b-a418-1dd14b9f26ba",
           "ruleId": "NuGet.0002",
           "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
           "state": "Active",
@@ -1750,7 +2074,7 @@
           }
         },
         {
-          "incidentId": "41be7675-06d2-4663-98fe-0c9307905fb4",
+          "incidentId": "873652e3-231e-4e7d-856d-9c92ca7a8d06",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
           "state": "Active",
@@ -1773,7 +2097,7 @@
           }
         },
         {
-          "incidentId": "6f2e7585-16e6-42ef-b9d0-e089e7abeb60",
+          "incidentId": "704450b2-ccff-41be-bf67-8068a72588ea",
           "ruleId": "Project.0002",
           "projectPath": "tests/IntegrationTests/IntegrationTests.csproj",
           "state": "Active",
@@ -1798,8 +2122,8 @@
     {
       "path": "src/PublicApi/PublicApi.csproj",
       "startingProject": true,
-      "issues": 6,
-      "storyPoints": 17,
+      "issues": 7,
+      "storyPoints": 27,
       "properties": {
         "appName": "PublicApi",
         "projectKind": "AspNetCore",
@@ -1818,13 +2142,13 @@
         "numberOfCodeFiles": 35,
         "linesTotal": 1120,
         "linesOfCode": 1070,
-        "totalApiScanned": 927,
-        "minLinesOfCodeToChange": 5,
-        "maxLinesOfCodeToChange": 5
+        "totalApiScanned": 1264,
+        "minLinesOfCodeToChange": 15,
+        "maxLinesOfCodeToChange": 15
       },
       "ruleInstances": [
         {
-          "incidentId": "10ea9ccf-b3a1-4f21-a257-08c5eb18ed99",
+          "incidentId": "a7ace5b0-5b4e-45d6-be78-374ee6364e65",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1847,7 +2171,7 @@
           }
         },
         {
-          "incidentId": "be6d97fb-08bf-4738-996a-5b9a8c66b2db",
+          "incidentId": "7767072e-3d7a-467b-bc5b-9c863f4ea4ab",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1870,7 +2194,7 @@
           }
         },
         {
-          "incidentId": "8b6041bc-5f55-472e-b062-c5ad7906389a",
+          "incidentId": "bad75a88-03e6-453f-a001-f1117acdbcc6",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1893,7 +2217,7 @@
           }
         },
         {
-          "incidentId": "b377774b-fc7a-4eef-a5c5-36aa591aafb6",
+          "incidentId": "7e50f875-9101-4fc0-bb57-63410390cb55",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1916,7 +2240,7 @@
           }
         },
         {
-          "incidentId": "56af510e-a761-4cd5-9b2c-c16eb95d7633",
+          "incidentId": "cfac1ab4-5c21-4396-889f-3643d67fcbc5",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1939,7 +2263,7 @@
           }
         },
         {
-          "incidentId": "ba618b61-2957-4fa6-8648-baf2524f9e3d",
+          "incidentId": "0b31faed-4fda-497f-a8cc-3f18938d8708",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1962,7 +2286,7 @@
           }
         },
         {
-          "incidentId": "9dad7b31-6b58-4b88-a2f3-77f5f9f898b8",
+          "incidentId": "857a8d62-0f8f-46a5-87ce-954ad810c49d",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -1985,7 +2309,7 @@
           }
         },
         {
-          "incidentId": "c0c64673-5789-421a-bf43-2e142eaa648f",
+          "incidentId": "b53ae51d-0176-4e39-bde3-f8f5ea9674e4",
           "ruleId": "NuGet.0001",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -2008,7 +2332,7 @@
           }
         },
         {
-          "incidentId": "d606e3ce-ac45-4226-957c-800cf1576e94",
+          "incidentId": "a1009a15-8bb5-4e42-9600-c1f7e7bd60a7",
           "ruleId": "NuGet.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -2031,7 +2355,7 @@
           }
         },
         {
-          "incidentId": "bd6d9e2c-041b-43d3-ae52-56e7f039f470",
+          "incidentId": "a5062392-76aa-4e0f-9400-21505bda4b69",
           "ruleId": "NuGet.0005",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -2054,7 +2378,7 @@
           }
         },
         {
-          "incidentId": "e0f5e3c0-de6a-4eca-851f-41d39a4f2274",
+          "incidentId": "d750187a-d746-4977-b0eb-f0e73e0288d2",
           "ruleId": "NuGet.0005",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -2077,7 +2401,7 @@
           }
         },
         {
-          "incidentId": "dbe9d26c-4cf6-49e6-81db-916c9cc1af94",
+          "incidentId": "6259c65c-f9b3-4312-aa8f-a19270a7b962",
           "ruleId": "Project.0002",
           "projectPath": "src/PublicApi/PublicApi.csproj",
           "state": "Active",
@@ -2097,7 +2421,205 @@
           }
         },
         {
-          "incidentId": "073c130e-8d20-4b2e-9322-c92fb8ad7396",
+          "incidentId": "931b5f0e-363a-44b9-b9fe-d720933c1b62",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "properties": {
+              "CharCount": "6239"
+            },
+            "line": 84,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "21d9769a-7ef3-4ed9-bf99-7e4ec24d877f",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.TokenValidationParameters",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 62,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "8c958c2b-7b29-4db3-934d-c0e8cc8563bb",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "config.SaveToken = true;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.SaveToken"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "config.SaveToken = true;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.SaveToken",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.SaveToken",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 61,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "80055832-4aa3-4915-ad74-cdc35a0c0f5e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "config.RequireHttpsMetadata = false;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.RequireHttpsMetadata"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "config.RequireHttpsMetadata = false;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.RequireHttpsMetadata",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.RequireHttpsMetadata",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 60,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "38d71a7b-efed-4197-9e9a-b49431c0fc03",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 56,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "f078624d-8e54-4452-8c6a-6ab67ca258a9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;",
+              "protected": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;",
+            "protectedSnippet": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "label": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 56,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "2c491d54-f8b2-4130-9104-ab45e730708d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(config =\u003E\n{\n    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;\n})\n.AddJwtBearer(config =\u003E\n{\n    config.RequireHttpsMetadata = false;\n    config.SaveToken = true;\n    config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };\n});",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.AddAuthentication(config =\u003E\n{\n    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;\n})\n.AddJwtBearer(config =\u003E\n{\n    config.RequireHttpsMetadata = false;\n    config.SaveToken = true;\n    config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };\n});",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "36de5a61-c809-4cf9-8569-2acfa4bed510",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddAuthentication(config =\u003E\n{\n    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;\n})\n.AddJwtBearer(config =\u003E\n{\n    config.RequireHttpsMetadata = false;\n    config.SaveToken = true;\n    config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };\n});",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.AddAuthentication(config =\u003E\n{\n    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;\n})\n.AddJwtBearer(config =\u003E\n{\n    config.RequireHttpsMetadata = false;\n    config.SaveToken = true;\n    config.TokenValidationParameters = new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false\n    };\n});",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})",
+            "label": "M:Microsoft.Extensions.DependencyInjection.JwtBearerExtensions.AddJwtBearer(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions})",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "a9dc014d-5aa7-4234-a4b8-6ed2c3ad1125",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/PublicApi/PublicApi.csproj",
@@ -2127,7 +2649,7 @@
           }
         },
         {
-          "incidentId": "330250f9-6126-4088-bdbd-2f29a2b9a973",
+          "incidentId": "90d54f5f-493f-4933-9918-215fd17bbb65",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/PublicApi/PublicApi.csproj",
@@ -2157,7 +2679,7 @@
           }
         },
         {
-          "incidentId": "7d109ee5-a011-498f-84aa-f13d4f82c404",
+          "incidentId": "b4e5dff5-7c0e-4061-8273-3e0c1e7dab9d",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/PublicApi/PublicApi.csproj",
@@ -2187,7 +2709,7 @@
           }
         },
         {
-          "incidentId": "d53d3538-4049-4dfc-8447-35d3976a3e93",
+          "incidentId": "c744bc19-198d-4527-8be1-21cbceab1a22",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/PublicApi/PublicApi.csproj",
@@ -2217,7 +2739,57 @@
           }
         },
         {
-          "incidentId": "2ef23083-9f1b-4e55-8c11-e63746b0049e",
+          "incidentId": "6ca296d5-d182-4bf2-b29f-c758ee9ccc38",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n        .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n        .AddDefaultTokenProviders();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n        .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n        .AddDefaultTokenProviders();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 35,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "3224a4a9-cd6f-4797-af90-1ee1f17230d7",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/PublicApi/PublicApi.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n        .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n        .AddDefaultTokenProviders();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)"
+            },
+            "kind": "File",
+            "path": "src/PublicApi/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n        .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n        .AddDefaultTokenProviders();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "6239"
+            },
+            "line": 35,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "d55a1242-7f60-4ccd-966f-f3bfa84e311c",
           "ruleId": "Api.0003",
           "description": "Breaking change: Message no longer duplicated in Console log output ",
           "projectPath": "src/PublicApi/PublicApi.csproj",
@@ -2252,8 +2824,8 @@
     {
       "path": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
       "startingProject": true,
-      "issues": 4,
-      "storyPoints": 11,
+      "issues": 5,
+      "storyPoints": 15,
       "properties": {
         "appName": "PublicApiIntegrationTests",
         "projectKind": "ClassLibrary",
@@ -2272,13 +2844,13 @@
         "numberOfCodeFiles": 7,
         "linesTotal": 321,
         "linesOfCode": 318,
-        "totalApiScanned": 224,
-        "minLinesOfCodeToChange": 7,
-        "maxLinesOfCodeToChange": 7
+        "totalApiScanned": 438,
+        "minLinesOfCodeToChange": 11,
+        "maxLinesOfCodeToChange": 11
       },
       "ruleInstances": [
         {
-          "incidentId": "e896c03d-ad0f-4e8e-ba3b-d855caaa30b1",
+          "incidentId": "b0346364-9f41-4b28-8c13-52c885f595f8",
           "ruleId": "NuGet.0002",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
           "state": "Active",
@@ -2301,7 +2873,7 @@
           }
         },
         {
-          "incidentId": "2e2f5f93-2a69-4d2f-b26d-5e1e9f181c6f",
+          "incidentId": "2bfbdc71-97f8-4bc5-9b24-77a2d033f6ef",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
           "state": "Active",
@@ -2324,7 +2896,7 @@
           }
         },
         {
-          "incidentId": "d61ea237-6ca0-42f6-804a-5fe4b8aebe2c",
+          "incidentId": "cf930fcc-77cf-4ec6-ae6d-5d40ab34de32",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
           "state": "Active",
@@ -2347,7 +2919,7 @@
           }
         },
         {
-          "incidentId": "e28d0368-ad3d-4f1c-b29c-227beaa96996",
+          "incidentId": "731f7e88-e8a9-48ee-b753-8e31cf1cc854",
           "ruleId": "Project.0002",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
           "state": "Active",
@@ -2367,7 +2939,7 @@
           }
         },
         {
-          "incidentId": "3b0a9f60-9529-459d-ab4a-69817b1790b1",
+          "incidentId": "a233be32-2734-4cd1-b9cd-5429d91c779d",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2397,7 +2969,7 @@
           }
         },
         {
-          "incidentId": "b070bdb7-d21f-4022-9fcb-1023dc2046af",
+          "incidentId": "63e9a392-b28b-4277-94ca-2fc968fc3b5f",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2427,7 +2999,7 @@
           }
         },
         {
-          "incidentId": "ba23bfcf-e908-474a-b89b-15b61aacf28e",
+          "incidentId": "a1d3b1af-c4b4-4d29-8ea6-88dd4035fc88",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2457,7 +3029,7 @@
           }
         },
         {
-          "incidentId": "6a1c36a6-9a00-439a-9127-6205f61523b0",
+          "incidentId": "acc39c2a-142a-4751-97ee-aa0bfc5b5063",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2487,7 +3059,7 @@
           }
         },
         {
-          "incidentId": "b222da56-5822-42ca-8c27-bed4f3fe4076",
+          "incidentId": "e5f85b7e-5ba1-436a-aa4a-765cc67bbe1f",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2517,7 +3089,7 @@
           }
         },
         {
-          "incidentId": "74373cbe-451c-402f-82bb-ca4f71173e2c",
+          "incidentId": "24fbf37f-ceaf-4000-a74e-c441987f0e47",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2547,7 +3119,7 @@
           }
         },
         {
-          "incidentId": "0d77d3be-d349-40b0-9c5e-0d2867195402",
+          "incidentId": "e69cfa90-e7fd-4c75-ba16-cb1edf8d4b2c",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
@@ -2575,9 +3147,111 @@
             "line": 28,
             "column": 8
           }
+        },
+        {
+          "incidentId": "f8f72ab1-abab-4ea0-9eb1-d5e1824b9b0a",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return tokenHandler.WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/ApiTokenHelper.cs",
+            "snippet": "return tokenHandler.WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "1663"
+            },
+            "line": 46,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "c9df96fe-f7c4-4c2e-9f54-53c4ebedabf7",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/ApiTokenHelper.cs",
+            "snippet": "var token = tokenHandler.CreateToken(tokenDescriptor);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.CreateToken(Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor)",
+            "properties": {
+              "CharCount": "1663"
+            },
+            "line": 45,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "71ec4626-3182-4fbf-92d9-f2fce5adc657",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/ApiTokenHelper.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "1663"
+            },
+            "line": 44,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0a133f25-dbea-4d47-89ba-e6dc142746e0",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "tests/PublicApiIntegrationTests/PublicApiIntegrationTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "tests/PublicApiIntegrationTests/ApiTokenHelper.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "1663"
+            },
+            "line": 44,
+            "column": 12
+          }
         }
       ],
-      "features": []
+      "features": [
+        {
+          "featureId": "IdentityModel",
+          "incidents": [
+            "0a133f25-dbea-4d47-89ba-e6dc142746e0",
+            "71ec4626-3182-4fbf-92d9-f2fce5adc657",
+            "c9df96fe-f7c4-4c2e-9f54-53c4ebedabf7",
+            "f8f72ab1-abab-4ea0-9eb1-d5e1824b9b0a"
+          ]
+        }
+      ]
     },
     {
       "path": "tests/UnitTests/UnitTests.csproj",
@@ -2602,13 +3276,13 @@
         "numberOfCodeFiles": 23,
         "linesTotal": 933,
         "linesOfCode": 933,
-        "totalApiScanned": 448,
+        "totalApiScanned": 1008,
         "minLinesOfCodeToChange": 0,
         "maxLinesOfCodeToChange": 0
       },
       "ruleInstances": [
         {
-          "incidentId": "4f0b8929-4f60-4e75-99b3-64a7052f0479",
+          "incidentId": "02da407b-14cf-4c2f-87a4-f0da69e2ae4e",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/UnitTests/UnitTests.csproj",
           "state": "Active",
@@ -2631,7 +3305,7 @@
           }
         },
         {
-          "incidentId": "05bcffd4-9ab4-4cc1-bb98-621d0c15342d",
+          "incidentId": "98caba2a-f007-463a-87b8-84cef8d62bff",
           "ruleId": "NuGet.0005",
           "projectPath": "tests/UnitTests/UnitTests.csproj",
           "state": "Active",
@@ -2654,7 +3328,7 @@
           }
         },
         {
-          "incidentId": "d198a74e-c0d1-410e-a3a5-ec4533ae8437",
+          "incidentId": "633ee104-629f-453f-bad9-ec54115c7a85",
           "ruleId": "Project.0002",
           "projectPath": "tests/UnitTests/UnitTests.csproj",
           "state": "Active",
@@ -2679,8 +3353,8 @@
     {
       "path": "src/Web/Web.csproj",
       "startingProject": true,
-      "issues": 6,
-      "storyPoints": 28,
+      "issues": 7,
+      "storyPoints": 38,
       "properties": {
         "appName": "Web",
         "projectKind": "AspNetCore",
@@ -2699,13 +3373,13 @@
         "numberOfCodeFiles": 112,
         "linesTotal": 30071,
         "linesOfCode": 4084,
-        "totalApiScanned": 3246,
-        "minLinesOfCodeToChange": 14,
-        "maxLinesOfCodeToChange": 14
+        "totalApiScanned": 3603,
+        "minLinesOfCodeToChange": 24,
+        "maxLinesOfCodeToChange": 24
       },
       "ruleInstances": [
         {
-          "incidentId": "da24356a-bb84-4f9f-84ab-bde3b7db6a9e",
+          "incidentId": "3316636c-0a9c-4840-84fd-8a34405ac788",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2728,7 +3402,7 @@
           }
         },
         {
-          "incidentId": "6fef29af-f534-4bae-b32a-5eba0f17a396",
+          "incidentId": "7b9c71bd-0ffc-4411-945e-40654aa3a2d0",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2751,7 +3425,7 @@
           }
         },
         {
-          "incidentId": "50a1a6ee-dbd0-4df6-abad-45144b2039eb",
+          "incidentId": "0879b636-1ce3-4ba1-bae5-101ab3c0f09d",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2774,7 +3448,7 @@
           }
         },
         {
-          "incidentId": "4a81f8e0-7212-477b-8b3a-708252ebe290",
+          "incidentId": "e9b4454f-5b9f-4dfd-9be1-f2e0d2f0a24d",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2797,7 +3471,7 @@
           }
         },
         {
-          "incidentId": "913f4b99-91c2-4fdf-a163-87bd0a8823cb",
+          "incidentId": "62a41b66-4f7a-42ec-abca-e32f2ae56e51",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2820,7 +3494,7 @@
           }
         },
         {
-          "incidentId": "728b9cce-c481-415c-92a5-fd8991ec9369",
+          "incidentId": "1cf69ea2-4f22-4a74-b320-6c611af04047",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2843,7 +3517,7 @@
           }
         },
         {
-          "incidentId": "02ff2f00-2642-4374-9db0-c12c99c73587",
+          "incidentId": "fe48d5e6-b2e7-4483-a421-6caaf6d1723a",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2866,7 +3540,7 @@
           }
         },
         {
-          "incidentId": "f6797a97-39de-407b-bbc5-d70e85889a69",
+          "incidentId": "4f46408c-b5d6-4ccb-bbc6-eeaf48da358b",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2889,7 +3563,7 @@
           }
         },
         {
-          "incidentId": "f4546071-1718-4031-80b7-14a1f51d8cd7",
+          "incidentId": "1d58f62e-c88c-4b58-b140-2a12bca5d87e",
           "ruleId": "NuGet.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2912,7 +3586,7 @@
           }
         },
         {
-          "incidentId": "a4c46169-efa1-40fa-80c4-703680a84509",
+          "incidentId": "6967c792-0a86-44fc-bb08-90990cba5e0e",
           "ruleId": "NuGet.0005",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2935,7 +3609,7 @@
           }
         },
         {
-          "incidentId": "6923af9f-5a4a-4ba2-9f13-428c72e8cd47",
+          "incidentId": "4f062e94-5795-4f6a-bfca-e1034066dc3c",
           "ruleId": "NuGet.0004",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2958,7 +3632,7 @@
           }
         },
         {
-          "incidentId": "1e4806fb-f415-42a4-96ac-c01eaffc1066",
+          "incidentId": "ef250346-adc6-4ef1-89f8-3d95977a5515",
           "ruleId": "NuGet.0005",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -2981,7 +3655,7 @@
           }
         },
         {
-          "incidentId": "8f0120f8-693f-4d06-a694-984677186b7c",
+          "incidentId": "75639445-28b9-4fe3-856c-fd3f1be0f70e",
           "ruleId": "NuGet.0005",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -3004,7 +3678,7 @@
           }
         },
         {
-          "incidentId": "a80f45ea-21a3-4762-8b06-e7549ca378ab",
+          "incidentId": "575c352c-033f-4313-bee3-bace20ef8bf2",
           "ruleId": "Project.0002",
           "projectPath": "src/Web/Web.csproj",
           "state": "Active",
@@ -3024,7 +3698,7 @@
           }
         },
         {
-          "incidentId": "841d2c48-1496-4295-b933-2d895e7e9d4a",
+          "incidentId": "49473f0c-c605-4b08-99aa-be9edc8be969",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "src/Web/Web.csproj",
@@ -3054,7 +3728,7 @@
           }
         },
         {
-          "incidentId": "01b6ae44-ec39-452f-a840-6c9a8ff06c67",
+          "incidentId": "aa60323e-c46f-4466-a3dd-97a880e6763f",
           "ruleId": "Api.0003",
           "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
           "projectPath": "src/Web/Web.csproj",
@@ -3084,7 +3758,7 @@
           }
         },
         {
-          "incidentId": "96af5b0f-ebb7-4a23-9788-20b2f2a7f76d",
+          "incidentId": "b149a5d2-0ac5-4345-af3d-6753b0a735d9",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/Web/Web.csproj",
@@ -3114,7 +3788,30 @@
           }
         },
         {
-          "incidentId": "061bb806-e08a-43f5-808f-837da1000d16",
+          "incidentId": "5120ea37-b9ae-4331-84dd-5220e0bdb520",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "services.AddMediatR(cfg =\u003E \n            cfg.RegisterServicesFromAssembly(typeof(BasketViewModelService).Assembly));",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Configuration/ConfigureWebServices.cs",
+            "snippet": "services.AddMediatR(cfg =\u003E \n            cfg.RegisterServicesFromAssembly(typeof(BasketViewModelService).Assembly));",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions",
+            "properties": {
+              "CharCount": "838"
+            },
+            "line": 10,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "d45292b4-e835-4b23-8f64-3a1e6d5245c9",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/Web/Web.csproj",
@@ -3144,7 +3841,7 @@
           }
         },
         {
-          "incidentId": "2956a775-fb25-4e8e-ab9d-b3066cc3fbac",
+          "incidentId": "a2822017-b0b5-4fa4-b8b3-f876b4240d3e",
           "ruleId": "Api.0003",
           "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
           "projectPath": "src/Web/Web.csproj",
@@ -3174,7 +3871,57 @@
           }
         },
         {
-          "incidentId": "0593eeea-c177-4dec-8785-1fc80c7badb4",
+          "incidentId": "148dbcc9-35f8-43e1-ac6d-d047ced2c497",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseMigrationsEndPoint();",
+              "protected": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "app.UseMigrationsEndPoint();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions",
+            "label": "T:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 173,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "5c1f5dbf-e8bc-4ef7-bdcc-00fa105959d4",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseMigrationsEndPoint();",
+              "protected": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "app.UseMigrationsEndPoint();",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)",
+            "label": "M:Microsoft.AspNetCore.Builder.MigrationsEndPointExtensions.UseMigrationsEndPoint(Microsoft.AspNetCore.Builder.IApplicationBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 173,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "fff7604b-630b-4d8c-b3b0-69c8f8d8b3c9",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/Web/Web.csproj",
@@ -3204,7 +3951,57 @@
           }
         },
         {
-          "incidentId": "0e1acc90-ba28-41b8-9b20-b159b9bff6ac",
+          "incidentId": "1b1e23ef-5caa-4062-9f83-e1f98d79cfb5",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 113,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "82f95ebf-aebd-4a36-9489-1da951a7dd08",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddDatabaseDeveloperPageExceptionFilter();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.DatabaseDeveloperPageExceptionFilterServiceExtensions.AddDatabaseDeveloperPageExceptionFilter(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 113,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "15d5b9b0-7784-4512-aebf-96bb4b2246a4",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/Web/Web.csproj",
@@ -3234,7 +4031,7 @@
           }
         },
         {
-          "incidentId": "5ab2dbae-3ada-4637-a1e3-7138f900c7f9",
+          "incidentId": "d3f257bf-3111-4cda-b85b-3a6a7349f5c2",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/Web/Web.csproj",
@@ -3264,7 +4061,7 @@
           }
         },
         {
-          "incidentId": "508b9668-ea3f-4cfc-b761-0d868977761d",
+          "incidentId": "f3925fa8-2bb3-42ad-b6e9-abb87adf4a83",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/Web/Web.csproj",
@@ -3294,7 +4091,7 @@
           }
         },
         {
-          "incidentId": "172bfe4c-1cf0-42f0-b7e9-6847f220ab36",
+          "incidentId": "80c288dc-768d-4d10-a6fa-177ad52c20bf",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/Web/Web.csproj",
@@ -3324,7 +4121,7 @@
           }
         },
         {
-          "incidentId": "e9cdeba4-168f-4402-a539-5ed7c4e2aa6f",
+          "incidentId": "cbd81e71-5c48-4016-a2a1-ada83055e02e",
           "ruleId": "Api.0001",
           "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
           "projectPath": "src/Web/Web.csproj",
@@ -3354,7 +4151,107 @@
           }
         },
         {
-          "incidentId": "3b7cac4a-6160-43c0-8f62-a064245a6f53",
+          "incidentId": "ac7e092f-8fe3-4fa8-b4bd-650d621a1792",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.UI, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.UI, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+              "protected": "T:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions",
+            "label": "T:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "1d0ee23f-b447-40dd-a24e-e46cfc5ee6eb",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.UI, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.UI, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+              "protected": "M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "label": "M:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.UI",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "fb0ed418-a0df-4655-b4bc-aa003127fa81",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+              "protected": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+            "protectedSnippet": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "label": "T:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "765b23f8-78ad-46f4-9bd1-82837e2bb8c3",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6. Add package reference to Microsoft.AspNetCore.Identity.EntityFrameworkCore, 8.0.6",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Services.AddIdentity\u003CApplicationUser, IdentityRole\u003E()\n           .AddDefaultUI()\n           .AddEntityFrameworkStores\u003CAppIdentityDbContext\u003E()\n                           .AddDefaultTokenProviders();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.IdentityEntityFrameworkBuilderExtensions.AddEntityFrameworkStores\u0060\u00601(Microsoft.AspNetCore.Identity.IdentityBuilder)",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+              "PackageNewVersion": "8.0.6",
+              "CharCount": "7340"
+            },
+            "line": 54,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "4fcb61b2-59a9-4b7f-bab4-4a15076648c6",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/Web/Web.csproj",
@@ -3384,7 +4281,7 @@
           }
         },
         {
-          "incidentId": "4b5c61d9-4731-4851-8bf1-de24201a6cc9",
+          "incidentId": "8ef658fa-fbe8-4e6e-b75f-5900e2379856",
           "ruleId": "Api.0003",
           "description": "Breaking change: URI length limits removed ",
           "projectPath": "src/Web/Web.csproj",
@@ -3414,7 +4311,32 @@
           }
         },
         {
-          "incidentId": "ae8741a9-862e-41a5-85da-46cc13c7e40d",
+          "incidentId": "0924eb70-5781-41a7-a15d-6b1cd1f7662d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Azure.Extensions.AspNetCore.Configuration.Secrets, 1.3.1. Add package reference to Azure.Extensions.AspNetCore.Configuration.Secrets, 1.3.1",
+          "projectPath": "src/Web/Web.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+              "protected": "T:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions"
+            },
+            "kind": "File",
+            "path": "src/Web/Program.cs",
+            "snippet": "builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration[\u0022AZURE_KEY_VAULT_ENDPOINT\u0022] ?? \u0022\u0022), credential);",
+            "protectedSnippet": "T:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions",
+            "label": "T:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions",
+            "properties": {
+              "PackageId": "Azure.Extensions.AspNetCore.Configuration.Secrets",
+              "PackageNewVersion": "1.3.1",
+              "CharCount": "7340"
+            },
+            "line": 31,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "cb4f8e39-dfaa-476a-a10f-6872d7cab3d2",
           "ruleId": "Api.0003",
           "description": "Breaking change: Message no longer duplicated in Console log output ",
           "projectPath": "src/Web/Web.csproj",
@@ -3527,6 +4449,21 @@
       "severity": "Potential",
       "effort": 1
     },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
     "NuGet.0005": {
       "id": "NuGet.0005",
       "isFeature": false,
@@ -3541,6 +4478,21 @@
         }
       ]
     },
+    "IdentityModel": {
+      "id": "IdentityModel",
+      "isFeature": false,
+      "description": "Windows Identity Foundation (WIF), SAML, and claims-based authentication APIs that have been replaced by modern identity libraries. WIF was the original identity framework for .NET Framework. Migrate to Microsoft.IdentityModel.* packages (modern identity stack).",
+      "label": "IdentityModel \u0026 Claims-based Security",
+      "severity": "Mandatory",
+      "effort": 4,
+      "links": [
+        {
+          "title": "Microsoft.IdentityModel packages",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2341614",
+          "isCustom": false
+        }
+      ]
+    },
     "NuGet.0001": {
       "id": "NuGet.0001",
       "isFeature": false,
@@ -3551,21 +4503,6 @@
       "links": [
         {
           "url": "https://go.microsoft.com/fwlink/?linkid=2262529",
-          "isCustom": false
-        }
-      ]
-    },
-    "Api.0001": {
-      "id": "Api.0001",
-      "isFeature": false,
-      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
-      "label": "Binary incompatible for selected .NET version",
-      "severity": "Mandatory",
-      "effort": 1,
-      "links": [
-        {
-          "title": "Breaking changes in .NET",
-          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
           "isCustom": false
         }
       ]

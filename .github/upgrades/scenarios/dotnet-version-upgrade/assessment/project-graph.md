@@ -23,19 +23,35 @@ flowchart LR
     P1 --> P9
     P1 --> P2
     P2 --> P3
+    P2 --> P9
     P3 --> P9
     P4 --> P3
     P4 --> P1
+    P4 --> P8
+    P4 --> P9
+    P4 --> P2
     P5 --> P2
     P5 --> P4
+    P5 --> P3
+    P5 --> P8
+    P5 --> P9
+    P5 --> P1
     P6 --> P3
     P6 --> P7
     P6 --> P1
+    P6 --> P8
+    P6 --> P9
+    P6 --> P2
     P7 --> P3
     P7 --> P2
+    P7 --> P9
     P8 --> P9
     P10 --> P7
     P10 --> P1
+    P10 --> P3
+    P10 --> P8
+    P10 --> P9
+    P10 --> P2
     click P1 "projects/Web.md"
     click P2 "projects/Infrastructure.md"
     click P3 "projects/ApplicationCore.md"
