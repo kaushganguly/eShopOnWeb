@@ -31,7 +31,22 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
+
+  <!--
+    BlazorInputFile 0.2.0 (pulled in transitively via ApplicationCore -> BlazorShared) is an unmaintained
+    package whose ReadRequest struct fails .NET 10's stricter type layout validation when its assembly is
+    actually loaded into the process (e.g. by ASP.NET Core's MVC ApplicationPart/RelatedAssembly discovery
+    during WebApplicationFactory test-host startup, which in turn makes it visible to MinimalApi.Endpoint's
+    AppDomain.GetAssemblies() endpoint scan, which throws a ReflectionTypeLoadException). PublicApi never
+    calls the only BlazorShared API that references BlazorInputFile types (CatalogItem.DataToBase64, a
+    Blazor-client-only file upload helper), so it is safe to remove this assembly from the test output.
+  -->
+  <Target Name="RemoveUnusedBlazorInputFileFromOutput" AfterTargets="Build;Publish">
+    <ItemGroup>
+      <_UnusedBlazorOutputFiles Include="$(OutDir)BlazorInputFile.*" />
+    </ItemGroup>
+    <Delete Files="@(_UnusedBlazorOutputFiles)" />
+  </Target>
 
 </Project>
