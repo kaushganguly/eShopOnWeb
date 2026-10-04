@@ -31,7 +31,28 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <ProjectReference Include="..\..\src\Web\Web.csproj" Aliases="WebEntry" />
   </ItemGroup>
+
+  <!--
+    Web.csproj brings in BlazorAdmin.csproj (a Blazor WebAssembly project) as a transitive
+    ProjectReference purely to bundle its published wwwroot static assets. Its WebAssembly-targeted
+    dependencies (BlazorAdmin.dll, Microsoft.JSInterop.WebAssembly.dll, etc.) are not usable outside
+    an actual WASM runtime: when they are loaded into this (non-WASM) test host process, MinimalApi.Endpoint's
+    AppDomain-wide assembly/type scan (used by PublicApi's AddEndpoints()/MapEndpoints()) throws a
+    ReflectionTypeLoadException while enumerating their types under .NET 10's stricter type loader.
+    None of this test project's code depends on BlazorAdmin at runtime (only on Web's own ViewModels),
+    so we remove these WebAssembly-only artifacts from the test output after build/publish.
+  -->
+  <Target Name="RemoveBlazorWasmTestArtifacts" AfterTargets="Build;Publish">
+    <ItemGroup>
+      <_BlazorWasmArtifactsToRemove Include="$(OutDir)BlazorAdmin.*" />
+      <_BlazorWasmArtifactsToRemove Include="$(OutDir)Microsoft.JSInterop.WebAssembly.*" />
+      <_BlazorWasmArtifactsToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.dll" />
+      <_BlazorWasmArtifactsToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.Server.dll" />
+      <_BlazorWasmArtifactsToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll" />
+    </ItemGroup>
+    <Delete Files="@(_BlazorWasmArtifactsToRemove)" />
+  </Target>
 
 </Project>
