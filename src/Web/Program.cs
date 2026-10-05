@@ -200,3 +200,9 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Starting with the .NET 10 SDK, the compiler-generated top-level Program class is public by
+// default. Declare it internal explicitly to restore the net8.0 behavior and avoid an
+// ambiguous-type (CS0433) clash with PublicApi's intentionally public partial Program class
+// in test projects that reference both Web and PublicApi (see PublicApiIntegrationTests).
+internal partial class Program { }

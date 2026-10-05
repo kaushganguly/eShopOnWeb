@@ -34,4 +34,40 @@
     <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
 
+  <!--
+    Web.csproj references BlazorAdmin (a Blazor WebAssembly project), which transitively drags
+    Blazor WebAssembly-only assemblies (e.g. Microsoft.JSInterop.WebAssembly) into this test
+    project's output and its runtime dependency file. These assemblies target the browser-wasm
+    runtime and are not loadable by the server-side .NET 10 CLR that hosts PublicApi under
+    WebApplicationFactory. ASP.NET Core's MVC ApplicationPart discovery eagerly loads every
+    assembly listed in the test host's dependency context at startup, and attempting to load
+    these WASM-only assemblies now throws (previously tolerated under net8.0, this started
+    failing after the .NET 10 upgrade due to stricter metadata/type loading). None of this
+    project's tests use BlazorAdmin or Blazor WebAssembly APIs (only Microsoft.eShopWeb.Web
+    ViewModels and BlazorShared.Models types are used), so these assemblies are safe to exclude
+    from this test project's build/runtime output.
+  -->
+  <Target Name="ExcludeBlazorWebAssemblyRuntimeAssemblies" AfterTargets="ResolveReferences;ResolveProjectReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)"
+        Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'BlazorAdmin' Or
+                   '%(ReferenceCopyLocalPaths.Filename)' == 'Microsoft.JSInterop.WebAssembly' Or
+                   '%(ReferenceCopyLocalPaths.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly' Or
+                   '%(ReferenceCopyLocalPaths.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly.Authentication' Or
+                   '%(ReferenceCopyLocalPaths.Filename)' == 'Blazored.LocalStorage'" />
+      <ReferencePath Remove="@(ReferencePath)"
+        Condition="'%(ReferencePath.Filename)' == 'BlazorAdmin' Or
+                   '%(ReferencePath.Filename)' == 'Microsoft.JSInterop.WebAssembly' Or
+                   '%(ReferencePath.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly' Or
+                   '%(ReferencePath.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly.Authentication' Or
+                   '%(ReferencePath.Filename)' == 'Blazored.LocalStorage'" />
+      <ReferenceDependencyPaths Remove="@(ReferenceDependencyPaths)"
+        Condition="'%(ReferenceDependencyPaths.Filename)' == 'BlazorAdmin' Or
+                   '%(ReferenceDependencyPaths.Filename)' == 'Microsoft.JSInterop.WebAssembly' Or
+                   '%(ReferenceDependencyPaths.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly' Or
+                   '%(ReferenceDependencyPaths.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly.Authentication' Or
+                   '%(ReferenceDependencyPaths.Filename)' == 'Blazored.LocalStorage'" />
+    </ItemGroup>
+  </Target>
+
 </Project>
