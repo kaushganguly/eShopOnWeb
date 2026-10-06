@@ -30,8 +30,51 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
+    <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj">
+      <Aliases>global,PublicApiAssembly</Aliases>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
+
+  <!--
+    This project references Web.csproj only for shared server-side ViewModels (e.g. CatalogItemViewModel),
+    not for any Blazor WebAssembly hosting feature. However, Web.csproj legitimately needs
+    Microsoft.AspNetCore.Components.WebAssembly.Server (for UseBlazorFrameworkFiles()) and a ProjectReference
+    to BlazorAdmin.csproj (for its static web assets + a couple of server-side DI service registrations),
+    so the full Blazor WASM/Mono-targeted assembly closure (BlazorAdmin.dll and the
+    Microsoft.AspNetCore.Components.WebAssembly*/Microsoft.JSInterop.WebAssembly assemblies) is copied
+    transitively into THIS test project's own output directory even though none of it is used at test
+    runtime (the test host only boots PublicApi's minimal-API Program, never Web's).
+
+    On .NET 10, this is a real problem: the test platform (and WebApplicationFactory's own host bootstrap,
+    which calls MinimalApi.Endpoint's AddEndpoints(), itself doing
+    AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes()) with no assembly filtering) ends up
+    reflecting over Web.dll in this AppDomain, which transitively requires resolving
+    Microsoft.JSInterop.WebAssembly.dll. That assembly is built for the Mono/WebAssembly runtime; CoreCLR's
+    stricter struct-layout validation (tightened in .NET 9/10) rejects its type layout with a
+    ReflectionTypeLoadException ("object field ... incorrectly aligned or overlapped by a non-object field").
+    This did not reproduce on .NET 8, whose type loader was more lenient. Verified this is a genuine net10-only
+    regression by running the same test against the net8.0 baseline (passed cleanly).
+
+    Fix: delete the WASM-only assemblies from this test project's own output directory after build, so they
+    are never present to be loaded/reflected in this AppDomain. This is safe because:
+      - None of this project's test code references BlazorAdmin, Blazored.LocalStorage, or any
+        Microsoft.AspNetCore.Components.WebAssembly* type.
+      - The test host (WebApplicationFactory<ProgramEntryPoint>, aliased to PublicApi's Program) never calls
+        UseBlazorFrameworkFiles() or anything else that needs these assemblies at runtime.
+      - Web.csproj's own build output (src/Web/bin/...) is untouched, so Web's actual hosted-Blazor-WASM
+        functionality is unaffected.
+  -->
+  <Target Name="RemoveWasmOnlyAssembliesFromTestOutput" AfterTargets="Build;Publish">
+    <ItemGroup>
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)BlazorAdmin.dll" />
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)BlazorAdmin.pdb" />
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.dll" />
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.Server.dll" />
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll" />
+      <_WasmOnlyTestOutputFilesToRemove Include="$(OutDir)Microsoft.JSInterop.WebAssembly.dll" />
+    </ItemGroup>
+    <Delete Files="@(_WasmOnlyTestOutputFilesToRemove)" ContinueOnError="true" />
+  </Target>
 
 </Project>

@@ -1,13 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc.Testing;
+﻿extern alias PublicApiAssembly;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;
+using ProgramEntryPoint = PublicApiAssembly::Program;
 
 namespace PublicApiIntegrationTests;
 
 [TestClass]
 public class ProgramTest
 {
-    private static WebApplicationFactory<Program> _application = new();
+    private static WebApplicationFactory<ProgramEntryPoint> _application = new();
 
     public static HttpClient NewClient
     {
@@ -20,7 +22,7 @@ public class ProgramTest
     [AssemblyInitialize]
     public static void AssemblyInitialize(TestContext _)
     {
-        _application = new WebApplicationFactory<Program>();
+        _application = new WebApplicationFactory<ProgramEntryPoint>();
 
     }
 }
