@@ -9,6 +9,7 @@
 
 @if (catalogItems == null)
 {
+    @* Workaround for .NET 10 Razor compiler issue with self-closed component tags (>=6 char names) as sole block content: https://github.com/dotnet/razor/issues *@
     <Spinner></Spinner>
 }
 else
@@ -60,8 +61,12 @@ else
         </tbody>
     </table>
 
+    @* Workaround for .NET 10 Razor compiler issue with self-closed component tags (>=6 char names): a comment must precede EACH such tag, even consecutive ones *@
     <Details Brands="@catalogBrands" Types="@catalogTypes" OnEditClick="EditClick" @ref="DetailsComponent"></Details>
+    @* workaround *@
     <Edit Brands="@catalogBrands" Types="@catalogTypes" OnSaveClick="ReloadCatalogItems" @ref="EditComponent"></Edit>
+    @* workaround *@
     <Create Brands="@catalogBrands" Types="@catalogTypes" OnSaveClick="ReloadCatalogItems" @ref="CreateComponent"></Create>
+    @* workaround *@
     <Delete Brands="@catalogBrands" Types="@catalogTypes" OnSaveClick="ReloadCatalogItems" @ref="DeleteComponent"></Delete>
 }

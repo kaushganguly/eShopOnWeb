@@ -14,6 +14,7 @@
             <span aria-hidden="true">Accept</span>
         </button>
     </div>
+    @* Workaround for .NET 10 Razor compiler issue (RZ1021/RZ1026) with >=6 char tag names as children of a code block *@
     <script>
         (function () {
             var button = document.querySelector("#cookieConsent button[data-cookie-string]");

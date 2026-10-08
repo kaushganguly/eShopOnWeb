@@ -24,16 +24,20 @@
 <div class="container">
     @if (Model.CatalogModel.CatalogItems.Any())
     {
+        @* Razor compiler workaround: tag-helper element as direct child of code block *@
         <partial name="_pagination" for="CatalogModel.PaginationInfo" />
 
+        @* Razor compiler workaround: nested code-block ancestor needs comment too *@
         <div class="esh-catalog-items row">
             @foreach (var catalogItem in Model.CatalogModel.CatalogItems)
             {
+                @* Razor compiler workaround: tag-helper element as direct child of code block *@
                 <div class="esh-catalog-item col-md-4">
                     <partial name="_product" for="@catalogItem" />
                 </div>
             }
         </div>
+        @* Razor compiler workaround: tag-helper element as direct child of code block *@
         <partial name="_pagination" for="CatalogModel.PaginationInfo" />
     }
     else

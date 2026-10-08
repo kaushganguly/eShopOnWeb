@@ -18,6 +18,7 @@
                 <label asp-for="Email"></label>
                 @if (Model.IsEmailConfirmed)
                 {
+                @* Razor compiler workaround: tag-helper element as direct child of code block *@
                 <div class="input-group">
                     <input asp-for="Email" class="form-control" />
                     <span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-ok text-success"></span></span>
@@ -25,7 +26,9 @@
                 }
                 else
                 {
+                @* Razor compiler workaround: tag-helper element as direct child of code block *@
                 <input asp-for="Email" class="form-control" />
+                @* Razor compiler workaround: tag-helper element as direct child of code block *@
                 <button asp-action="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                 }
                 <span asp-validation-for="Email" class="text-danger"></span>

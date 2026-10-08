@@ -13,6 +13,7 @@
     <h1>Review</h1>
     @if (Model.BasketModel.Items.Any())
     {
+        @* Razor compiler workaround: tag-helper element as direct child of code block *@
         <form asp-page="Checkout" method="post">
             <article class="esh-basket-titles row">
                 <br />

@@ -16,10 +16,11 @@
                     <td>
                         @if (Model.ShowRemoveButton)
                         {
+                            @* Razor compiler workaround: tag-helper element as direct child of code block *@
                             <form asp-action="RemoveLogin" method="post">
                                 <div>
-                                    <input asp-for="@login.LoginProvider" name="LoginProvider" type="hidden" />
-                                    <input asp-for="@login.ProviderKey" name="ProviderKey" type="hidden" />
+                                    <input type="hidden" name="LoginProvider" value="@login.LoginProvider" />
+                                    <input type="hidden" name="ProviderKey" value="@login.ProviderKey" />
                                     <button type="submit" class="btn btn-default" title="Remove this @login.LoginProvider login from your account">Remove</button>
                                 </div>
                             </form>
@@ -38,6 +39,7 @@
 {
     <h4>Add another service to log in.</h4>
     <hr />
+    @* Razor compiler workaround: tag-helper element as direct child of code block *@
     <form asp-action="LinkLogin" method="post" class="form-horizontal">
         <div id="socialLoginList">
             <p>

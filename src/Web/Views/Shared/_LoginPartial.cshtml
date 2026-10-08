@@ -1,5 +1,6 @@
 ﻿@if (Context!.User!.Identity!.IsAuthenticated)
 {
+    @* Workaround for .NET 10 Razor compiler issue (RZ1021/RZ1026) with >=6 char tag names as first child of a code block *@
     <section class="col-lg-4 col-md-5 col-xs-12">
         <div class="esh-identity">
             <form asp-area="Identity" asp-page="/Account/Logout" method="post" id="logoutForm" class="navbar-right">
@@ -34,6 +35,7 @@
         </div>
     </section>
 
+    @* workaround for same Razor issue *@
     <section class="col-lg-1 col-xs-12">
         @await Component.InvokeAsync("Basket")
     </section>
@@ -41,6 +43,7 @@
 }
 else
 {
+    @* Workaround for .NET 10 Razor compiler issue (RZ1021/RZ1026) with >=6 char tag names as first child of a code block *@
     <section class="col-lg-4 col-md-5 col-xs-12">
         <div class="esh-identity">
             <section class="esh-identity-section">
@@ -54,6 +57,7 @@ else
         </div>
     </section>
 
+    @* workaround for same Razor issue *@
     <section class="col-lg-1 col-xs-12">
         @await Component.InvokeAsync("Basket")
     </section>
