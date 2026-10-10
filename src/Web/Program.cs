@@ -200,3 +200,9 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Explicitly restrict the compiler-generated top-level Program class to internal visibility,
+// to avoid an ambiguous-reference compile error (CS0433) in test projects that reference both
+// Web.csproj and PublicApi.csproj, since PublicApi.Program is explicitly declared public for
+// WebApplicationFactory<Program> integration testing.
+internal partial class Program { }
