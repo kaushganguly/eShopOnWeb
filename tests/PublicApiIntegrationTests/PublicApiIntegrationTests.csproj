@@ -31,7 +31,26 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
+    <!-- Reference only for Microsoft.eShopWeb.Web.ViewModels types used to deserialize
+         test responses; Web's transitive Blazor WebAssembly runtime assets are never
+         exercised by these API tests and are excluded below (see RemoveBlazorWebAssemblyAssets). -->
     <ProjectReference Include="..\..\src\Web\Web.csproj" />
   </ItemGroup>
+
+  <!-- On net10.0, Microsoft.JSInterop.WebAssembly.dll (a transitive dependency pulled in by
+       the Web project reference above, via BlazorAdmin's Blazor WebAssembly client) fails to
+       load with a TypeLoadException ("JSCallInfo ... incorrectly aligned or overlapped")
+       when its types are enumerated outside an actual Blazor WASM host. MinimalApi.Endpoint's
+       AddEndpoints() scans every assembly currently loaded in the AppDomain
+       (AppDomain.CurrentDomain.GetAssemblies()) looking for endpoint types, which blows up the
+       moment this assembly is present. It is never needed by these API-only integration tests,
+       so it (and its WASM-only companion) are stopped from being copied into the test output,
+       which keeps them out of the AppDomain entirely. -->
+  <Target Name="RemoveBlazorWebAssemblyAssets" AfterTargets="ResolveReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)"
+                                Condition="'%(ReferenceCopyLocalPaths.Filename)' == 'Microsoft.JSInterop.WebAssembly' OR '%(ReferenceCopyLocalPaths.Filename)' == 'Microsoft.AspNetCore.Components.WebAssembly'" />
+    </ItemGroup>
+  </Target>
 
 </Project>

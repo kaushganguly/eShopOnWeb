@@ -200,3 +200,11 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
+
+// Explicitly restore pre-.NET9 default accessibility for the compiler-generated top-level
+// Program class. Starting with newer SDKs, the implicit entry-point partial class defaults
+// to public (previously internal), which collided with PublicApi's own explicitly public
+// `partial class Program` when both assemblies are referenced together by
+// PublicApiIntegrationTests (CS0433 ambiguous type). Declaring it internal here disambiguates
+// without touching the test project.
+internal partial class Program { }
