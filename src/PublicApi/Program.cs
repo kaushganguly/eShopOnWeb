@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BlazorShared;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -19,13 +20,20 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using MinimalApi.Endpoint.Configurations.Extensions;
 using MinimalApi.Endpoint.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpoints();
+// NOTE: MinimalApi.Endpoint's own AddEndpoints() scans every assembly loaded in the
+// AppDomain (AppDomain.CurrentDomain.GetAssemblies()), not just this project's assembly.
+// Under .NET 10 that broad scan triggers a ReflectionTypeLoadException when ASP.NET Core
+// test hosting (WebApplicationFactory) also loads the referenced Web/BlazorAdmin project's
+// Blazor WebAssembly interop assemblies (e.g. Microsoft.JSInterop.WebAssembly), whose types
+// are not valid to load/reflect over outside a wasm runtime. All IEndpoint implementations
+// live in this assembly, so scope the scan to it explicitly instead of using AddEndpoints().
+AddPublicApiEndpoints(builder.Services);
 
 // Use to force loading of appsettings.json of test project
 builder.Configuration.AddConfigurationFile("appsettings.test.json");
@@ -102,21 +110,10 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer"
     });
 
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    c.AddSecurityRequirement(doc => new OpenApiSecurityRequirement()
             {
                     {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "Bearer"
-                            },
-                            Scheme = "oauth2",
-                            Name = "Bearer",
-                            In = ParameterLocation.Header,
-
-                        },
+                        new OpenApiSecuritySchemeReference("Bearer", doc, null),
                         new List<string>()
                     }
             });
@@ -177,5 +174,14 @@ app.MapEndpoints();
 
 app.Logger.LogInformation("LAUNCHING PublicApi");
 app.Run();
+
+static void AddPublicApiEndpoints(IServiceCollection services)
+{
+    foreach (var type in typeof(Program).Assembly.GetTypes()
+        .Where(t => !t.IsInterface && typeof(MinimalApi.Endpoint.IEndpoint).IsAssignableFrom(t)))
+    {
+        services.AddScoped(typeof(MinimalApi.Endpoint.IEndpoint), type);
+    }
+}
 
 public partial class Program { }

@@ -31,7 +31,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <!-- Aliased (instead of default "global") because .NET 10's generated top-level-statement
+         Program class is now public, which collides with PublicApi's own `public partial class
+         Program` under the default global alias (CS0433). Files that need Web's types reference
+         them via `extern alias WebAssembly;`. -->
+    <ProjectReference Include="..\..\src\Web\Web.csproj">
+      <Aliases>WebAssembly</Aliases>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
