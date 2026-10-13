@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Threading.Tasks;
-using BlazorInputFile;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace BlazorShared.Models;
 
@@ -60,9 +60,9 @@ public class CatalogItem
         return null;
     }
 
-    public static async Task<string> DataToBase64(IFileListEntry fileItem)
+    public static async Task<string> DataToBase64(IBrowserFile fileItem)
     {
-        using (var reader = new StreamReader(fileItem.Data))
+        using (var reader = new StreamReader(fileItem.OpenReadStream(ImageMaximumBytes)))
         {
             using (var memStream = new MemoryStream())
             {

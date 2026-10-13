@@ -31,7 +31,29 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\PublicApi\PublicApi.csproj" />
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <ProjectReference Include="..\..\src\Web\Web.csproj" Aliases="WebApp" />
   </ItemGroup>
+
+  <!--
+    Web.csproj is only referenced so this test project can deserialize Microsoft.eShopWeb.Web.ViewModels
+    types (e.g. CatalogIndexViewModel) returned by PublicApi's JSON responses. The actual app under test
+    (PublicApi, hosted in-process via WebApplicationFactory<Program>) never executes Web or BlazorAdmin code.
+    Web's transitive dependency on BlazorAdmin (a Blazor WebAssembly/Mono-targeted project) pulls Mono/WASM
+    runtime assemblies into this CoreCLR test process. Newer .NET runtimes enforce stricter type-layout
+    validation and throw a ReflectionTypeLoadException the moment any assembly-scanning code (such as
+    MinimalApi.Endpoint's AppDomain.CurrentDomain.GetAssemblies() scan in PublicApi's startup) touches
+    those Mono/WASM assemblies. Since nothing in this test process needs them, exclude them from the
+    output so they are never loaded.
+  -->
+  <Target Name="RemoveBlazorWebAssemblyRuntimeAssets" AfterTargets="ResolveReferences;ResolveProjectReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="
+        $([System.String]::Copy('%(ReferenceCopyLocalPaths.FileName)').StartsWith('Microsoft.JSInterop.WebAssembly')) Or
+        $([System.String]::Copy('%(ReferenceCopyLocalPaths.FileName)').StartsWith('Microsoft.AspNetCore.Components.WebAssembly')) Or
+        $([System.String]::Copy('%(ReferenceCopyLocalPaths.FileName)').StartsWith('BlazorAdmin')) Or
+        $([System.String]::Copy('%(ReferenceCopyLocalPaths.FileName)').StartsWith('Blazored.LocalStorage')) Or
+        $([System.String]::Copy('%(ReferenceCopyLocalPaths.FileName)').StartsWith('Mono.TextTemplating'))" />
+    </ItemGroup>
+  </Target>
 
 </Project>
