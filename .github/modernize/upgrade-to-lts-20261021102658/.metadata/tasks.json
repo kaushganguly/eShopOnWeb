@@ -1,0 +1,29 @@
+{
+  "$schema": "tasks-schema.json",
+  "description": ".NET version upgrade plan from .NET 8.0 to .NET 10.0 (latest LTS) for eShopOnWeb",
+  "tasks": [
+    {
+      "type": "upgrade",
+      "id": "001-upgrade-dotnet-to-net10",
+      "description": "Upgrade eShopOnWeb (ApplicationCore, BlazorAdmin, BlazorShared, Infrastructure, PublicApi, Web, and all test projects) from .NET 8.0 to .NET 10.0",
+      "reason": "The user explicitly requested upgrading the application to the latest LTS version of .NET. Moving from .NET 8.0 to .NET 10.0 ensures continued long-term support, access to the latest security and performance improvements, and compatibility with current Azure SDK and tooling versions.",
+      "requirements": "Upgrade all projects in the solution from .NET 8.0 to .NET 10.0, including updating the centrally managed target framework and NuGet package versions, and resolving any API or build compatibility issues introduced by the version change.",
+      "environmentConfiguration": null,
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "generateNewUnitTests": "false",
+        "passUnitTests": "true",
+        "securityComplianceCheck": "true"
+      },
+      "status": "pending"
+    }
+  ],
+  "metadata": {
+    "planName": "upgrade-to-lts",
+    "projectName": "eShopOnWeb",
+    "language": "dotnet",
+    "createdAt": "2026-10-21T10:26:58.000Z",
+    "version": "1.0"
+  }
+}
